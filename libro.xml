@@ -1,0 +1,83 @@
+<doc>
+  <title>Aprender PHP, MySQL y JavaScript</title>
+  <!-- <titleimg>(filename) ...</titleimg> -->
+  <!-- <url>...</url> -->
+  <version>5.0</version>
+  <theme>theme.css</theme>
+  <lang>es</lang>
+  <rslt>Resultados de búsqueda</rslt>
+  <home>Inicio</home>
+  <link>Enlace permanente a este encabezado</link>
+  <info>Importante</info>
+  <note>Nota</note>
+  <also>Ver También</also>
+  <todo>Por Hacer</todo>
+  <warn>Precaución</warn>
+  <args>Argumentos</args>
+  <rval>Valor de Retorno</rval>
+  <prev>Volver</prev>
+  <next>Siguiente</next>
+  <copy>2021 Robin Nixon. Todos los derechos reservados.</copy>
+</doc>
+
+<cap>0. Prefacio</cap>
+
+<cap>1. Introducción al contenido dinámico de la web</cap>
+
+<cap>2. Configuración de un servidor de desarrollo</cap>
+
+<cap>3. Introducción a PHP</cap>
+
+<cap>4. Expresiones y control de flujo en PHP</cap>
+
+<cap>5. Funciones y objetos en PHP</cap>
+
+<cap>6. Matrices en PHP</cap>
+
+<cap>7. PHP práctico</cap>
+
+<cap>8. Introducción a MySQL</cap>
+
+<cap>9. Dominio de MySQL</cap>
+
+<cap>10. Novedades en PHP 8 y MySQL 8</cap>
+
+<cap>11. Accediendo a MySQL mediante PHP</cap>
+
+<cap>12. Gestión de formularios</cap>
+
+<cap>13. Cookies, sesiones y autenticación</cap>
+
+<cap>14. Explorando JavaScript</cap>
+
+<cap>15. Expresiones y control de flujo en JavaScript</cap>
+
+<cap>16. Funciones, objetos y matrices en JavaScript</cap>
+
+<cap>17. Validación y Manejo de Errores en JavaScript y PHP</cap>
+
+<cap>18. Utilizando comunicaciones asíncronas</cap>
+
+<cap>19. Introducción a CSS</cap>
+
+<cap>20. CSS avanzado con CSS</cap>
+
+<cap>21. Accediendo a CSS desde JavaScript</cap>
+
+<cap>22. Introducción a jQuery</cap>
+
+<cap>23. Introducción a jQuery Mobile</cap>
+
+<cap>24. Introducción a React</cap>
+
+<cap>25. Introducción a HTML5</cap>
+
+<cap>26. Canvas de HTML5</cap>
+
+<cap>27. Audio y vídeo en HTML5</cap>
+
+<cap>28. Otras características de HTML5</cap>
+
+<cap>29. Uniendo todo</cap>
+
+<cap>A. Soluciones a las preguntas de los capítulos</cap>
