@@ -1,0 +1,5 @@
+<h3 explorando_javascript_utilizando_alert>
+  Utilizando alert
+</h3>
+
+<p>La función <tt>alert</tt> muestra en una ventana emergente valores o expresiones que se le pasan, la cual requiere que hagas clic en un botón para cerrarla. Claramente, esto puede volverse bastante irritante muy rápidamente, y tiene la desventaja de mostrar solo el mensaje actual, borrando los anteriores.</p>

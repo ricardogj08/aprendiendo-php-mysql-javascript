@@ -1,0 +1,13 @@
+<h2 explorando_javascript_variables_globales>
+  Variables globales
+</h2>
+
+<p>Las <i>variables globales</i> son aquellas definidas fuera de cualquier función (o definidas dentro de funciones pero sin la palabra clave <tt>var</tt>). Pueden definirse de las siguientes maneras:</p>
+
+<code>
+    a = 123               // Global scope
+var b = 456               // Global scope
+if (a == 123) var c = 789 // Global scope
+</code>
+
+<p>Independientemente si estás utilizando la palabra clave <tt>var</tt>, mientras una variable esté definida fuera de una función, su alcance es global. Esto significa que cada parte de un script puede tener acceso a él.</p>

@@ -1,0 +1,30 @@
+<h3 explorando_javascript_operadores_logicos>
+  Operadores lógicos
+</h3>
+
+<p>A diferencia de PHP, los <i>operadores lógicos</i> de JavaScript no incluyen equivalentes de <tt>and</tt> y <tt>or</tt> a <tt>&&</tt> y <tt>||</tt>, y no hay un operador <tt>xor</tt>. (ver la Tabla 14-5).</p>
+
+<p><i>Tabla 14-5. Operadores lógicos</i></p>
+
+<table>
+  <tr>
+    <th>Operador</th>
+    <th>Descripción</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td><tt>&&</tt></td>
+    <td>And</td>
+    <td><tt>j == 1 && k == 2</tt></td>
+  </tr>
+  <tr>
+    <td><tt>||</tt></td>
+    <td>Or</td>
+    <td><tt>j < 100 || j > 0</tt></td>
+  </tr>
+  <tr>
+    <td><tt>!</tt></td>
+    <td>Not</td>
+    <td><tt>! (j == k)</tt></td>
+  </tr>
+</table>

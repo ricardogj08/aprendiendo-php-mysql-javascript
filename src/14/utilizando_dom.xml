@@ -1,0 +1,49 @@
+<h3 explorando_javascript_utilizando_dom>
+  Utilizando el DOM
+</h3>
+
+<p>El objeto <tt>links</tt> es en realidad un array de URLs, por lo que la URL <tt>mylink</tt> en el <a #explorando_javascript_document_object_model>Ejemplo 14-7</a> también puede referirse de manera segura en todos los navegadores de la siguiente manera (porque es el primer y único enlace):</p>
+
+<code>
+url = document.links[0].href
+</code>
+
+<p>Si quieres saber cuántos enlaces hay en un documento completo, puedes consultar la propiedad <tt>length</tt> del objeto <tt>links</tt> así:</p>
+
+<code>
+numlinks = document.links.length
+</code>
+
+<p>Puedes extraer y mostrar todos los enlaces en un documento de esta manera:</p>
+
+<code>
+for (j=0; j < document.links.length; ++j)
+  document.write(document.links[j].href + '<br>')
+</code>
+
+<p>El <tt>length</tt> de algo es una propiedad de cada array, y de muchos objetos también. Por ejemplo, el número de elementos en el historial web de tu navegador se puede consultar así:</p>
+
+<code>
+document.write(history.length)
+</code>
+
+<p>Para evitar que los sitios web espíen tu historial de navegación, el objeto <tt>history</tt> almacena solo el número de sitios en el array: no puedes leer ni escribir en estos valores. Pero puedes reemplazar la página actual con una del historial, si sabes en qué posición se encuentra dentro del historial. Esto puede ser muy útil en casos en los que sabes que ciertas páginas en el historial provienen de tu sitio, o simplemente desees que el navegador retroceda una o más páginas, lo cual puedes hacer con el método <tt>go</tt> del objeto <tt>history</tt>. Por ejemplo, para hacer que el navegador retroceda tres páginas, emita el siguiente comando:</p>
+
+<code>
+history.go(-3)
+</code>
+
+<p>También puedes utilizar los siguientes métodos para avanzar o retroceder una página a la vez:</p>
+
+<code>
+history.back()
+history.forward()
+</code>
+
+<p>De manera similar, puedes reemplazar la URL actualmente cargada con una de tu elección, así:</p>
+
+<code>
+document.location.href = 'http://google.com'
+</code>
+
+<p>Por supuesto, hay mucho más cosas en el DOM que leer y modificar enlaces. A medida que avances a través de los siguientes capítulos sobre JavaScript, te familiarizarás bastante con el DOM y cómo acceder a él.</p>

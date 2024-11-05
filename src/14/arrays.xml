@@ -1,0 +1,45 @@
+<h3 explorando_javascript_arrays>
+  Arrays
+</h3>
+
+<p>Los arrays en JavaScript también son muy similares a los de PHP, en el sentido de que un array puede contener datos de tipo string o numéricos, así como otros arrays. Para asignar valores a un array, utiliza la siguiente sintaxis (que en este caso crea un array de strings):</p>
+
+<code>
+toys = ['bat', 'ball', 'whistle', 'puzzle', 'doll']
+</code>
+
+<p>Para crear un array multidimensional, anida arrays más pequeños dentro de uno más grande. Entonces, para crear un array bidimensional que contenga los colores de una sola cara de un Cubo Rubik desordenado (donde los colores red (rojo), green (verde), orange (naranja), yellow (amarillo), blue (azul) y white (blanco) están representados por sus letras iniciales en mayúscula), podrías usar el siguiente código:</p>
+
+<code>
+face = [
+  ['R', 'G', 'Y'],
+  ['W', 'R', 'O'],
+  ['Y', 'W', 'G']
+]
+</code>
+
+<p>El ejemplo anterior se le ha dado formato para que sea obvio lo que está sucediendo, pero también podría escribirse así:</p>
+
+<code>
+face = [['R', 'G', 'Y'], ['W', 'R', 'O'], ['Y', 'W', 'G']]
+</code>
+
+<p>o incluso así:</p>
+
+<code>
+top = ['R', 'G', 'Y']
+mid = ['W', 'R', 'O']
+bot = ['Y', 'W', 'G']
+
+face = [top, mid, bot]
+</code>
+
+<p>Para acceder al elemento dos hacia abajo y tres hacia la derecha en este array, usarías lo siguiente (porque los elementos del array comienzan en la posición <tt>0</tt>):</p>
+
+<code>
+document.write(face[1][2])
+</code>
+
+<p>Esta declaración mostrará la letra <tt>O</tt> para <i>orange</i> (naranja).</p>
+
+<note>Los arrays en JavaScript son estructuras de almacenamiento poderosas, por lo que el <a #funciones_objetos_arrays_javascript>Capítulo 16</a> se tratan con mucho más detalle.</note>

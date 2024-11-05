@@ -1,0 +1,5 @@
+<h2 explorando_javascript_sobre_document_write>
+  Sobre document.write
+</h2>
+
+<p>Al enseñar programación, es necesario tener una forma rápida y fácil de mostrar los resultados de las expresiones. En PHP (por ejemplo) existen las declaraciones <tt>echo</tt> y <tt>print</tt>, que simplemente envían texto al navegador, así que es fácil. En JavaScript, sin embargo, existen las siguientes alternativas.</p>

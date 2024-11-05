@@ -1,0 +1,17 @@
+<h1 explorando_javascript>
+  Explorando JavaScript
+</h1>
+
+<h2 explorando_javascript_introduccion>
+  Introducción
+</h2>
+
+<p>JavaScript aporta una funcionalidad dinámica a tus sitios web. Cada vez que mires algo aparecer cuando pasas el mouse sobre un elemento en el navegador, o ves nuevo texto, colores o imágenes aparecer en la página frente a tus ojos, o cuando tomas un objeto en la página y lo arrastras a una nueva ubicación, todas esas cosas generalmente se hacen a través de JavaScript (aunque CSS se está volviendo cada vez más poderoso y también puede hacer muchas de estas cosas). Ofrece efectos que de otro modo no serían posibles, porque se ejecuta dentro del navegador y tiene acceso directo a todos los elementos de un documento web.</p>
+
+<p>JavaScript apareció por primera vez en el navegador Netscape Navigator en 1995, coincidiendo con la incorporación del soporte para la tecnología Java en el navegador. Debido a la incorrecta impresión inicial de que JavaScript era un derivado de Java, ha habido una confusión durante mucho tiempo sobre su relación. Sin embargo, el nombre fue solo una táctica de <i>marketing</i> para ayudar al nuevo lenguaje de scripting a beneficiarse de la popularidad del lenguaje de programación Java.</p>
+
+<p>JavaScript ganó nuevo poder cuando los elementos HTML de la página web obtuvieron una definición más formal y estructurada en lo que se llama <i>Document Object Model</i> (DOM). El DOM hace que sea relativamente fácil añadir un nuevo párrafo o centrarse en un fragmento de texto y modificarlo.</p>
+
+<p>Debido a que tanto JavaScript como PHP soportan gran parte de la sintaxis de la programación estructurada que utiliza el lenguaje de programación C, son muy similares entre sí. También son lenguajes de alto nivel. Además, son débilmente tipados, por lo que es fácil cambiar una variable a un nuevo tipo simplemente usándola en un nuevo contexto.</p>
+
+<p>Ahora que has aprendido PHP, deberías encontrar JavaScript aún más fácil. Y te alegrarás de haberlo hecho, porque está en el corazón de la tecnología de la comunicación asíncrona que proporciona las interfaces web fluidas que (junto con las características de HTML5) los usuarios web expertos esperan hoy en día.</p>

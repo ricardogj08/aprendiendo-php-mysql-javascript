@@ -1,0 +1,12 @@
+<h3 explorando_javascript_incrementando_decrementando_asignacion_abreviada>
+  Incrementando, decrementando y asignación abreviada
+</h3>
+
+<p>Las siguientes formas de post y preincremento y decremento que aprendiste a utilizar en PHP también son compatibles con JavaScript, al igual que los operadores de asignación abreviada:</p>
+
+<code>
+++x
+--y
+x += 22
+y -= 3
+</code>

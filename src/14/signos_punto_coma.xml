@@ -1,0 +1,19 @@
+<h2 explorando_javascript_signos_punto_coma>
+  Signos de punto y coma
+</h2>
+
+<p>A diferencia de PHP, JavaScript generalmente no requiere punto y coma si tienes solo una instrucción en una línea. Por lo tanto, lo siguiente es válido:</p>
+
+<code>
+x += 10
+</code>
+
+<p>Sin embargo, cuando desees colocar más de una declaración en una línea, debes separarlas con punto y coma, así:</p>
+
+<code>
+x += 10; y -= 5; z = 0
+</code>
+
+<p>Normalmente puedes omitir el punto y coma final, porque la nueva línea termina la declaración final.</p>
+
+<warn>Hay excepciones a la regla del punto y coma. Si escribes bookmarklets (marcadores) en JavaScript, o terminas una declaración con una referencia a una variable o función, <i>y el primer carácter</i> de la siguiente línea es un paréntesis izquierdo o un corchete, <i>debes recordar</i> agregar un punto y coma o JavaScript fallará. Entonces, cuando tengas dudas, usa un punto y coma.</warn>

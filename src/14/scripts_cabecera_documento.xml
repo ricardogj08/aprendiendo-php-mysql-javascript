@@ -1,0 +1,7 @@
+<h3 explorando_javascript_scripts_cabecera_documento>
+  Uso de scripts dentro de la cabecera de un documento
+</h3>
+
+<p>Además de colocar un script dentro del cuerpo de un documento, puedes ponerlo en la sección <tt><head></tt>, que es el lugar ideal si deseas ejecutar un script cuando se carga una página. Si colocas código y funciones críticas allí, también puedes tener la seguridad de que estén listos para usarse de inmediato por cualquier otra sección de script en el documento que dependa de ellos.</p>
+
+<p>Otra razón para colocar un script en la cabecera del documento es permitir que JavaScript escriba cosas como meta etiquetas en la sección <tt><head></tt>, porque la ubicación de tu script es la parte del documento donde se escribe (imprime) por defecto.</p>

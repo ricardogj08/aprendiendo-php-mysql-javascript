@@ -1,0 +1,64 @@
+<h3 explorando_javascript_caracteres_escape>
+  Caracteres de escape
+</h3>
+
+<p>Los caracteres de escape, que se han utilizado para insertar comillas en los strings, también pueden ser utilizados para insertar varios caracteres especiales, como tabulaciones, saltos de línea y retornos de carro. Aquí hay un ejemplo usando tabulaciones para organizar un encabezado: se incluye aquí simplemente para ilustrar escapes, porque en las páginas web, hay mejores maneras de hacer el diseño:</p>
+
+<code>
+heading = "Name\tAge\tLocation"
+</code>
+
+<p>La Tabla 14-6 detalla los caracteres de escape disponibles.</p>
+
+<p><i>Tabla 14-6. Caracteres de escape en JavaScript</i></p>
+
+<table>
+  <tr>
+    <th>Caracter</th>
+    <tH>Significado</th>
+  </tr>
+  <tr>
+    <td><tt>\b</tt></td>
+    <td>Retroceso</td>
+  </tr>
+  <tr>
+    <td><tt>\f</tt></td>
+    <td>Salto de página</td>
+  </tr>
+  <tr>
+    <td><tt>\n</tt></td>
+    <td>Salto de línea</td>
+  </tr>
+  <tr>
+    <td><tt>\r</tt></td>
+    <td>Retorno de carro</td>
+  </tr>
+  <tr>
+    <td><tt>\t</tt></td>
+    <td>Tabulador</td>
+  </tr>
+  <tr>
+    <td><tt>\'</tt></td>
+    <td>Comillas simples (o apóstrofe)</td>
+  </tr>
+  <tr>
+    <td><tt>\"</tt></td>
+    <td>Comillas dobles</td>
+  </tr>
+  <tr>
+    <td><tt>\\</tt></td>
+    <td>Barra invertida</td>
+  </tr>
+  <tr>
+    <td><tt>\XXX</tt></td>
+    <td>Un número octal entre <tt>000</tt> y <tt>377</tt> que representa el equivalente de caracteres Latin-1 (como <tt>\251</tt> para el símbolo ©)</td>
+  </tr>
+  <tr>
+    <td><tt>\xXX</tt></td>
+    <td>Un número hexadecimal entre <tt>00</tt> y <tt>FF</tt> que representa el equivalente de caracteres Latin-1 (como <tt>\xA9</tt> para el símbolo ©)</td>
+  </tr>
+  <tr>
+    <td><tt>\uXXXX</tt></td>
+    <td>Un número hexadecimal entre <tt>0000</tt> y <tt>FFFF</tt> que representa el equivalente de caracteres Unicode (como <tt>\u00A9</tt> para el símbolo ©)</td>
+  </tr>
+</table>

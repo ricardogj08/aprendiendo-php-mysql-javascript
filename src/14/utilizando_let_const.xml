@@ -1,0 +1,82 @@
+<h3 explorando_javascript_utilizando_let_const>
+  Utilizando let y const
+</h3>
+
+<p>JavaScript ahora ofrece dos nuevas palabras clave: <tt>let</tt> y <tt>const</tt>. La palabra clave <tt>let</tt> es prácticamente un reemplazo para <tt>var</tt>, pero tiene la ventaja de que no puedes redeclarar una variable una vez que lo hayas hecho con <tt>let</tt>, aunque sí puedes con <tt>var</tt>.</p>
+
+<p>Verás, el hecho de que pudieras redeclarar variables utilizando <tt>var</tt> estaba llevando a errores oscuros, como el siguiente:</p>
+
+<code>
+var hello   = "Hello there"
+var counter = 1
+
+if (counter > 0)
+{
+  var hello = "How are you?"
+}
+
+document.write(hello)
+</code>
+
+<p>¿Puedes ver el problema? Debido a que <tt>counter</tt> es mayor que <tt>0</tt> (ya que lo inicializamos en <tt>1</tt>), el string <tt>hello</tt> se redefine como "How are you?" (¿Cómo estás?) y luego se muestra en el documento.</p>
+
+<p>Ahora, si reemplazas <tt>var</tt> con <tt>let</tt> (como lo siguiente), la segunda declaración será ignorada, y se mostrará el string original "Hello there":</p>
+
+<code>
+let hello   = "Hello there"
+let counter = 1
+
+if (counter > 0)
+{
+  let hello = "How are you?"
+}
+
+document.write(hello)
+</code>
+
+<p>La palabra clave <tt>var</tt> tiene un alcance global (si está fuera de cualquier bloque o función) o de <i>función</i>, y las variables declaradas se inicializan con <tt>undefined</tt>, pero la palabra clave <tt>let</tt> tiene un alcance global o de <i>bloque</i>, y las variables no se inicializan.</p>
+
+<p>Cualquier variable asignada utilizando <tt>let</tt> tiene un alcance dentro de todo el documento si se declara fuera de cualquier bloque, o, si se declara dentro de un bloque delimitado por <tt>{}</tt> (lo que incluye funciones), su alcance se limita a ese bloque (y cualquier sub-bloque anidado). Si declaras una variable dentro de un bloque pero intentas acceder a ella desde fuera de ese bloque, se devolverá un error, como en el siguiente caso, que fallará en el <tt>document.write</tt> porque <tt>hello</tt> no tendrá valor:</p>
+
+<code>
+let counter = 1
+
+if (counter > 0)
+{
+  let hello = "How are you?"
+}
+
+document.write(hello)
+</code>
+
+<p>Puedes usar <tt>let</tt> para declarar variables con el mismo nombre que las variables previamente declaradas, siempre y cuando sean dentro de un nuevo ámbito, en cuyo caso cualquier valor anterior asignado a una variable con el mismo nombre en el ámbito anterior se volverá inaccesible para el nuevo ámbito, porque la nueva variable con el mismo nombre se maneja totalmente diferente de la anterior. Solo tiene alcance dentro del bloque actual, o de cualquier sub-bloque (a menos que se use otro <tt>let</tt> para declarar otra variable con el mismo nombre en un sub-bloque).</p>
+
+<p>Es una buena práctica intentar evitar la reutilización de nombres significativos de variables, o corres el riesgo de causar confusión. Sin embargo, las variables de bucle o índice como <tt>i</tt> (u otros nombres cortos y simples) generalmente pueden reutilizarse en nuevos ámbitos sin causar confusión.</p>
+
+<p>Puedes aumentar aún más tu control sobre el alcance declarando una variable con un valor constante, es decir, uno que no pueda ser cambiado. Esto es beneficioso cuando has creado una variable que lo estás tratando como una constante pero la has declarado utilizando solo <tt>var</tt> o <tt>let</tt>, porque podrías tener ocasiones que en tu código intentes cambiar ese valor, lo cual estaría permitido pero sería un error.</p>
+
+<p>Sin embargo, si utilizas la palabra clave <tt>const</tt> para declarar la variable y asignar su valor, cualquier intento de cambiar más tarde su valor será prohibido, y tu código se detendrá con un mensaje de error en la consola similar a:</p>
+
+<pre>
+Uncaught TypeError: Assignment to constant variable
+</pre>
+
+<p>El siguiente código causará exactamente ese error:</p>
+
+<code>
+const hello = "Hello there"
+let counter = 1
+
+if (counter > 0)
+{
+  hello = "How are you?"
+}
+
+document.write(hello)
+</code>
+
+<p>Al igual que <tt>let</tt>, las declaraciones <tt>const</tt> también tienen un alcance de bloque (dentro de secciones <tt>{}</tt> y cualquier sub-bloque), lo que significa que puedes tener variables constantes con el mismo nombre pero con diferentes valores en diferentes ámbitos de un fragmento de código. Sin embargo, te recomiendo encarecidamente que intentes evitar la duplicación de nombres y mantengas cualquier nombre de constante para un solo valor a lo largo de cada programa, utilizando un nuevo nombre de constante donde necesites una nueva constante.</p>
+
+<p>En resumen: <tt>var</tt> tiene un alcance global o de función, y <tt>let</tt> y <tt>const</tt> tienen un alcance global o de bloque. Tanto <tt>var</tt> como <tt>let</tt> pueden ser declarados sin ser inicializados, mientras que <tt>const</tt> debe ser inicializado durante la declaración. La palabra clave <tt>var</tt> se puede reutilizar para redeclarar una variable <tt>var</tt>, pero <tt>let</tt> y <tt>const</tt> no pueden. Finalmente, <tt>const</tt> no puede ser redeclarado ni reasignado.</p>
+
+<note>Es posible que prefieras utilizar una consola de desarrollador para pruebas como estas (y en otras partes de este libro) como se explicó anteriormente en <a #explorando_javascript_depuracion_errores_javascript>"Depuración de errores en JavaScript"</a>, en cuyo caso puedes reemplazar <tt>document.write</tt> con <tt>console.log</tt>, y la salida se mostrará en la consola en lugar del documento del navegador. También es una mejor opción para que JavaScript se ejecute una vez que el documento se haya cargado completamente, porque en ese momento <tt>document.write</tt> reemplazaría el documento actual, en lugar de agregarle contenido, lo cual probablemente no sea lo que esperes.</note>

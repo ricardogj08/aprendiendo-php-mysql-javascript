@@ -1,0 +1,15 @@
+<h2 explorando_javascript_variables>
+  Variables
+</h2>
+
+<p>Ningún carácter en particular identifica una variable en JavaScript como lo hace el signo de dólar en PHP. En su lugar, las variables utilizan las siguientes reglas de nomenclatura:</p>
+
+<ul>
+  <li>Una variable puede incluir solo las letras <tt>a–z</tt>, <tt>A–Z</tt>, <tt>0–9</tt>, el símbolo <tt>$</tt> y el guion bajo (<tt>_</tt>).</li>
+  <li>No se permiten otros caracteres, como espacios o signos de puntuación, en el nombre de una variable.</li>
+  <li>El primer carácter del nombre de una variable puede ser solo <tt>a–z</tt>, <tt>A–Z</tt>, <tt>$</tt>, o <tt>_</tt> (sin números).</li>
+  <li>Los nombres son sensibles a mayúsculas y minúsculas. <tt>Count</tt>, <tt>count</tt> y <tt>COUNT</tt> son todas variables diferentes.</li>
+  <li>No hay un límite establecido para la longitud de los nombres de las variables.</li>
+</ul>
+
+<p>Y sí, tienes razón: hay un <tt>$</tt> en esta lista de caracteres permitidos. <i>Está permitido</i> por JavaScript y <i>puede ser</i> el primer carácter de un nombre de una variable o función. Aunque no recomiendo utilizar los caracteres <tt>$</tt>, esta regla te permite integrar mucho código PHP más rápidamente a JavaScript.</p>

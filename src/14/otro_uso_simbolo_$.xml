@@ -1,0 +1,34 @@
+<h3 explorando_javascript_otro_uso_simbolo_$>
+  Otro uso del símbolo $
+</h3>
+
+<p>Como se mencionó anteriormente, el símbolo <tt>$</tt> está permitido en los nombres de variables y funciones de JavaScript. Debido a esto, a veces puedes encontrarte con código de aspecto extraño como este:</p>
+
+<code>
+url = $('mylink').href
+</code>
+
+<p>Algunos programadores con iniciativa han decidido que la función <tt>getElementById</tt> es tan importante en JavaScript que han escrito una función para reemplazar la llamada <tt>$</tt>, como en jQuery (aunque jQuery usa el <tt>$</tt> para mucho más que eso ver <a #introduccion_jquery>Capítulo 22</a>), como se muestra en el Ejemplo 14-8.</p>
+
+<p><i>Ejemplo 14-8. Una función que reemplaza el método <tt>getElementById</tt></i></p>
+
+<code>
+<script>
+  function $(id)
+  {
+    return document.getElementById(id)
+  }
+</script>
+</code>
+
+<p>Por lo tanto, siempre y cuando hayas incluido la función <tt>$</tt> en tu código, una sintaxis como esta:</p>
+
+<code>
+$('mylink').href
+</code>
+
+<p>puede reemplazar al siguiente código:</p>
+
+<code>
+document.getElementById('mylink').href
+</code>

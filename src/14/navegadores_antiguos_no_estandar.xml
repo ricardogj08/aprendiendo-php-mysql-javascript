@@ -1,0 +1,36 @@
+<h3 explorando_javascript_navegadores_antiguos_no_estandar>
+  Navegadores antiguos y no estándar
+</h3>
+
+<p>Si necesitas soportar navegadores que no ofrecen scripting (muy poco probable en la actualidad), deberás usar las etiquetas de comentario HTML (<tt><!--</tt> y <tt>--></tt>) para evitar que se encuentren con código script que no deberían ver. El ejemplo 14-2 muestra cómo añadirlos a tu código de script.</p>
+
+<p>Ejemplo 14-2. El ejemplo de "Hello World" modificado para navegadores que no soportan JavaScript</p>
+
+<code>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <script type="text/javascript"><!--
+      document.write('Hello World')
+    // -->
+    </script>
+  </body>
+</html>
+</code>
+
+<p>Aquí se ha añadido una etiqueta HTML de apertura de comentario (<tt><!--</tt>) directamente después de la declaración de apertura <tt><script></tt>, y se ha añadido una etiqueta de cierre de comentario (<tt>// --></tt>) directamente antes de que el script se cierre con <tt></script></tt>.</p>
+
+<p>La doble barra diagonal (<tt>//</tt>) la utiliza JavaScript para indicar que el resto de la línea es un comentario. Está ahí para que los navegadores que <i>sí soportan JavaScript</i> ignoren el siguiente <tt>--></tt>, pero los navegadores que no soportan JavaScript ignorarán el <tt>//</tt> anterior y actuarán sobre el <tt>--></tt> cerrando el comentario HTML.</p>
+
+<p>Aunque la solución es un poco complicada, lo único que realmente necesitas recordar es utilizar las dos líneas siguientes para encerrar tu JavaScript cuando desees soportar navegadores muy antiguos o no estándar:</p>
+
+<code>
+<script type="text/javascript"><!--
+  (Your JavaScript goes here...)
+// -->
+</script>
+</code>
+
+<p>Sin embargo, el uso de estos comentarios es innecesario para cualquier navegador lanzado en los últimos años, pero debes estar al tanto de esto, por si acaso.</p>

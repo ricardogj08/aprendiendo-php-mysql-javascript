@@ -1,0 +1,52 @@
+<h2 explorando_javascript_variables_locales>
+  Variables locales
+</h2>
+
+<p>Los parámetros pasados a una función automáticamente tienen un <i>alcance local</i>, es decir, solo pueden ser referenciados dentro de esa función. Sin embargo, hay una excepción. Los arrays se pasan a una función por referencia, por lo que si modificas cualquier elemento de un parámetro de tipo array, los elementos del array original serán modificados.</p>
+
+<p>Para definir una variable local que tenga alcance solo dentro de la función actual y que no haya sido pasada como parámetro, utiliza la palabra clave <tt>var</tt>. El Ejemplo 14-5 muestra una función que crea una variable con alcance global y dos con alcance local.</p>
+
+<p><i>Ejemplo 14-5. Una función que crea variables con alcance global y local</i></p>
+
+<code>
+<script>
+  function test()
+  {
+        a = 123               // Global scope
+    var b = 456               // Local scope
+    if (a == 123) var c = 789 // Local scope
+  }
+</script>
+</code>
+
+<p>Para comprobar si la configuración del alcance ha funcionado en PHP, podemos usar la función <tt>isset</tt>. Pero en JavaScript no existe tal función, así que el Ejemplo 14-6 utiliza el operador <tt>typeof</tt>, que devuelve el string <tt>undefined</tt> cuando una variable no está definida.</p>
+
+<p><i>Ejemplo 14-6. Verificación del alcance de las variables definidas en la función test</i></p>
+
+<code>
+<script>
+  test()
+
+  if (typeof a != 'undefined') document.write('a = "' + a + '"<br>')
+  if (typeof b != 'undefined') document.write('b = "' + b + '"<br>')
+  if (typeof c != 'undefined') document.write('c = "' + c + '"<br>')
+
+  function test()
+  {
+    a     = 123
+    var b = 456
+
+    if (a == 123) var c = 789
+  }
+</script>
+</code>
+
+<p>La salida de este script es la siguiente línea:</p>
+
+<pre>
+a = "123"
+</pre>
+
+<p>Esto muestra que solo la variable <tt>a</tt> recibió un alcance global, que es exactamente lo que esperaríamos, ya que las variables <tt>b</tt> y <tt>c</tt> recibieron un alcance local al estar precedidas por la palabra clave <tt>var</tt>.</p>
+
+<p>Si tu navegador emite una advertencia sobre que <tt>b</tt> está indefinido, la advertencia es correcta pero se puede ignorar.</p>

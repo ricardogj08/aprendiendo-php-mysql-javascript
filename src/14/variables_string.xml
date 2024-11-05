@@ -1,0 +1,30 @@
+<h3 explorando_javascript_variables_string>
+  Variables string
+</h3>
+
+<p>Las variables string en JavaScript deben estar entre comillas simples o dobles, así:</p>
+
+<code>
+greeting = "Hello there"
+warning  = 'Be careful'
+</code>
+
+<p>Puedes incluir una comilla simple dentro de un string de comillas dobles o una comilla doble dentro de un string de comillas simples. Pero debes escapar el entrecomillado del mismo tipo usando el carácter de barra invertida, así:</p>
+
+<code>
+greeting = "\"Hello there\" is a greeting"
+warning  = '\'Be careful\' is a warning'
+</code>
+
+<p>Para leer de una variable string, puedes asignarla a otra, así:</p>
+
+<code>
+newstring = oldstring
+</code>
+
+<p>o puedes usarla en una función, así:</p>
+
+<code>
+status = "All systems are working"
+document.write(status)
+</code>

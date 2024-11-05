@@ -1,0 +1,55 @@
+<h3 explorando_javascript_operadores_comparacion>
+  Operadores de comparación
+</h3>
+
+<p>Los <i>operadores de comparación</i> se utilizan generalmente dentro de una estructura como una declaración <tt>if</tt>, donde necesitas comparar dos elementos. Por ejemplo, puede que desee saber si una variable que ha estado incrementando ha alcanzado un valor específico, o si otra variable es menor que un valor establecido, y así sucesivamente. (ver la Tabla 14-4).</p>
+
+<p><i>Tabla 14-4. Operadores de comparación</i></p>
+
+<table>
+  <tr>
+    <th>Operador</th>
+    <th>Descripción</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td><tt>==</tt></td>
+    <td>Es <i>igual</i> a</td>
+    <td><tt>j == 42</tt></td>
+  </tr>
+  <tr>
+    <td><tt>!=</tt></td>
+    <td><i>No es igual</i> a</td>
+    <td><tt>j != 17</tt></td>
+  </tr>
+  <tr>
+    <td><tt>></tt></td>
+    <td>Es <i>mayor que</i></td>
+    <td><tt>j > 0</tt></td>
+  </tr>
+  <tr>
+    <td><tt><</tt></td>
+    <td>Es <i>menor que</i></td>
+    <td><tt>j < 100</tt></td>
+  </tr>
+  <tr>
+    <td><tt>>=</tt></td>
+    <td>Es <i>mayor o igual</i> que</td>
+    <td><tt>j >= 23</tt></td>
+  </tr>
+  <tr>
+    <td><tt><=</tt></td>
+    <td>Es <i>menor o igual</i> que</td>
+    <td><tt>j <= 13</tt></td>
+  </tr>
+  <tr>
+    <td><tt>===</tt></td>
+    <td>Es <i>igual</i> a (y del mismo tipo)</td>
+    <td><tt>j === 56</tt></td>
+  </tr>
+  <tr>
+    <td><tt>!==</tt></td>
+    <td><i>No es igual</i> a (y del mismo tipo)</td>
+    <td><tt>j !== '1'</tt></td>
+  </tr>
+</table>

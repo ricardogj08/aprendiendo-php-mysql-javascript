@@ -1,8 +1,8 @@
 <doc>
-  <title>Aprender PHP, MySQL y JavaScript</title>
+  <title>Aprendiendo PHP, MySQL y JavaScript</title>
   <!-- <titleimg>(filename) ...</titleimg> -->
   <!-- <url>...</url> -->
-  <version>5.0</version>
+  <version>6.0</version>
   <theme>theme.css</theme>
   <lang>es</lang>
   <rslt>Resultados de búsqueda</rslt>
@@ -20,64 +20,133 @@
   <copy>2021 Robin Nixon. Todos los derechos reservados.</copy>
 </doc>
 
-<cap>0. Prefacio</cap>
+<hello>
+  <include src/introduccion.xml>
+</hello>
 
-<cap>1. Introducción al contenido dinámico de la web</cap>
+<cap>Capítulo 0</cap>
+  <include src/00/introduccion.xml>
 
-<cap>2. Configuración de un servidor de desarrollo</cap>
+<cap>Capítulo 1</cap>
+  <include src/01/introduccion.xml>
 
-<cap>3. Introducción a PHP</cap>
+<cap>Capítulo 2</cap>
+  <include src/02/introduccion.xml>
 
-<cap>4. Expresiones y control de flujo en PHP</cap>
+<cap>Capítulo 3</cap>
+  <include src/03/introduccion.xml>
 
-<cap>5. Funciones y objetos en PHP</cap>
+<cap>Capítulo 4</cap>
+  <include src/04/introduccion.xml>
 
-<cap>6. Matrices en PHP</cap>
+<cap>Capítulo 5</cap>
+  <include src/05/introduccion.xml>
 
-<cap>7. PHP práctico</cap>
+<cap>Capítulo 6</cap>
+  <include src/06/introduccion.xml>
 
-<cap>8. Introducción a MySQL</cap>
+<cap>Capítulo 7</cap>
+  <include src/07/introduccion.xml>
 
-<cap>9. Dominio de MySQL</cap>
+<cap>Capítulo 8</cap>
+  <include src/08/introduccion.xml>
 
-<cap>10. Novedades en PHP 8 y MySQL 8</cap>
+<cap>Capítulo 9</cap>
+  <include src/09/introduccion.xml>
 
-<cap>11. Accediendo a MySQL mediante PHP</cap>
+<cap>Capítulo 10</cap>
+  <include src/10/introduccion.xml>
 
-<cap>12. Gestión de formularios</cap>
+<cap>Capítulo 11</cap>
+  <include src/11/introduccion.xml>
 
-<cap>13. Cookies, sesiones y autenticación</cap>
+<cap>Capítulo 12</cap>
+  <include src/12/introduccion.xml>
 
-<cap>14. Explorando JavaScript</cap>
+<cap>Capítulo 13</cap>
+  <include src/13/introduccion.xml>
 
-<cap>15. Expresiones y control de flujo en JavaScript</cap>
+<cap>Capítulo 14</cap>
+  <include src/14/introduccion.xml>
+  <include src/14/texto_javascript_html.xml>
+    <include src/14/scripts_cabecera_documento.xml>
+    <include src/14/navegadores_antiguos_no_estandar.xml>
+    <include src/14/incluyendo_archivos_javascript.xml>
+    <include src/14/depuracion_errores_javascript.xml>
+  <include src/14/utilizando_comentarios.xml>
+  <include src/14/signos_punto_coma.xml>
+  <include src/14/variables.xml>
+    <include src/14/variables_string.xml>
+    <include src/14/variables_numericas.xml>
+    <include src/14/arrays.xml>
+  <include src/14/operadores.xml>
+    <include src/14/operadores_aritmeticos.xml>
+    <include src/14/operadores_asignacion.xml>
+    <include src/14/operadores_comparacion.xml>
+    <include src/14/operadores_logicos.xml>
+    <include src/14/incrementando_decrementando_asignacion_abreviada.xml>
+    <include src/14/concatenacion_strings.xml>
+    <include src/14/caracteres_escape.xml>
+  <include src/14/tipado_variables.xml>
+  <include src/14/funciones.xml>
+  <include src/14/variables_globales.xml>
+  <include src/14/variables_locales.xml>
+    <include src/14/utilizando_let_const.xml>
+  <include src/14/document_object_model.xml>
+    <include src/14/otro_uso_simbolo_$.xml>
+    <include src/14/utilizando_dom.xml>
+  <include src/14/sobre_document_write.xml>
+    <include src/14/utilizando_console_log.xml>
+    <include src/14/utilizando_alert.xml>
+    <include src/14/escritura_elementos.xml>
+    <include src/14/utilizando_document_write.xml>
+  <include src/14/preguntas.xml>
 
-<cap>16. Funciones, objetos y matrices en JavaScript</cap>
+<cap>Capítulo 15</cap>
+  <include src/15/introduccion.xml>
 
-<cap>17. Validación y Manejo de Errores en JavaScript y PHP</cap>
+<cap>Capítulo 16</cap>
+  <include src/16/introduccion.xml>
 
-<cap>18. Utilizando comunicaciones asíncronas</cap>
+<cap>Capítulo 17</cap>
+  <include src/17/introduccion.xml>
 
-<cap>19. Introducción a CSS</cap>
+<cap>Capítulo 18</cap>
+  <include src/18/introduccion.xml>
 
-<cap>20. CSS avanzado con CSS</cap>
+<cap>Capítulo 19</cap>
+  <include src/19/introduccion.xml>
 
-<cap>21. Accediendo a CSS desde JavaScript</cap>
+<cap>Capítulo 20</cap>
+  <include src/20/introduccion.xml>
 
-<cap>22. Introducción a jQuery</cap>
+<cap>Capítulo 21</cap>
+  <include src/21/introduccion.xml>
 
-<cap>23. Introducción a jQuery Mobile</cap>
+<cap>Capítulo 22</cap>
+  <include src/22/introduccion.xml>
 
-<cap>24. Introducción a React</cap>
+<cap>Capítulo 23</cap>
+  <include src/23/introduccion.xml>
 
-<cap>25. Introducción a HTML5</cap>
+<cap>Capítulo 24</cap>
+  <include src/24/introduccion.xml>
 
-<cap>26. Canvas de HTML5</cap>
+<cap>Capítulo 25</cap>
+  <include src/25/introduccion.xml>
 
-<cap>27. Audio y vídeo en HTML5</cap>
+<cap>Capítulo 26</cap>
+  <include src/26/introduccion.xml>
 
-<cap>28. Otras características de HTML5</cap>
+<cap>Capítulo 27</cap>
+  <include src/27/introduccion.xml>
 
-<cap>29. Uniendo todo</cap>
+<cap>Capítulo 28</cap>
+  <include src/28/introduccion.xml>
 
-<cap>A. Soluciones a las preguntas de los capítulos</cap>
+<cap>Capítulo 29</cap>
+  <include src/29/introduccion.xml>
+
+<cap>Apéndice A</cap>
+  <include src/A/introduccion.xml>
+  <include src/A/respuestas_capitulo_14.xml>

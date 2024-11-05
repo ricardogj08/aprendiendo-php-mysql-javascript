@@ -1,0 +1,24 @@
+<h3 explorando_javascript_depuracion_errores_javascript>
+  Depuración de errores en JavaScript
+</h3>
+
+<p>Cuando estás aprendiendo JavaScript, es importante poder rastrear errores de escritura u otros errores de codificación. A diferencia de PHP, que muestra mensajes de error en el navegador, JavaScript maneja los mensajes de error de una manera que cambia de acuerdo con el navegador que se está utilizando. La Tabla 14-1 muestra cómo acceder a los mensajes de error de JavaScript en los navegadores más utilizados.</p>
+
+<p><i>Tabla 14-1. Acceso a los mensajes de error de JavaScript en diferentes navegadores</i></p>
+
+<table>
+  <tr>
+    <th>Navegador</th>
+    <th>Cómo acceder a los mensajes de error de JavaScript</th>
+  </tr>
+  <tr>
+    <td>Apple Safari</td>
+    <td>Abre Safari y elige <ui1>Safari</ui1> > <ui1>Preferencias</ui1> > <ui1>Avanzado</ui1>. Luego selecciona <ui1>Mostrar menú de desarrollo en la barra de menú</ui1>. Elige <ui1>Desarrollar</ui1> > <ui1>Mostrar Consola de Errores</ui1></td>
+  </tr>
+  <tr>
+    <td>Google Chrome, Microsoft Edge, Mozilla Firefox, & Opera</td>
+    <td>Presiona <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> en una PC o <kbd>Command</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> en una Mac.</td>
+  </tr>
+</table>
+
+<p>Por favor, consulte la documentación de los desarrolladores del navegador en sus sitios web para obtener todos los detalles sobre su uso.</p>

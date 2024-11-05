@@ -1,0 +1,11 @@
+<h2 explorando_javascript_operadores>
+  Operadores
+</h2>
+
+<p>Los operadores en JavaScript, al igual que en PHP, pueden incluir matemáticas, cambios en strings y operaciones de comparación y lógicas. (<tt>and</tt>, <tt>or</tt>, etc.). Los operadores matemáticos de JavaScript se parecen mucho a la aritmética básica; por ejemplo, la siguiente instrucción devuelve <tt>15</tt>:</p>
+
+<code>
+document.write(13 + 2)
+</code>
+
+<p>Las siguientes secciones te enseñan sobre los distintos operadores.</p>

@@ -1,0 +1,52 @@
+<h3 explorando_javascript_operadores_aritmeticos>
+  Operadores aritméticos
+</h3>
+
+<p>Los <i>operadores aritméticos</i> se utilizan para realizar operaciones matemáticas. Puedes usarlos para las cuatro operaciones principales (suma, resta, multiplicación y división), así como para encontrar el módulo de una división (el residuo después de una división) y para incrementar o decrementar un valor.
+(ver la Tabla 14-2).</p>
+
+<p><i>Tabla 14-2. Operadores aritméticos</i></p>
+
+<table>
+  <tr>
+    <th>Operador</th>
+    <th>Descripción</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td><tt>+</tt></td>
+    <td>Suma</td>
+    <td><tt>j + 12</tt></td>
+  </tr>
+  <tr>
+    <td><tt>-</tt></td>
+    <td>Resta</td>
+    <td><tt>j - 22</tt></td>
+  </tr>
+  <tr>
+    <td><tt>*</tt></td>
+    <td>Multiplicación</td>
+    <td><tt>j * 7</tt></td>
+  </tr>
+  <tr>
+    <td><tt>/</tt></td>
+    <td>División</td>
+    <td><tt>j / 3.13</tt></td>
+  </tr>
+  <tr>
+    <td><tt>%</tt></td>
+    <td>Módulo (resto de la división)</td>
+    <td><tt>j % 6</tt></td>
+  </tr>
+  <tr>
+    <td><tt>++</tt></td>
+    <td>Incremento</td>
+    <td><tt>++j</tt></td>
+  </tr>
+  <tr>
+    <td><tt>--</tt></td>
+    <td>Decremento</td>
+    <td><tt>--j</tt></td>
+  </tr>
+</table>
+

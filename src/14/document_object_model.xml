@@ -1,0 +1,74 @@
+<h2 explorando_javascript_document_object_model>
+  El Document Object Model
+</h2>
+
+<p>El diseño de JavaScript es muy inteligente. En lugar de simplemente crear otro lenguaje de scripting (lo que hubiera sido una mejora bastante buena en ese momento), había una visión de construirlo alrededor del ya existente Document Object Model de HTML. Este modelo descompone las partes de un documento HTML en <i>objetos</i> discretos, cada uno con sus respectivas <i>propiedades</i> y <i>métodos</i>, y cada uno sujeto al control de JavaScript.</p>
+
+<p>JavaScript separa objetos, propiedades y métodos utilizando un punto (una buena razón por la cual <tt>+</tt> es el operador de concatenación de strings en JavaScript, en lugar del punto). Por ejemplo, consideremos una tarjeta de presentación como un objeto al que llamaremos <tt>card</tt>. Este objeto contiene propiedades como su nombre, dirección, número de teléfono, y así sucesivamente. En la sintaxis de JavaScript, estas propiedades se verían así:</p>
+
+<pre>
+card.name
+card.phone
+card.address
+</pre>
+
+<p>Sus métodos son funciones que recuperan, modifican y actúan de otras maneras sobre las propiedades. Por ejemplo, para invocar un método que muestre las propiedades del objeto <tt>card</tt>, podrías utilizar una sintaxis como esta:</p>
+
+<code>
+card.display()
+</code>
+
+<p>Echa un vistazo a algunos de los ejemplos anteriores en este capítulo y observa dónde se utiliza la instrucción <tt>document.write</tt>. Ahora que entiendes cómo JavaScript se basa en objetos, verás que <tt>write</tt> es en realidad un método del objeto <tt>document</tt>.</p>
+
+<p>Dentro de JavaScript, existe una jerarquía de objetos padre e hijo, que es lo que se conoce como el Document Object Model. (DOM; ver Figura 14-3).</p>
+
+<imgc ../imgs/figura_14-3.png>
+<fig>Figura 14-3. Ejemplo de jerarquía de objetos del DOM</fig>
+
+<p>La figura utiliza etiquetas HTML con las que ya estás familiarizado para ilustrar la relación padre/hijo entre los distintos objetos de un documento. Por ejemplo, una URL dentro de un enlace es parte del cuerpo de un documento HTML. En JavaScript, se hace referencia a ello así:</p>
+
+<code>
+url = document.links.linkname.href
+</code>
+
+<p>Observa cómo esto sigue la columna central hacia abajo. La primera parte, <tt>document</tt>, se refiere a las etiquetas <tt><html></tt> y <tt><body></tt>; <tt>links.linkname</tt> se refiere a la etiqueta <tt><a></tt>, y <tt>href</tt> al atributo <tt>href</tt>.</p>
+
+<p>Vamos a convertir la expresión en HTML y un script para leer las propiedades de un enlace. Escribe el Ejemplo 14-7 y guárdalo como <i>linktest.html</i>; luego ábrelo en tu navegador.</p>
+
+<p><i>Ejemplo 14-7. Leer una URL de un enlace con JavaScript</i></p>
+
+<code>
+<html>
+  <head>
+    <title>Link Test</title>
+  </head>
+  <body>
+    <a id="mylink" href="http://mysite.com">Click me</a><br>
+    <script>
+      url = document.links.mylink.href
+      document.write('The URL is ' + url)
+    </script>
+  </body>
+</html>
+</code>
+
+<p>Observa la forma corta de las etiquetas <tt><script></tt>, donde he omitido el parámetro <tt>type="text/JavaScript"</tt> para ahorrarte un poco de escritura. Si lo deseas, solo con el fin de probar esto (y otros ejemplos), también podrías omitir todo lo que esté fuera de las etiquetas <tt><script></tt> y <tt></script></tt>. El resultado de este ejemplo es el siguiente:</p>
+
+<pre>
+<hl>Click me</hl>
+The URL is http://mysite.com
+</pre>
+
+<p>La segunda línea de la salida proviene del método <tt>document.write</tt>. Observa cómo el código sigue el árbol del documento desde <tt>document</tt> hasta <tt>links</tt>, luego a <tt>mylink</tt> (el <tt>id</tt> dado al enlace) y finalmente a <tt>href</tt> (el valor de destino de la URL).</p>
+
+<p>También hay una forma corta que funciona igual de bien, que comienza con el valor en el atributo <tt>id</tt>: <tt>mylink.href</tt>. Entonces, puedes reemplazar esto:</p>
+
+<code>
+url = document.links.mylink.href
+</code>
+
+<p>con lo siguiente:</p>
+
+<code>
+url = mylink.href
+</code>

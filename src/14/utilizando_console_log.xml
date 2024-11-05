@@ -1,0 +1,5 @@
+<h3 explorando_javascript_utilizando_console_log>
+  utilizando console.log
+</h3>
+
+<p>La función <tt>console.log</tt> mostrará en la consola del navegador actual el resultado de cualquier valor o expresión que se le pase. Se trata de un modo especial de presentación, con un marco o ventana separada de la ventana del navegador, en la cual se pueden mostrar errores y otros mensajes. Aunque es genial para programadores experimentados, no es la mejor opción para principiantes porque la salida no se parece al contenido web en el navegador.</p>

@@ -1,0 +1,21 @@
+<h3 explorando_javascript_incluyendo_archivos_javascript>
+  Incluyendo archivos JavaScript
+</h3>
+
+<p>Además de escribir código JavaScript directamente en documentos HTML, puedes incluir archivos de código JavaScript desde tu sitio web o desde cualquier lugar de internet. La sintaxis para esto es la siguiente:</p>
+
+<code>
+<script type="text/javascript" src="script.js"></script>
+</code>
+
+<p>O, para cargar un archivo desde internet, usa esto (aquí sin el <tt>type="text/javascript"</tt> ya que es opcional):</p>
+
+<code>
+<script src="http://someserver.com/script.js"></script>
+</code>
+
+<p>En cuanto a los archivos de script en sí, <i>no deben incluir</i> ninguna etiqueta <tt><script></tt> o <tt></script></tt>, porque son innecesarias: el navegador ya sabe que se está cargando un archivo JavaScript. Ponerlos en los archivos JavaScript causará un error.</p>
+
+<p>Incluir archivos de script es la forma preferida para que uses archivos JavaScript de terceros en tu sitio web.</p>
+
+<note>Es posible omitir el parámetro <tt>type="text/javascript"</tt>; todos los navegadores modernos asumen por defecto que el script contiene JavaScript.</note>

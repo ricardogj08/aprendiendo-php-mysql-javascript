@@ -1,0 +1,12 @@
+<h3 explorando_javascript_variables_numericas>
+  Variables numéricas
+</h3>
+
+<p>Crear una variable numérica es tan simple como asignarle un valor, como estos ejemplos:</p>
+
+<code>
+count       = 42
+temperature = 98.4
+</code>
+
+<p>Al igual que los strings, las variables numéricas pueden leerse y usarse en expresiones y funciones.</p>

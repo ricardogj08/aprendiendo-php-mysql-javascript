@@ -1,0 +1,49 @@
+<h2 explorando_javascript_texto_javascript_html>
+  Texto JavaScript y HTML
+</h2>
+
+<p>JavaScript es un lenguaje de scripting del lado del cliente que se ejecuta completamente dentro del navegador web o bajo <i>Node.js</i>. Para llamarlo, se coloca entre las etiquetas HTML de apertura <tt><script></tt> y cierre <tt></script></tt>. Un documento típico de "Hello World" utilizando JavaScript puede parecerse al Ejemplo 14-1.</p>
+
+<p><i>Ejemplo 14-1. Visualización de "Hello World" con JavaScript</i></p>
+
+<code>
+<html>
+  <head>
+    <title>Hello World</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      document.write("Hello World")
+    </script>
+    <noscript>
+      Your browser doesn't support or has disabled JavaScript
+    </noscript>
+  </body>
+</html>
+</code>
+
+<note>Es posible que hayas visto páginas web que utilizan la etiqueta HTML <tt><script language="javascript"></tt>, pero ahora esa manera está obsoleta. Este ejemplo utiliza el más reciente y preferido <tt><script type="text/javascript"></tt>, o puedes simplemente utilizar <tt><script></tt> por tu cuenta si lo prefieres.</note>
+
+<p>Dentro de las etiquetas <tt><script></tt> hay una sola línea de código JavaScript que utiliza su equivalente a los comandos <tt>echo</tt> o <tt>print</tt> de PHP, es <tt>document.write</tt>. Como era de esperar, simplemente envía el string proporcionado al documento actual, donde se muestra.</p>
+
+<p>También puede que haya notado que, a diferencia de PHP, no hay punto y coma al final. (<tt>;</tt>). Esto se debe a que un salto de línea cumple la misma función que un punto y coma en JavaScript. Sin embargo, si deseas tener más de una instrucción en una sola línea, debes colocar un punto y coma después de cada comando, excepto el último. Por supuesto, si lo deseas, puedes añadir un punto y coma al final de cada instrucción, y tu JavaScript funcionará bien. Mi preferencia personal es omitir el punto y coma porque es innecesario, y por lo tanto también evito prácticas que podrían causar problemas. Al final del día, sin embargo, la elección puede depender del equipo en el que trabajes, que más a menudo no puede requerir puntos y coma, solo para estar seguros. Entonces, si tienes dudas, simplemente añade los puntos y comas.</p>
+
+<p>Lo otro a tener en cuenta en este ejemplo es el par de etiquetas <tt><noscript></tt> y <tt></noscript></tt>. Estos se utilizan cuando deseas ofrecer HTML alternativo a los usuarios cuyos navegadores no soportan JavaScript o lo tienen desactivado. El uso de estas etiquetas depende de ti, ya que no son obligatorias, pero realmente deberías usarlas porque generalmente no es tan difícil proporcionar alternativas HTML estáticas a las operaciones que ofreces utilizando JavaScript. Sin embargo, los ejemplos restantes en este libro omitirán las etiquetas <tt><noscript></tt>, porque nos estamos enfocando en lo que puedes hacer con JavaScript, no en lo que puedes hacer sin él.</p>
+
+<p>Cuando se carga el Ejemplo 14-1, un navegador web con JavaScript habilitado mostrará lo siguiente (ver Figura 14-1):</p>
+
+<pre>
+Hello World
+</pre>
+
+<imgc ../imgs/figura_14-1.png>
+<fig>Figura 14-1. JavaScript, habilitado y funcionando</fig>
+
+<p>Un navegador con JavaScript desactivado mostrará este mensaje (ver Figura 14-2):</p>
+
+<pre>
+Your browser doesn't support or has disabled JavaScript
+</pre>
+
+<imgc ../imgs/figura_14-2.png>
+<fig>Figura 14-2. JavaScript, desactivado</fig>

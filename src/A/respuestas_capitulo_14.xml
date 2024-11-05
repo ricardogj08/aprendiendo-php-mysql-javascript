@@ -1,0 +1,33 @@
+<h2 soluciones_preguntas_capitulos_respuestas_capitulo_14>
+  Respuestas del capítulo 14
+</h2>
+
+<ol>
+  <li>Para incluir código JavaScript, utilizas las etiquetas <tt><script></tt> y <tt></script></tt>.</li>
+  <li>Por defecto, el código JavaScript se mostrará en la parte del documento en la que reside. Si está en el encabezado, se mostrará en el <tt>head</tt>; si está en el cuerpo del documento, se mostrará en el <tt>body</tt>.</li>
+  <li>Puedes incluir código JavaScript de otros archivos en tus documentos ya sea copiándolo y pegándolo o, lo más habitual, incluyéndolo como parte de una etiqueta <tt><script src='filename.js'></tt>.</li>
+  <li>El equivalente de los comandos <tt>echo</tt> y <tt>print</tt> utilizados en PHP, es la función <tt>document.write</tt> de JavaScript (o método).</li>
+  <li>Para crear un comentario en JavaScript, comienza con <tt>//</tt> para un comentario de una sola línea o incluirlo entre <tt>/*</tt> y <tt>*/</tt> para un comentario de varias líneas.</li>
+  <li>El operador de concatenación de strings en JavaScript es el símbolo <tt>+</tt>.</li>
+  <li>Dentro de una función de JavaScript, puedes definir una variable que tenga un alcance local iniciandola con la palabra clave <tt>var</tt> , <tt>let</tt> o <tt>const</tt> en la primera asignación.</li>
+  <li>
+    Para mostrar la URL asignada al enlace con un <tt>id</tt> de <tt>thislink</tt> en los navegadores más importantes, puedes usar cualquiera de los dos siguientes comandos:
+<code>
+document.write(document.getElementById('thislink').href)
+document.write(thislink.href)
+</code>
+  </li>
+  <li>
+    Los comandos para cambiar a la página anterior en el historial del navegador son:
+<code>
+history.back()
+history.go(-1)
+</code>
+  </li>
+  <li>
+    Para reemplazar el documento actual con la página principal del sitio web de O'Reilly (<a https://www.oreilly.com>https://www.oreilly.com</a>), podrías utilizar el siguiente comando:
+<code>
+document.location.href = 'http://www.oreilly.com'
+</code>
+  </li>
+</ol>

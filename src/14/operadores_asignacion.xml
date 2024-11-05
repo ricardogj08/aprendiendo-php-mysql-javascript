@@ -1,0 +1,62 @@
+<h3 explorando_javascript_operadores_asignacion>
+  Operadores de asignación
+</h3>
+
+<p>Los <i>operadores de asignación</i> se utilizan para asignar valores a las variables. Empiezan con el muy simple <tt>=</tt> y continúan con <tt>+=</tt>, <tt>–=</tt>, y así sucesivamente. El operador <tt>+=</tt> añade el valor del lado derecho a la variable del lado izquierdo, en lugar de reemplazar totalmente el valor del lado izquierdo. Así, si <tt>count</tt> comienza con el valor de <tt>6</tt>, la declaración:</p>
+
+<code>
+count += 1
+</code>
+
+<p>establece <tt>count</tt> en <tt>7</tt>, al igual que la declaración de asignación más familiar:</p>
+
+<code>
+count = count + 1
+</code>
+
+<p>La Tabla 14-3 enumera los distintos operadores de asignación disponibles.</p>
+
+<p><i>Tabla 14-3. Operadores de asignación</i></p>
+
+<table>
+  <tr>
+    <th>Operador</th>
+    <th>Ejemplo</th>
+    <th>Equivalente a</th>
+  </tr>
+  <tr>
+    <td><tt>=</tt></td>
+    <td><tt>j = 99</tt></td>
+    <td><tt>j = 99</tt></td>
+  </tr>
+  <tr>
+    <td><tt>+=</tt></td>
+    <td><tt>j += 2</tt></td>
+    <td><tt>j = j + 2</tt></td>
+  </tr>
+  <tr>
+    <td><tt>+=</tt></td>
+    <td><tt>j += 'string'</tt></td>
+    <td><tt>j = j + 'string'</tt></td>
+  </tr>
+  <tr>
+    <td><tt>–=</tt></td>
+    <td><tt>j –= 12</tt></td>
+    <td><tt>j = j – 12</tt></td>
+  </tr>
+  <tr>
+    <td><tt>*=</tt></td>
+    <td><tt>j *= 2</tt></td>
+    <td><tt>j = j * 2</tt></td>
+  </tr>
+  <tr>
+    <td><tt>/=</tt></td>
+    <td><tt>j /= 6</tt></td>
+    <td><tt>j = j / 6</tt></td>
+  </tr>
+  <tr>
+    <td><tt>%=</tt></td>
+    <td><tt>j %= 7</tt></td>
+    <td><tt>j = j % 7</tt></td>
+  </tr>
+</table>

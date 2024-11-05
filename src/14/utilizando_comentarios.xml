@@ -1,0 +1,20 @@
+<h2 explorando_javascript_utilizando_comentarios>
+  Utilizando comentarios
+</h2>
+
+<p>Debido a su herencia compartida del lenguaje de programación C, PHP y JavaScript tienen muchas similitudes, una de las cuales es la forma de comentar. Primero, hay el comentario de una sola línea, como este:</p>
+
+<code>
+// This is a comment
+</code>
+
+<p>Este estilo utiliza un par de caracteres de barra diagonal (<tt>//</tt>) para informar a JavaScript que todo lo que sigue debe ser ignorado. También tienes comentarios multilínea, como este:</p>
+
+<code>
+/* This is a section
+   of multiline comments
+   that will not be
+   interpreted */
+</code>
+
+<p>Empiezas un comentario de varias líneas con la secuencia <tt>/*</tt> y lo terminas con <tt>*/</tt>. Solo recuerda que no puedes anidar comentarios multilínea, así que asegúrate de no comentar grandes secciones de código que ya contengan comentarios multilínea.</p>

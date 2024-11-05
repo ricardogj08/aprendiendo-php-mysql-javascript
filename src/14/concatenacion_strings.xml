@@ -1,0 +1,22 @@
+<h3 explorando_javascript_concatenacion_strings>
+  Concatenación de strings
+</h3>
+
+<p>JavaScript maneja la concatenación de strings de manera ligeramente diferente a PHP. En lugar del operador <tt>.</tt> (punto), utiliza el signo más (<tt>+</tt>), así:</p>
+
+<code>
+document.write("You have " + messages + " messages.")
+</code>
+
+<p>Suponiendo que la variable <tt>messages</tt> está establecida con el valor de <tt>3</tt>, la salida de esta línea de código será la siguiente:</p>
+
+<pre>
+You have 3 messages.
+</pre>
+
+<p>Así como puedes agregar un valor a una variable numérica con el operador <tt>+=</tt>, también puedes concatenar un string a otra de la misma manera:</p>
+
+<code>
+name = "James"
+name += " Dean"
+</code>

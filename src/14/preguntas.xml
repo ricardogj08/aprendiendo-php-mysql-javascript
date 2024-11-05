@@ -1,0 +1,18 @@
+<h2 explorando_javascript_preguntas>
+  Preguntas
+</h2>
+
+<ol>
+  <li>¿Qué etiquetas utilizas para incluir código JavaScript?</li>
+  <li>Por defecto, ¿a qué parte de un documento se enviará la salida del código JavaScript?</li>
+  <li>¿Cómo puedes incluir código JavaScript desde otra fuente en tus documentos?</li>
+  <li>¿Qué función de JavaScript es equivalente a <tt>echo</tt> o <tt>print</tt> de PHP?</li>
+  <li>¿Cómo puedes crear un comentario en JavaScript?</li>
+  <li>¿Cuál es el operador de concatenación de strings en JavaScript?</li>
+  <li>¿Qué palabra clave puedes utilizar dentro de una función en JavaScript para definir una variable que tenga un alcance local?</li>
+  <li>Proporciona dos métodos compatibles con múltiples navegadores para mostrar la URL asignada al enlace con un <tt>id</tt> de <tt>thislink</tt>.</li>
+  <li>¿Qué dos comandos de JavaScript harán que el navegador cargue la página anterior en su array de historial?</li>
+  <li>¿Qué comando de JavaScript usarías para reemplazar el documento actual con la página principal del sitio web <i>oreilly.com</i>?</li>
+</ol>
+
+<p>Ver <a #soluciones_preguntas_capitulos_respuestas_capitulo_14>"Respuestas del capítulo 14"</a> del <a #soluciones_preguntas_capitulos>Apéndice A</a> para comprobar las respuestas a estas preguntas.</p>

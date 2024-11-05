@@ -1,0 +1,18 @@
+<h2 explorando_javascript_funciones>
+  Funciones
+</h2>
+
+<p>Al igual que con PHP, las funciones en JavaScript se utilizan para separar secciones de código que realizan una tarea específica. Para crear una función, se declara de la manera que se muestra en el Ejemplo 14-4.</p>
+
+<p><i>Ejemplo 14-4. Una declaración simple de una función</i></p>
+
+<code>
+<script>
+  function product(a, b)
+  {
+    return a*b
+  }
+</script>
+</code>
+
+<p>Esta función toma los dos parámetros pasados, los multiplica y devuelve el resultado.</p>

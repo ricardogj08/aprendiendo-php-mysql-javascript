@@ -1,0 +1,13 @@
+<h3 explorando_javascript_utilizando_document_write>
+  Utilizando document.write
+</h3>
+
+<p>La función <tt>document.write</tt> escribe un valor o expresión en la ubicación actual del navegador y, por lo tanto, es la opción perfecta para mostrar resultados rápidamente. Mantiene todos los ejemplos breves y concisos, colocando la salida justo allí en el navegador junto al contenido web y el código.</p>
+
+<p>Sin embargo, es posible que hayas escuchado que esta función es considerada insegura por algunos desarrolladores, porque cuando la llamas después de que una página web se ha cargado completamente, sobrescribirá el documento actual. Aunque esto es correcto, no se aplica a ninguno de los ejemplos de este libro, porque todos ellos utilizan <tt>document.write</tt> de la manera en que originalmente se pretendía: como parte del proceso de creación de la página, llamándolo solo antes de que la página haya terminado de cargarse y mostrarse.</p>
+
+<p>No obstante, aunque uso <tt>document.write</tt> de esta manera para ejemplos simples, nunca lo utilizo en código de producción (excepto en las circunstancias más raras en las que realmente es necesario). En su lugar, casi siempre utilizo la opción anterior de escribir directamente en un elemento especialmente preparado, como en los ejemplos más complejos a partir del <a #utilizando_comunicaciones_asincronas>Capítulo 18</a>. (que acceden a la propiedad <tt>innerHTML</tt> de los elementos para presentar la salida del programa).</p>
+
+<p>Así que, por favor, recuerda que cuando veas que se llama a <tt>document.write</tt> en este libro, está ahí solo para simplificar un ejemplo, y les recomiendo que también usen la función de la misma manera para obtener resultados rápidos de prueba.</p>
+
+<p>Con la advertencia explicada, en el siguiente capítulo continuaremos nuestra exploración con JavaScript analizando cómo controlar el flujo del programa y escribir expresiones.</p>

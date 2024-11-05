@@ -1,0 +1,5 @@
+<h3 explorando_javascript_escritura_elementos>
+  Escritura en elementos
+</h3>
+
+<p>Es posible escribir directamente en el texto de un elemento HTML, lo cual es una solución bastante elegante (y la mejor para sitios web en producción), excepto que para este libro cada ejemplo requeriría que se creara dicho elemento y algunas líneas de código JavaScript para acceder a él. Esto interfiere con la enseñanza principal de un ejemplo y haría que el código pareciera excesivamente engorroso y confuso.</p>

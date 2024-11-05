@@ -1,0 +1,59 @@
+<h2 explorando_javascript_tipado_variables>
+  Tipado de variables
+</h2>
+
+<p>Al igual que PHP, JavaScript es un lenguaje muy débilmente tipado; el <i>tipo de dato</i> de una variable se determina solo cuando se le asigna un valor y puede cambiar a medida que la variable aparece en diferentes contextos. Por lo general, no tienes que preocuparte por el tipo de dato de las variables; JavaScript averigua lo que quieres y simplemente lo hace.</p>
+
+<p>Echa un vistazo al Ejemplo 14-3, en el cual:</p>
+
+<ol>
+  <li>A la variable <tt>n</tt> se le asigna el valor del string <tt>'838102050'</tt>. La siguiente línea imprime su valor, y se utiliza el operador <tt>typeof</tt> para consultar el tipo de dato de la variable.</li>
+  <li><tt>n</tt> se le asigna el valor devuelto cuando se multiplican los números <tt>12345</tt> y <tt>67890</tt>. Este valor también es <tt>838102050</tt>, pero es un número, no un string. El tipo de dato de la variable se busca y se muestra.</li>
+  <li>Se añade algún texto al número <tt>n</tt> y se muestra el resultado.</li>
+</ol>
+
+<p><i>Ejemplo 14-3. Establece el tipo de dato de una variable por asignación</i></p>
+
+<code>
+<script>
+  n = '838102050'        // Set 'n' to a string
+  document.write('n = ' + n + ', and is a ' + typeof n + '<br>')
+
+  n = 12345 * 67890;     // Set 'n' to a number
+  document.write('n = ' + n + ', and is a ' + typeof n + '<br>')
+
+  n += ' plus some text' // Change 'n' from a number to a string
+  document.write('n = ' + n + ', and is a ' + typeof n + '<br>')
+</script>
+</code>
+
+<p>La salida de este script se ve así:</p>
+
+<pre>
+n = 838102050, and is a string
+n = 838102050, and is a number
+n = 838102050 plus some text, and is a string
+</pre>
+
+<p>Si alguna vez hay alguna duda sobre el tipo de dato de una variable, o necesitas asegurarte de que una variable tenga un tipo de dato en particular, puedes forzarla a ese tipo de dato utilizando declaraciones como las siguientes (que convierten respectivamente un string a un número y un número a un string):</p>
+
+<code>
+n = "123"
+n *= 1  // Convert 'n' into a number
+
+n = 123
+n += "" // Convert 'n' into a string
+</code>
+
+<p>O puedes usar las siguientes funciones de la misma manera:</p>
+
+<code>
+n = "123"
+n = parseInt(n)   // Convert 'n' into an integer number
+n = parseFloat(n) // Convert 'n' into a floating point number
+
+n = 123
+n = n.toString()  // Convert 'n' into a string
+</code>
+
+<p>Puedes leer más sobre la conversión de tipos de datos en JavaScript en línea (<a https://es.javascript.info/type-conversions>https://es.javascript.info/type-conversions</a>). Y siempre puedes consultar el tipo de dato de una variable usando el operador <tt>typeof</tt>.</p>
