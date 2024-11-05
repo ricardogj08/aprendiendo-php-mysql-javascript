@@ -1,3 +1,7 @@
 #!/bin/sh
 
-gendoc docs/index.html libro.xml
+while :; do
+  echo 'Build...'
+  gendoc docs/index.html libro.xml
+  sleep 3
+done
