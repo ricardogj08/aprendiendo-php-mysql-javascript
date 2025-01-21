@@ -8,4 +8,6 @@ Adaptación web y traducción al español del libro "Learning PHP, MySQL & JavaS
 
 ## Compilación
 
-    ./make
+```
+./make
+```

@@ -17,7 +17,7 @@ numlinks = document.links.length
 <p>Puedes extraer y mostrar todos los enlaces en un documento de esta manera:</p>
 
 <code>
-for (j=0; j < document.links.length; ++j)
+for (j = 0; j < document.links.length; ++j)
   document.write(document.links[j].href + '<br>')
 </code>
 
@@ -46,4 +46,4 @@ history.forward()
 document.location.href = 'http://google.com'
 </code>
 
-<p>Por supuesto, hay mucho más cosas en el DOM que leer y modificar enlaces. A medida que avances a través de los siguientes capítulos sobre JavaScript, te familiarizarás bastante con el DOM y cómo acceder a él.</p>
+<p>Por supuesto, hay mucho más cosas en el DOM que leer y modificar enlaces. A medida que avances a través de los siguientes capítulos sobre JavaScript, te familiarizarás bastante con el DOM y en la manera de cómo acceder a él.</p>

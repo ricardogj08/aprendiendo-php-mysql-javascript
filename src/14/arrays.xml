@@ -42,4 +42,4 @@ document.write(face[1][2])
 
 <p>Esta declaración mostrará la letra <tt>O</tt> para <i>orange</i> (naranja).</p>
 
-<note>Los arrays en JavaScript son estructuras de almacenamiento poderosas, por lo que el <a #funciones_objetos_arrays_javascript>Capítulo 16</a> se tratan con mucho más detalle.</note>
+<note>Los arrays en JavaScript son estructuras de almacenamiento poderosas, por lo que en el <a #funciones_objetos_arrays_javascript>Capítulo 16</a> se tratan con mucho más detalle.</note>

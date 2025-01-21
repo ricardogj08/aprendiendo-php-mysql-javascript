@@ -2,7 +2,7 @@
   Depuración de errores en JavaScript
 </h3>
 
-<p>Cuando estás aprendiendo JavaScript, es importante poder rastrear errores de escritura u otros errores de codificación. A diferencia de PHP, que muestra mensajes de error en el navegador, JavaScript maneja los mensajes de error de una manera que cambia de acuerdo con el navegador que se está utilizando. La Tabla 14-1 muestra cómo acceder a los mensajes de error de JavaScript en los navegadores más utilizados.</p>
+<p>Cuando estás aprendiendo JavaScript, es importante poder rastrear errores de escritura u otros errores de codificación. A diferencia de PHP, que muestra mensajes de error en el navegador, JavaScript maneja los mensajes de error de una manera que cambia de acuerdo con el navegador que se esté utilizando. La Tabla 14-1 muestra cómo acceder a los mensajes de error de JavaScript en los navegadores más utilizados.</p>
 
 <p><i>Tabla 14-1. Acceso a los mensajes de error de JavaScript en diferentes navegadores</i></p>
 
