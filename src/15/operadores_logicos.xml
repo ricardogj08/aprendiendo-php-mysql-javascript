@@ -1,0 +1,105 @@
+<h3 expresiones_control_flujo_javascript_operadores_logicos>
+  Operadores lógicos
+</h3>
+
+<p>Los operadores lógicos producen resultados verdaderos o falsos y también se conocen como <i>operadores booleanos</i>. Hay tres de ellos en JavaScript (ver la Tabla 15-4).</p>
+
+<p><i>Tabla 15-4. Operadores lógicos de JavaScript</i></p>
+
+<table>
+  <tr>
+    <th>Operador lógico</th>
+    <th>Descripción</th>
+  </tr>
+  <tr>
+    <td><tt>&&</tt> <i>(and)</i></td>
+    <td><tt>true</tt> si ambos operandos son <tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>||</tt> <i>(or)</i></td>
+    <td><tt>true</tt> si cualquiera de los dos operandos es <tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>!</tt> <i>(not)</i></td>
+    <td><tt>true</tt> si el operando es <tt>false</tt>, o <tt>false</tt> si el operando es <tt>true</tt></td>
+  </tr>
+</table>
+
+<p>Puedes ver cómo se pueden utilizar en el Ejemplo 15-7, que produce <tt>0</tt>, <tt>1</tt> y <tt>true</tt>.</p>
+
+<p><i>Ejemplo 15-7. Los operadores lógicos en uso</i></p>
+
+<code>
+<script>
+  a = 1; b = 0
+  document.write((a && b) + "<br>")
+  document.write((a || b) + "<br>")
+  document.write((  !b )  + "<br>")
+</script>
+</code>
+
+<p>La sentencia <tt>&&</tt> requiere que ambos operandos sean <tt>true</tt> para devolver un valor <tt>true</tt>, la sentencia <tt>||</tt> será <tt>true</tt> si cualquiera de los valores es <tt>true</tt>, y la tercera sentencia realiza un <tt>NOT</tt> en el valor de <tt>b</tt>, convirtiéndolo de <tt>0</tt> a un valor <tt>true</tt>.</p>
+
+<p>El operador <tt>||</tt> puede causar problemas involuntarios, porque el segundo operando no se evaluará si el primero se evalúa como <tt>true</tt>. En el Ejemplo 15-8, la función <tt>getnext</tt> nunca se llamará si <tt>finished</tt> tiene un valor de <tt>1</tt> (estos son puramente ejemplos, y la acción de <tt>getnext</tt> es irrelevante para esta explicación, solo piénselo como una función que hace <i>algo</i> cuando se llama).</p>
+
+<p><i>Ejemplo 15-8. Una sentencia utilizando el operador <tt>||</tt></i></p>
+
+<code>
+<script>
+  if (finished == 1 || getnext() == 1) done = 1
+</script>
+</code>
+
+<p>Si <i>necesitas</i> que <tt>getnext</tt> se llame en cada sentencia <tt>if</tt>, debes reescribir el código como se muestra en el Ejemplo 15-9.</p>
+
+<p><i>Ejemplo 15-9. La sentencia <tt>if</tt>...<tt>or</tt> modificada para asegurar la llamada a <tt>getnext</tt></i></p>
+
+<code>
+<script>
+  gn = getnext()
+  if (finished == 1 || gn == 1) done = 1;
+</script>
+</code>
+
+<p>En este caso, el código en la función <tt>getnext</tt> se ejecutará y su valor de retorno se almacenará en <tt>gn</tt> antes de la sentencia <tt>if</tt>.</p>
+
+<p>La Tabla 15-5 muestra todas las posibles variaciones del uso de los operadores lógicos. También debes tener en cuenta que <tt>!true</tt> es igual a <tt>false</tt> y <tt>!false</tt> es igual a <tt>true</tt>.</p>
+
+<p><i>Tabla 15-5. Todas las posibles expresiones lógicas</i></p>
+
+<table>
+  <tr>
+    <th colspan="2">Entrada</th>
+    <th colspan="2">Operadores y resultados</th>
+  </tr>
+  <tr>
+    <th>a</th>
+    <th>b</th>
+    <th>&&</th>
+    <th>||</th>
+  </tr>
+  <tr>
+    <td><tt>true</tt></td>
+    <td><tt>true</tt></td>
+    <td><tt>true</tt></td>
+    <td><tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>true</tt></td>
+    <td><tt>false</tt></td>
+    <td><tt>false</tt></td>
+    <td><tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>false</tt></td>
+    <td><tt>true</tt></td>
+    <td><tt>false</tt></td>
+    <td><tt>true</tt></td>
+  </tr>
+  <tr>
+    <td><tt>false</tt></td>
+    <td><tt>false</tt></td>
+    <td><tt>false</tt></td>
+    <td><tt>false</tt></td>
+  </tr>
+</table>

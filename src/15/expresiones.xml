@@ -30,7 +30,7 @@ d: true
 
 <p>En JavaScript, cuando estás comprobando si un valor es <tt>true</tt> o <tt>false</tt>, todos los valores se evalúan como <tt>true</tt> excepto los siguientes, que se evalúan como <tt>false</tt>: el string <tt>false</tt> en sí misma, <tt>0</tt>, <tt>-0</tt>, la cadena vacía, <tt>null</tt>, <tt>undefined</tt> y <tt>NaN</tt> (Not a Number, un concepto de ingeniería informática para el resultado de una operación ilegal de punto flotante como la división entre cero).</p>
 
-<p>Como puedes ver, me estoy refiriendo a <tt>true</tt> y <tt>false</tt> en minúsculas. Esto se debe a que, a diferencia de PHP, estos valores <i>deben estar</i> en minúsculas en JavaScript. Por lo tanto, solo se mostrará la primera de las dos siguientes declaraciones, imprimiendo la palabra en minúsculas <tt>true</tt>, porque la segunda causará un error de '<tt>TRUE</tt>' no está definido:</p>
+<p>Como puedes ver, me estoy refiriendo a <tt>true</tt> y <tt>false</tt> en minúsculas. Esto se debe a que, a diferencia de PHP, estos valores <i>deben estar</i> en minúsculas en JavaScript. Por lo tanto, solo se mostrará la primera de las dos siguientes sentencias, imprimiendo la palabra en minúsculas <tt>true</tt>, porque la segunda causará un error de '<tt>TRUE</tt>' no está definido:</p>
 
 <code>
 if (1 == true) document.write('true') // True

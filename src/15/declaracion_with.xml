@@ -1,0 +1,32 @@
+<h2 expresiones_control_flujo_javascript_declaracion_with>
+  Declaración with
+</h2>
+
+<p>La declaración <tt>with</tt> no la has visto en los capítulos anteriores sobre PHP, porque es exclusiva de JavaScript, y también es una que, aunque necesitas conocerla, no deberías utilizarla. Con él (si me entiendes), puedes simplificar algunos tipos de declaraciones de JavaScript reduciendo muchas referencias a un objeto a una solo referencia. Se asume que las referencias a las propiedades y métodos dentro del bloque <tt>with</tt> se aplican a ese objeto.</p>
+
+<p>Por ejemplo, considerando el código del Ejemplo 15-10, en el cual la función <tt>document.write</tt> nunca hace referencia a la variable <tt>string</tt> por su nombre.</p>
+
+<p><i>Ejemplo 15-10. Utilizando la declaración with</i></p>
+
+<code>
+<script>
+  string = "The quick brown fox jumps over the lazy dog"
+
+  with (string)
+  {
+    document.write("The string is " + length + " characters<br>")
+    document.write("In upper case it's: " + toUpperCase())
+  }
+</script>
+</code>
+
+<p>Aunque <tt>string</tt> nunca es referenciada directamente mediante <tt>document.write</tt>, este código consigue mostrar lo siguiente:</p>
+
+<pre>
+The string is 43 characters
+In upper case it's: THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG
+</pre>
+
+<p>Así es como funciona el código: el intérprete de JavaScript reconoce que la propiedad <tt>length</tt> y el método <tt>toUpperCase</tt> deben aplicarse en algún objeto. Como son independientes, el intérprete asume que se aplican al objeto <tt>string</tt> especificado en la declaración <tt>with</tt>.</p>
+
+<note>Utilizar <tt>with</tt> ya no se recomienda y ahora está prohibido en el modo estricto de ECMAScript 5. La alternativa recomendada es asignar a una variable temporal el objeto cuyas propiedades deseas acceder. Asegúrate de tener esto en cuenta para poder actualizarlo (si es necesario) cuando lo veas en el código de otras personas, pero no lo uses tú mismo.</note>

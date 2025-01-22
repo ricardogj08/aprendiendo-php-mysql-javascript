@@ -110,7 +110,12 @@
     <include src/15/precedencia_operadores.xml>
     <include src/15/asociatividad.xml>
   <include src/15/operadores_relacionales.xml>
-  <include src/15/operadores_igualdad.xml>
+    <include src/15/operadores_igualdad.xml>
+    <include src/15/operadores_comparacion.xml>
+    <include src/15/operadores_logicos.xml>
+  <include src/15/declaracion_with.xml>
+  <include src/15/utilizando_onerror.xml>
+  <include src/15/utilizando_try_catch.xml>
 
 <cap>Capítulo 16</cap>
   <include src/16/introduccion.xml>

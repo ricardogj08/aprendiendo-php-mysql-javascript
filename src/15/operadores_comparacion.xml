@@ -1,0 +1,24 @@
+<h3 expresiones_control_flujo_javascript_operadores_comparacion>
+  Operadores de comparación
+</h3>
+
+<p>Utilizando operadores de comparación, puedes probar más que solo igualdad y desigualdad. JavaScript también te ofrece <tt>></tt> (es mayor que), <tt><</tt> (es menor que), <tt>>=</tt> (es mayor o igual que) y <tt><=</tt> (es menor o igual que) con los que puedes juga. El Ejemplo 15-6 muestra como puedes utilizar estos operadores.</p>
+
+<p><i>Ejemplo 15-6. Los cuatro operadores de comparación</i></p>
+
+<code>
+<script>
+  a = 7; b = 11
+  if (a > b)  document.write("a is greater than b<br>")
+  if (a < b)  document.write("a is less than b<br>")
+  if (a >= b) document.write("a is greater than or equal to b<br>")
+  if (a <= b) document.write("a is less than or equal to b<br>")
+</script>
+</code>
+
+<p>En este ejemplo, donde <tt>a</tt> es <tt>7</tt> y <tt>b</tt> es <tt>11</tt>, se produce la siguiente salida (porque <tt>7</tt> es menor que <tt>11</tt> y también menor o igual a <tt>11</tt>):</p>
+
+<pre>
+a is less than b
+a is less than or equal to b
+</pre>

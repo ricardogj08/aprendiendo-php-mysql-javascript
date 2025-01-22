@@ -30,11 +30,11 @@ d: Peter
 e: 24
 </pre>
 
-<p>Los operadores te permiten crear expresiones más complejas que se evalúan en resultados útiles. Cuando combinas asignaciones o estructuras de control de flujo con expresiones, el resultado es una <i>declaración</i>.</p>
+<p>Los operadores te permiten crear expresiones más complejas que se evalúan en resultados útiles. Cuando combinas asignaciones o estructuras de control de flujo con expresiones, el resultado es una <i>sentencia</i>.</p>
 
 <p>El ejemplo 15-3 muestra uno de cada uno. El primero asigna el resultado de la expresión <tt>366 - day_number</tt> a la variable <tt>days_to_new_year</tt>, y el segundo muestra un mensaje amigable solo si la expresión <tt>days_to_new_year < 30</tt> se evalúa como <tt>true</tt>.</p>
 
-<p><i>Ejemplo 15-3. Dos declaraciones simples de JavaScript</i></p>
+<p><i>Ejemplo 15-3. Dos sentencias simples de JavaScript</i></p>
 
 <code>
 <script>

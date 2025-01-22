@@ -1,0 +1,34 @@
+<h2 expresiones_control_flujo_javascript_utilizando_onerror>
+  Utilizando onerror
+</h2>
+
+<p>Utilizando el evento <tt>onerror</tt> o una combinación de las palabras reservadas <tt>try</tt> y <tt>catch</tt>, puedes capturar errores de JavaScript y manejarlos tú mismo.</p>
+
+<p>Los <i>eventos</i> son acciones que puede detectar JavaScript. Cada elemento de una página web tiene ciertos eventos que pueden activar funciones de JavaScript. Por ejemplo, el evento <tt>onclick</tt> de un elemento button se puede configurar para llamar a una función y hacer que se ejecute cada vez que un usuario haga clic en el botón.</p>
+
+<p><i>Ejemplo 15-11. Un script que emplea el evento <tt>onerror</tt></i></p>
+
+<code>
+<script>
+  onerror = errorHandler
+  document.writ("Welcome to this website") // Deliberate error
+
+  function errorHandler(message, url, line)
+  {
+    out = "Sorry, an error was encountered.\n\n";
+    out += "Error: " + message + "\n";
+    out += "URL: "   + url     + "\n";
+    out += "Line: "  + line    + "\n\n";
+    out += "Click OK to continue.\n\n";
+    alert(out);
+    return true;
+  }
+</script>
+</code>
+
+<p>La primera línea de este script indica al evento de error que use la nueva función <tt>errorHandler</tt> a partir de ahora. Esta función toma tres parámetros: un mensaje (<tt>message</tt>), una URL (<tt>url</tt>) y un número de línea (<tt>line</tt>), por lo que es sencillo mostrar todo esto en una ventana emergente de alerta.</p>
+
+<p>Luego, para probar la nueva función, colocamos intencionalmente un error de sintaxis en el código con una llamada a <tt>document.writ</tt> en lugar de <tt>document.write</tt> (falta la <tt>e</tt> al final). La Figura 15-1 muestra el resultado de ejecutar este script en un navegador. Usar <tt>onerror</tt> de esta manera también puede ser bastante útil durante el proceso de depuración.</p>
+
+<imgc ../imgs/figura_15-1.png>
+<fig>Figura 15-1. Uso del evento onerror con un pop-up del método alert</fig>
