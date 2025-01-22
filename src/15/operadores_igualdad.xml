@@ -1,0 +1,33 @@
+<h3 expresiones_control_flujo_javascript_operadores_igualdad>
+  Operadores de igualdad
+</h3>
+
+<p>El operador de igualdad es <tt>==</tt> (que no debe confundirse con el operador de asignación <tt>=</tt>). En el Ejemplo 15-4, la primera instrucción asigna un valor, y la segunda comprueba si son iguales. Tal como está, no se imprimirá nada, porque a <tt>month</tt> se le asigna el valor del string <tt>July</tt>, y por lo tanto la comprobación de que tenga el valor de <tt>October</tt> fallará.</p>
+
+<p><i>Ejemplo 15-4. Asignación de un valor y prueba de igualdad</i></p>
+
+<code>
+<script>
+  month = "July"
+  if (month == "October") document.write("It's the Fall")
+</script>
+</code>
+
+<p>Si los dos operandos de una expresión de igualdad son de diferentes tipos, JavaScript los convertirá al tipo dato más adecuado. Por ejemplo, cualquier string compuesto completamente por números será convertido a números cada vez que se compare con un número. En el Ejemplo 15-5, <tt>a</tt> y <tt>b</tt> son dos valores diferentes (uno es un número y el otro es un string), y por lo tanto, normalmente esperaríamos que ninguna de las sentencias <tt>if</tt> produzca un resultado.</p>
+
+<p><i>Ejemplo 15-5. Los operadores de igualdad e identidad</i></p>
+
+<code>
+<script>
+  a = 3.1415927
+  b = "3.1415927"
+  if (a == b)  document.write("1")
+  if (a === b) document.write("2")
+</script>
+</code>
+
+<p>Sin embargo, si ejecutas el ejemplo, verás que imprime el número <tt>1</tt>, lo que significa que la primera sentencia <tt>if</tt> se evaluó como <tt>true</tt>. Esto se debe a que el valor del string de <tt>b</tt> se convirtió temporalmente en un número, y por lo tanto ambas mitades de la ecuación tenían un valor numérico de <tt>3.1415927</tt>.</p>
+
+<p>En contraste, la segunda sentencia <tt>if</tt> utiliza el <i>operador de identidad</i>, tres signos de igual uno a continuación del otro, lo que evita que JavaScript convierta automáticamente los tipos. Por lo tanto, <tt>a</tt> y <tt>b</tt> son diferentes, por lo que no se muestra ningún resultado.</p>
+
+<p>Al igual que al forzar la precedencia de los operadores, siempre que tengas dudas sobre cómo JavaScript convertirá los tipos de los operandos, puedes usar el operador de identidad para desactivar este comportamiento.</p>

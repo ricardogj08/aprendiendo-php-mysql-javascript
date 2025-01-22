@@ -1,7 +1,7 @@
 <doc>
   <title>Aprendiendo PHP, MySQL y JavaScript</title>
   <!-- <titleimg>(filename) ...</titleimg> -->
-  <!-- <url>...</url> -->
+  <url>https://ricardogj08.github.io/aprendiendo-php-mysql-javascript/</url>
   <version>6.0</version>
   <theme>theme.css</theme>
   <lang>es</lang>
@@ -104,6 +104,13 @@
 
 <cap>Capítulo 15</cap>
   <include src/15/introduccion.xml>
+  <include src/15/expresiones.xml>
+  <include src/15/literales_variables.xml>
+  <include src/15/operadores.xml>
+    <include src/15/precedencia_operadores.xml>
+    <include src/15/asociatividad.xml>
+  <include src/15/operadores_relacionales.xml>
+  <include src/15/operadores_igualdad.xml>
 
 <cap>Capítulo 16</cap>
   <include src/16/introduccion.xml>

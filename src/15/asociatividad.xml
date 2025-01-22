@@ -1,0 +1,73 @@
+<h3 expresiones_control_flujo_javascript_asociatividad>
+  Asociatividad
+</h3>
+
+<p>La mayoría de los operadores en JavaScript se procesan de izquierda a derecha en una ecuación. Pero algunos operadores en su lugar requieren un procesamiento de derecha a izquierda. La dirección del procesamiento se denomina <i>asociatividad del operador</i>.</p>
+
+<p>Esta asociatividad se vuelve importante cuando no fuerzas explícitamente la precedencia (lo cual deberías hacer siempre, por cierto, porque hace que el código sea más legible y menos propenso a errores). Por ejemplo, observe los siguientes operadores de asignación, mediante los cuales se establecen tres variables con en el valor <tt>0</tt>:</p>
+
+<code>
+level = score = time = 0
+</code>
+
+<p>Esta asignación múltiple solo es posible porque la parte más a la derecha de la expresión se evalúa primero y luego el procesamiento continúa de derecha a izquierda. La Tabla 15-3 enumera los operadores de JavaScript y su asociatividad.</p>
+
+<p><i>Tabla 15-3. Operadores y asociatividad</i></p>
+
+<table>
+  <tr>
+    <th>Operador</th>
+    <th>Descripción</th>
+    <th>Asociatividad</th>
+  </tr>
+  <tr>
+    <td><tt>++</tt> <tt>--</tt></td>
+    <td>Incremento y decremento</td>
+    <td>Ninguna</td>
+  </tr>
+  <tr>
+    <td><tt>new</tt></td>
+    <td>Crea un nuevo objecto</td>
+    <td>Derecha</td>
+  </tr>
+  <tr>
+    <td><tt>+</tt> <tt>-</tt> <tt>~</tt> <tt>!</tt></td>
+    <td>Unario y operador a nivel de bit</td>
+    <td>Derecha</td>
+  </tr>
+  <tr>
+    <td><tt>?:</tt></td>
+    <td>Ternario</td>
+    <td>Derecha</td>
+  </tr>
+  <tr>
+    <td><tt>=</tt> <tt>*=</tt> <tt>/=</tt> <tt>%=</tt> <tt>+=</tt> <tt>-=</tt></td>
+    <td>Asignación</td>
+    <td>Derecha</td>
+  </tr>
+  <tr>
+    <td><tt><<=</tt> <tt>>>=</tt> <tt>>>>=</tt> <tt>&=</tt> <tt>^=</tt> <tt>|=</tt></td>
+    <td>Asignación</td>
+    <td>Derecha</td>
+  </tr>
+  <tr>
+    <td><tt>,</tt></td>
+    <td>Separador</td>
+    <td>Izquierda</td>
+  </tr>
+  <tr>
+    <td><tt>+</tt> <tt>-</tt> <tt>*</tt> <tt>/</tt> <tt>%</tt></td>
+    <td>Aritmético</td>
+    <td>Izquierda</td>
+  </tr>
+  <tr>
+    <td><tt><<</tt> <tt>>></tt> <tt>>>></tt></td>
+    <td>Operador a nivel de bit</td>
+    <td>Izquierda</td>
+  </tr>
+  <tr>
+    <td><tt><</tt> <tt><=</tt> <tt>></tt> <tt>>=</tt> <tt>==</tt> <tt>!=</tt> <tt>===</tt> <tt>!=</tt></td>
+    <td>Aritmético</td>
+    <td>Izquierda</td>
+  </tr>
+</table>

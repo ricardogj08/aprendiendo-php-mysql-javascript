@@ -1,0 +1,5 @@
+<h2 expresiones_control_flujo_javascript_operadores_relacionales>
+  Operadores relacionales
+</h2>
+
+<p>Los <i>operadores relacionales</i> comprueban dos operandos y devuelven un resultado booleano de <tt>true</tt> o <tt>false</tt>. Existen tres tipos de operadores relacionales: de <i>igualdad</i>, <i>comparación</i> y <i>lógico</i>.</p>

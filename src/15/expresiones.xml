@@ -1,0 +1,40 @@
+<h2 expresiones_control_flujo_javascript_expresiones>
+  Expresiones
+</h2>
+
+<p>Las expresiones de JavaScript son muy similares a las de PHP. Como aprendiste en el <a #expresiones_control_flujo_php>Capítulo 4</a>, una expresión es una combinación de valores, variables, operadores y funciones que da como resultado un valor; el resultado puede ser un número, un string o un valor booleano (que se evalúa como <tt>true</tt> o <tt>false</tt>).</p>
+
+<p>El ejemplo 15-1 muestra algunas expresiones simples. En cada línea, imprime una letra entre <tt>a</tt> y <tt>d</tt>, seguida de dos puntos y el resultado de las expresiones. La etiqueta <tt><br></tt> está ahí para crear un salto de línea y separar la salida en cuatro líneas (recuerda que tanto <tt><br></tt> como <tt><br/></tt> son aceptables en HTML5, así que decidí utilizar el primer estilo por brevedad).</p>
+
+<p><i>Ejemplo 15-1. Cuatro simples expresiones booleanas</i></p>
+
+<code>
+<script>
+  document.write("a: " + (42 > 3) + "<br>")
+  document.write("b: " + (91 < 4) + "<br>")
+  document.write("c: " + (8 == 2) + "<br>")
+  document.write("d: " + (4 < 17) + "<br>")
+</script>
+</code>
+
+<p>La salida de este código es la siguiente:</p>
+
+<pre>
+a: true
+b: false
+c: false
+d: true
+</pre>
+
+<p>Nota que ambas expresiones <tt>a:</tt> y <tt>d:</tt> se evalúan como <tt>true</tt>, pero <tt>b:</tt> y <tt>c:</tt> se evalúan como <tt>false</tt>. A diferencia de PHP (que imprimiría el número <tt>1</tt> y nada, respectivamente), se muestran los strings <tt>true</tt> y <tt>false</tt>.</p>
+
+<p>En JavaScript, cuando estás comprobando si un valor es <tt>true</tt> o <tt>false</tt>, todos los valores se evalúan como <tt>true</tt> excepto los siguientes, que se evalúan como <tt>false</tt>: el string <tt>false</tt> en sí misma, <tt>0</tt>, <tt>-0</tt>, la cadena vacía, <tt>null</tt>, <tt>undefined</tt> y <tt>NaN</tt> (Not a Number, un concepto de ingeniería informática para el resultado de una operación ilegal de punto flotante como la división entre cero).</p>
+
+<p>Como puedes ver, me estoy refiriendo a <tt>true</tt> y <tt>false</tt> en minúsculas. Esto se debe a que, a diferencia de PHP, estos valores <i>deben estar</i> en minúsculas en JavaScript. Por lo tanto, solo se mostrará la primera de las dos siguientes declaraciones, imprimiendo la palabra en minúsculas <tt>true</tt>, porque la segunda causará un error de '<tt>TRUE</tt>' no está definido:</p>
+
+<code>
+if (1 == true) document.write('true') // True
+if (1 == TRUE) document.write('TRUE') // Will cause an error
+</code>
+
+<note>Recuerda que cualquier fragmento de código que desees escribir y probar por ti mismo en un archivo HTML, debe estar encerrado dentro de las etiquetas <tt><script></tt> y <tt></script></tt>.</note>

@@ -1,0 +1,46 @@
+<h2 expresiones_control_flujo_javascript_literales_variables>
+  Literales y variables
+</h2>
+
+<p>La forma más simple de una expresión es una <i>literal</i>, que significa algo que se evalúa a sí mismo, como el número <tt>22</tt> o el string <tt>Presiona Enter</tt>. Una expresión también podría ser una variable, que evalúa el valor que se le ha asignado. Ambos son tipos de expresiones, porque devuelven un valor.</p>
+
+<p>El Ejemplo 15-2 muestra tres literales diferentes y dos variables, todas ellas devuelven valores, aunque de diferentes tipos.</p>
+
+<p><i>Ejemplo 15-2. Cinco tipos de literales</i></p>
+
+<code>
+<script>
+  myname = "Peter"
+  myage  = 24
+  document.write("a: " + 42     + "<br>") // Numeric literal
+  document.write("b: " + "Hi"   + "<br>") // String literal
+  document.write("c: " + true   + "<br>") // Boolean literal
+  document.write("d: " + myname + "<br>") // String variable
+  document.write("e: " + myage  + "<br>") // Numeric variable
+</script>
+</code>
+
+<p>Y, como es de esperar, puedes ver el valor de retorno de todo esto en la siguiente salida:</p>
+
+<pre>
+a: 42
+b: Hi
+c: true
+d: Peter
+e: 24
+</pre>
+
+<p>Los operadores te permiten crear expresiones más complejas que se evalúan en resultados útiles. Cuando combinas asignaciones o estructuras de control de flujo con expresiones, el resultado es una <i>declaración</i>.</p>
+
+<p>El ejemplo 15-3 muestra uno de cada uno. El primero asigna el resultado de la expresión <tt>366 - day_number</tt> a la variable <tt>days_to_new_year</tt>, y el segundo muestra un mensaje amigable solo si la expresión <tt>days_to_new_year < 30</tt> se evalúa como <tt>true</tt>.</p>
+
+<p><i>Ejemplo 15-3. Dos declaraciones simples de JavaScript</i></p>
+
+<code>
+<script>
+  day_number       = 127 // For example
+  days_to_new_year = 366 - day_number
+  if (days_to_new_year < 30) document.write("It's nearly New Year")
+  else                       document.write("It's a long time to go")
+</script>
+</code>

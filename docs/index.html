@@ -143,6 +143,10 @@
           <li class="h2"><a href="#expresiones_control_flujo_javascript_expresiones" onclick="m()">Expresiones</a></li>
           <li class="h2"><a href="#expresiones_control_flujo_javascript_literales_variables" onclick="m()">Literales y variables</a></li>
           <li class="h2"><a href="#expresiones_control_flujo_javascript_operadores" onclick="m()">Operadores</a></li>
+          <li class="h3"><a href="#expresiones_control_flujo_javascript_precedencia_operadores" onclick="m()">Precedencia de operadores</a></li>
+          <li class="h3"><a href="#expresiones_control_flujo_javascript_asociatividad" onclick="m()">Asociatividad</a></li>
+          <li class="h2"><a href="#expresiones_control_flujo_javascript_operadores_relacionales" onclick="m()">Operadores relacionales</a></li>
+          <li class="h3"><a href="#expresiones_control_flujo_javascript_operadores_igualdad" onclick="m()">Operadores de igualdad</a></li>
         </ul></li>
         </ul>
         <p>Capítulo 16</p>
@@ -932,7 +936,7 @@ The URL is http://mysite.com
 <h1 id="expresiones_control_flujo_javascript">Expresiones y control de flujo en JavaScript<a href="#expresiones_control_flujo_javascript"></a></h1>
 <p>En el capítulo anterior, introduje los conceptos básicos de JavaScript y el DOM. Ahora es el momento de ver cómo construir expresiones complejas en JavaScript y cómo controlar el flujo del programa de tus scripts utilizando sentencias condicionales.</p>
 <h2 id="expresiones_control_flujo_javascript_expresiones">Expresiones<a href="#expresiones_control_flujo_javascript_expresiones"></a></h2>
-<p>Las expresiones de JavaScript son muy similares a las de PHP. Como aprendiste en el <a href="#expresiones_control_flujo_php" onclick="c('expresiones_control_flujo_php')">Capítulo 4</a>, una expresión es una combinación de valores, variables, operadores y funciones que da como resultado un valor; el resultado puede ser un número, un string o un valor booleano. (que se evalúa como <samp>true</samp> o <samp>false</samp>).</p>
+<p>Las expresiones de JavaScript son muy similares a las de PHP. Como aprendiste en el <a href="#expresiones_control_flujo_php" onclick="c('expresiones_control_flujo_php')">Capítulo 4</a>, una expresión es una combinación de valores, variables, operadores y funciones que da como resultado un valor; el resultado puede ser un número, un string o un valor booleano (que se evalúa como <samp>true</samp> o <samp>false</samp>).</p>
 <p>El ejemplo 15-1 muestra algunas expresiones simples. En cada línea, imprime una letra entre <samp>a</samp> y <samp>d</samp>, seguida de dos puntos y el resultado de las expresiones. La etiqueta <samp>&lt;br&gt;</samp> está ahí para crear un salto de línea y separar la salida en cuatro líneas (recuerda que tanto <samp>&lt;br&gt;</samp> como <samp>&lt;br/&gt;</samp> son aceptables en HTML5, así que decidí utilizar el primer estilo por brevedad).</p>
 <p><i>Ejemplo 15-1. Cuatro simples expresiones booleanas</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
@@ -955,7 +959,7 @@ d: true
 <span class="hl_k">if</span> (<span class="hl_n">1</span> <span class="hl_o">==</span> <span class="hl_t">TRUE</span>) <span class="hl_f">document.write</span>(<span class="hl_v">&#039;TRUE&#039;</span>) <span class="hl_c">// Will cause an error</span></code></div>
 <div class="info"><p><span>Nota</span></p><p>Recuerda que cualquier fragmento de código que desees escribir y probar por ti mismo en un archivo HTML, debe estar encerrado dentro de las etiquetas <samp>&lt;script&gt;</samp> y <samp>&lt;/script&gt;</samp>.</p></div>
 <h2 id="expresiones_control_flujo_javascript_literales_variables">Literales y variables<a href="#expresiones_control_flujo_javascript_literales_variables"></a></h2>
-<p>La forma más simple de una expresión es una <i>literal</i>, que significa algo que se evalúa a sí mismo, como el número <samp>22</samp> o el string <samp>Presiona Enter</samp>. Una expresión también podría ser una variable, que evalúa al valor que se le ha asignado. Ambos son tipos de expresiones, porque devuelven un valor.</p>
+<p>La forma más simple de una expresión es una <i>literal</i>, que significa algo que se evalúa a sí mismo, como el número <samp>22</samp> o el string <samp>Presiona Enter</samp>. Una expresión también podría ser una variable, que evalúa el valor que se le ha asignado. Ambos son tipos de expresiones, porque devuelven un valor.</p>
 <p>El Ejemplo 15-2 muestra tres literales diferentes y dos variables, todas ellas devuelven valores, aunque de diferentes tipos.</p>
 <p><i>Ejemplo 15-2. Cinco tipos de literales</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
@@ -976,7 +980,7 @@ d: Peter
 e: 24
 </pre></div>
 <p>Los operadores te permiten crear expresiones más complejas que se evalúan en resultados útiles. Cuando combinas asignaciones o estructuras de control de flujo con expresiones, el resultado es una <i>declaración</i>.</p>
-<p>El ejemplo 15-3 muestra uno de cada uno. El primero asigna el resultado de la expresión <samp>366 - day_number</samp> a la variable <samp>days_to_new_year</samp>, y el segundo muestra un mensaje amigable solo si la expresión <samp>days_to_new_year &lt; 30</samp> evalúa como <samp>true</samp>.</p>
+<p>El ejemplo 15-3 muestra uno de cada uno. El primero asigna el resultado de la expresión <samp>366 - day_number</samp> a la variable <samp>days_to_new_year</samp>, y el segundo muestra un mensaje amigable solo si la expresión <samp>days_to_new_year &lt; 30</samp> se evalúa como <samp>true</samp>.</p>
 <p><i>Ejemplo 15-3. Dos declaraciones simples de JavaScript</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
   <span class="hl_v">day_number</span>       <span class="hl_o">=</span> <span class="hl_n">127</span> <span class="hl_c">// For example</span>
@@ -1039,7 +1043,159 @@ e: 24
 <li>Los <i>operadores unarios</i>, como el incremento (<samp>a++</samp>) o la negación (<samp>-a</samp>), admiten un solo operando.</li>
 <li>Los <i>operadores binarios</i>, que representan la mayoría de los operadores de JavaScript (incluyendo la suma, la resta, la multiplicación y la división) admiten dos operandos.</li>
 <li>El único <i>operador ternario</i>, que adopta la forma <samp>? x : y</samp>, requiere tres operandos. Es una declaración <samp>if</samp> concisa de una sola línea que elige entre dos expresiones en función de una tercera.</li>
-</ul><br style="clear:both;"><label class="btn prev" accesskey="p" for="_explorando_javascript" title="Explorando JavaScript">Volver</label><label class="btn next" accesskey="n" for="_funciones_objetos_arrays_javascript" title="Funciones, objetos y arrays en JavaScript">Siguiente</label></div>
+</ul>
+<h3 id="expresiones_control_flujo_javascript_precedencia_operadores">Precedencia de operadores<a href="#expresiones_control_flujo_javascript_precedencia_operadores"></a></h3>
+<p>Al igual que PHP, JavaScript utiliza la precedencia de operadores, en la que algunos operadores de una expresión se procesan antes que otros y, por lo tanto, se evalúan primero. La Tabla 15-2 enumera los operadores de JavaScript y sus precedencias.</p>
+<p><i>Tabla 15-2. Precedencia de los operadores de JavaScript (de mayor a menor)</i></p>
+<div class="table"><table>
+<tr>
+<th>Operador(es)</th>
+<th>Tipo(s)</th>
+</tr>
+<tr>
+<td><samp>()</samp> <samp>[]</samp> <samp>.</samp></td>
+<td>Paréntesis, llamada, y miembro</td>
+</tr>
+<tr>
+<td><samp>++</samp> <samp>--</samp></td>
+<td>Incremento/decremento</td>
+</tr>
+<tr>
+<td><samp>+</samp> <samp>-</samp> <samp>~</samp> <samp>!</samp></td>
+<td>Unario, operador a nivel de bit y lógico</td>
+</tr>
+<tr>
+<td><samp>*</samp> <samp>/</samp> <samp>%</samp></td>
+<td>Aritmético</td>
+</tr>
+<tr>
+<td><samp>+</samp> <samp>-</samp></td>
+<td>Aritmético y string</td>
+</tr>
+<tr>
+<td><samp>&lt;&lt;</samp> <samp>&gt;&gt;</samp> <samp>&gt;&gt;&gt;</samp></td>
+<td>Operador a nivel de bit</td>
+</tr>
+<tr>
+<td><samp>&lt;</samp> <samp>&gt;</samp> <samp>&lt;=</samp> <samp>&gt;=</samp></td>
+<td>Comparación</td>
+</tr>
+<tr>
+<td><samp>==</samp> <samp>!=</samp> <samp>===</samp> <samp>!==</samp></td>
+<td>Comparación</td>
+</tr>
+<tr>
+<td><samp>&amp;</samp> <samp>^</samp> <samp>|</samp></td>
+<td>Operador a nivel de bit</td>
+</tr>
+<tr>
+<td><samp>&amp;&amp;</samp></td>
+<td>Lógico</td>
+</tr>
+<tr>
+<td><samp>||</samp></td>
+<td>Lógico</td>
+</tr>
+<tr>
+<td><samp>? :</samp></td>
+<td>Ternario</td>
+</tr>
+<tr>
+<td><samp>=</samp> <samp>+=</samp> <samp>-=</samp> <samp>*=</samp> <samp>/=</samp> <samp>%=</samp></td>
+<td>Asignación</td>
+</tr>
+<tr>
+<td><samp>&lt;&lt;=</samp> <samp>&gt;&gt;=</samp> <samp>&gt;&gt;&gt;=</samp> <samp>&amp;=</samp> <samp>^=</samp> <samp>|=</samp></td>
+<td>Asignación</td>
+</tr>
+<tr>
+<td><samp>,</samp></td>
+<td>Separador</td>
+</tr>
+</table></div>
+<h3 id="expresiones_control_flujo_javascript_asociatividad">Asociatividad<a href="#expresiones_control_flujo_javascript_asociatividad"></a></h3>
+<p>La mayoría de los operadores en JavaScript se procesan de izquierda a derecha en una ecuación. Pero algunos operadores en su lugar requieren un procesamiento de derecha a izquierda. La dirección del procesamiento se denomina <i>asociatividad del operador</i>.</p>
+<p>Esta asociatividad se vuelve importante cuando no fuerzas explícitamente la precedencia (lo cual deberías hacer siempre, por cierto, porque hace que el código sea más legible y menos propenso a errores). Por ejemplo, observe los siguientes operadores de asignación, mediante los cuales se establecen tres variables con en el valor <samp>0</samp>:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">level</span> <span class="hl_o">=</span> <span class="hl_v">score</span> <span class="hl_o">=</span> <span class="hl_v">time</span> <span class="hl_o">=</span> <span class="hl_n">0</span></code></div>
+<p>Esta asignación múltiple solo es posible porque la parte más a la derecha de la expresión se evalúa primero y luego el procesamiento continúa de derecha a izquierda. La Tabla 15-3 enumera los operadores de JavaScript y su asociatividad.</p>
+<p><i>Tabla 15-3. Operadores y asociatividad</i></p>
+<div class="table"><table>
+<tr>
+<th>Operador</th>
+<th>Descripción</th>
+<th>Asociatividad</th>
+</tr>
+<tr>
+<td><samp>++</samp> <samp>--</samp></td>
+<td>Incremento y decremento</td>
+<td>Ninguna</td>
+</tr>
+<tr>
+<td><samp>new</samp></td>
+<td>Crea un nuevo objecto</td>
+<td>Derecha</td>
+</tr>
+<tr>
+<td><samp>+</samp> <samp>-</samp> <samp>~</samp> <samp>!</samp></td>
+<td>Unario y operador a nivel de bit</td>
+<td>Derecha</td>
+</tr>
+<tr>
+<td><samp>?:</samp></td>
+<td>Ternario</td>
+<td>Derecha</td>
+</tr>
+<tr>
+<td><samp>=</samp> <samp>*=</samp> <samp>/=</samp> <samp>%=</samp> <samp>+=</samp> <samp>-=</samp></td>
+<td>Asignación</td>
+<td>Derecha</td>
+</tr>
+<tr>
+<td><samp>&lt;&lt;=</samp> <samp>&gt;&gt;=</samp> <samp>&gt;&gt;&gt;=</samp> <samp>&amp;=</samp> <samp>^=</samp> <samp>|=</samp></td>
+<td>Asignación</td>
+<td>Derecha</td>
+</tr>
+<tr>
+<td><samp>,</samp></td>
+<td>Separador</td>
+<td>Izquierda</td>
+</tr>
+<tr>
+<td><samp>+</samp> <samp>-</samp> <samp>*</samp> <samp>/</samp> <samp>%</samp></td>
+<td>Aritmético</td>
+<td>Izquierda</td>
+</tr>
+<tr>
+<td><samp>&lt;&lt;</samp> <samp>&gt;&gt;</samp> <samp>&gt;&gt;&gt;</samp></td>
+<td>Operador a nivel de bit</td>
+<td>Izquierda</td>
+</tr>
+<tr>
+<td><samp>&lt;</samp> <samp>&lt;=</samp> <samp>&gt;</samp> <samp>&gt;=</samp> <samp>==</samp> <samp>!=</samp> <samp>===</samp> <samp>!=</samp></td>
+<td>Aritmético</td>
+<td>Izquierda</td>
+</tr>
+</table></div>
+<h2 id="expresiones_control_flujo_javascript_operadores_relacionales">Operadores relacionales<a href="#expresiones_control_flujo_javascript_operadores_relacionales"></a></h2>
+<p>Los <i>operadores relacionales</i> comprueban dos operandos y devuelven un resultado booleano de <samp>true</samp> o <samp>false</samp>. Existen tres tipos de operadores relacionales: de <i>igualdad</i>, <i>comparación</i> y <i>lógico</i>.</p>
+<h3 id="expresiones_control_flujo_javascript_operadores_igualdad">Operadores de igualdad<a href="#expresiones_control_flujo_javascript_operadores_igualdad"></a></h3>
+<p>El operador de igualdad es <samp>==</samp> (que no debe confundirse con el operador de asignación <samp>=</samp>). En el Ejemplo 15-4, la primera instrucción asigna un valor, y la segunda comprueba si son iguales. Tal como está, no se imprimirá nada, porque a <samp>month</samp> se le asigna el valor del string <samp>July</samp>, y por lo tanto la comprobación de que tenga el valor de <samp>October</samp> fallará.</p>
+<p><i>Ejemplo 15-4. Asignación de un valor y prueba de igualdad</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">month</span> <span class="hl_o">=</span> <span class="hl_s">&quot;July&quot;</span>
+  <span class="hl_k">if</span> (<span class="hl_v">month</span> <span class="hl_o">==</span> <span class="hl_s">&quot;October&quot;</span>) <span class="hl_f">document.write</span>(<span class="hl_s">&quot;It&#039;s the Fall&quot;</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Si los dos operandos de una expresión de igualdad son de diferentes tipos, JavaScript los convertirá al tipo dato más adecuado. Por ejemplo, cualquier string compuesto completamente por números será convertido a números cada vez que se compare con un número. En el Ejemplo 15-5, <samp>a</samp> y <samp>b</samp> son dos valores diferentes (uno es un número y el otro es un string), y por lo tanto, normalmente esperaríamos que ninguna de las sentencias <samp>if</samp> produzca un resultado.</p>
+<p><i>Ejemplo 15-5. Los operadores de igualdad e identidad</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">a</span> <span class="hl_o">=</span> <span class="hl_n">3</span><span class="hl_v">.1415927</span>
+  <span class="hl_v">b</span> <span class="hl_o">=</span> <span class="hl_s">&quot;3.1415927&quot;</span>
+  <span class="hl_k">if</span> (<span class="hl_v">a</span> <span class="hl_o">==</span> <span class="hl_v">b</span>)  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;1&quot;</span>)
+  <span class="hl_k">if</span> (<span class="hl_v">a</span> <span class="hl_o">===</span> <span class="hl_v">b</span>) <span class="hl_f">document.write</span>(<span class="hl_s">&quot;2&quot;</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Sin embargo, si ejecutas el ejemplo, verás que imprime el número <samp>1</samp>, lo que significa que la primera sentencia <samp>if</samp> se evaluó como <samp>true</samp>. Esto se debe a que el valor del string de <samp>b</samp> se convirtió temporalmente en un número, y por lo tanto ambas mitades de la ecuación tenían un valor numérico de <samp>3.1415927</samp>.</p>
+<p>En contraste, la segunda sentencia <samp>if</samp> utiliza el <i>operador de identidad</i>, tres signos de igual uno a continuación del otro, lo que evita que JavaScript convierta automáticamente los tipos. Por lo tanto, <samp>a</samp> y <samp>b</samp> son diferentes, por lo que no se muestra ningún resultado.</p>
+<p>Al igual que al forzar la precedencia de los operadores, siempre que tengas dudas sobre cómo JavaScript convertirá los tipos de los operandos, puedes usar el operador de identidad para desactivar este comportamiento.</p><br style="clear:both;"><label class="btn prev" accesskey="p" for="_explorando_javascript" title="Explorando JavaScript">Volver</label><label class="btn next" accesskey="n" for="_funciones_objetos_arrays_javascript" title="Funciones, objetos y arrays en JavaScript">Siguiente</label></div>
 <div class="page" rel="funciones_objetos_arrays_javascript"><div><ul class="breadcrumbs"><li><label class="home" for="_" title="Inicio"></label>&nbsp;»</li><li>&nbsp;Capítulo 16&nbsp;»</li><li>&nbsp;Funciones, objetos y arrays en JavaScript</li></ul><hr></div>
 <h1 id="funciones_objetos_arrays_javascript">Funciones, objetos y arrays en JavaScript<a href="#funciones_objetos_arrays_javascript"></a></h1>
 <h2 id="funciones_objetos_arrays_javascript_funciones_javascript">Funciones en JavaScript<a href="#funciones_objetos_arrays_javascript_funciones_javascript"></a></h2><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>

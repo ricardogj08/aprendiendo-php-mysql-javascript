@@ -1,0 +1,74 @@
+<h3 expresiones_control_flujo_javascript_precedencia_operadores>
+  Precedencia de operadores
+</h3>
+
+<p>Al igual que PHP, JavaScript utiliza la precedencia de operadores, en la que algunos operadores de una expresión se procesan antes que otros y, por lo tanto, se evalúan primero. La Tabla 15-2 enumera los operadores de JavaScript y sus precedencias.</p>
+
+<p><i>Tabla 15-2. Precedencia de los operadores de JavaScript (de mayor a menor)</i></p>
+
+<table>
+  <tr>
+    <th>Operador(es)</th>
+    <th>Tipo(s)</th>
+  </tr>
+  <tr>
+    <td><tt>()</tt> <tt>[]</tt> <tt>.</tt></td>
+    <td>Paréntesis, llamada, y miembro</td>
+  </tr>
+  <tr>
+    <td><tt>++</tt> <tt>--</tt></td>
+    <td>Incremento/decremento</td>
+  </tr>
+  <tr>
+    <td><tt>+</tt> <tt>-</tt> <tt>~</tt> <tt>!</tt></td>
+    <td>Unario, operador a nivel de bit y lógico</td>
+  </tr>
+  <tr>
+    <td><tt>*</tt> <tt>/</tt> <tt>%</tt></td>
+    <td>Aritmético</td>
+  </tr>
+  <tr>
+    <td><tt>+</tt> <tt>-</tt></td>
+    <td>Aritmético y string</td>
+  </tr>
+  <tr>
+    <td><tt><<</tt> <tt>>></tt> <tt>>>></tt></td>
+    <td>Operador a nivel de bit</td>
+  </tr>
+  <tr>
+    <td><tt><</tt> <tt>></tt> <tt><=</tt> <tt>>=</tt></td>
+    <td>Comparación</td>
+  </tr>
+  <tr>
+    <td><tt>==</tt> <tt>!=</tt> <tt>===</tt> <tt>!==</tt></td>
+    <td>Comparación</td>
+  </tr>
+  <tr>
+    <td><tt>&</tt> <tt>^</tt> <tt>|</tt></td>
+    <td>Operador a nivel de bit</td>
+  </tr>
+  <tr>
+    <td><tt>&&</tt></td>
+    <td>Lógico</td>
+  </tr>
+  <tr>
+    <td><tt>||</tt></td>
+    <td>Lógico</td>
+  </tr>
+  <tr>
+    <td><tt>? :</tt></td>
+    <td>Ternario</td>
+  </tr>
+  <tr>
+    <td><tt>=</tt> <tt>+=</tt> <tt>-=</tt> <tt>*=</tt> <tt>/=</tt> <tt>%=</tt></td>
+    <td>Asignación</td>
+  </tr>
+  <tr>
+    <td><tt><<=</tt> <tt>>>=</tt> <tt>>>>=</tt> <tt>&=</tt> <tt>^=</tt> <tt>|=</tt></td>
+    <td>Asignación</td>
+  </tr>
+  <tr>
+    <td><tt>,</tt></td>
+    <td>Separador</td>
+  </tr>
+</table>

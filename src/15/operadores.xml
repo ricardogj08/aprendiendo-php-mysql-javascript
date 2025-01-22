@@ -1,0 +1,63 @@
+<h2 expresiones_control_flujo_javascript_operadores>
+  Operadores
+</h2>
+
+<p>JavaScript ofrece muchos operadores potentes, que van desde operadores aritméticos, de string y lógicos hasta de asignación, comparación, etc. (ver la Tabla 15-1).</p>
+
+<p><i>Tabla 15-1. Tipos de operadores de JavaScript</i></p>
+
+<table>
+  <tr>
+    <th>Operador</th>
+    <th>Descripción</th>
+    <th>Ejemplo</th>
+  </tr>
+  <tr>
+    <td>Aritmético</td>
+    <td>Matemáticas básicas</td>
+    <td><tt>a + b</tt></td>
+  </tr>
+  <tr>
+    <td>Array</td>
+    <td>Manipulación de arrays</td>
+    <td><tt>a + b</tt></td>
+  </tr>
+  <tr>
+    <td>Asignación</td>
+    <td>Asignar valores</td>
+    <td><tt>a = b + 23</tt></td>
+  </tr>
+  <tr>
+    <td>Operador a nivel de bit</td>
+    <td>Manipula bits en bytes</td>
+    <td><tt>12 ^ 9</tt></td>
+  </tr>
+  <tr>
+    <td>Comparación</td>
+    <td>Comparar dos valores </td>
+    <td><tt>a < b</tt></td>
+  </tr>
+  <tr>
+    <td>Incremento/decremento</td>
+    <td>Sumar o restar en uno </td>
+    <td><tt>a++</tt></td>
+  </tr>
+  <tr>
+    <td>Lógico</td>
+    <td>Booleano</td>
+    <td><tt>a && b</tt></td>
+  </tr>
+  <tr>
+    <td>String</td>
+    <td>Concatenación</td>
+    <td><tt>a + 'string'</tt></td>
+  </tr>
+</table>
+
+<p>Cada operador admite un número diferente de operandos:</p>
+
+<ul>
+  <li>Los <i>operadores unarios</i>, como el incremento (<tt>a++</tt>) o la negación (<tt>-a</tt>), admiten un solo operando.</li>
+  <li>Los <i>operadores binarios</i>, que representan la mayoría de los operadores de JavaScript (incluyendo la suma, la resta, la multiplicación y la división) admiten dos operandos.</li>
+  <li>El único <i>operador ternario</i>, que adopta la forma <tt>? x : y</tt>, requiere tres operandos. Es una declaración <tt>if</tt> concisa de una sola línea que elige entre dos expresiones en función de una tercera.</li>
+</ul>
