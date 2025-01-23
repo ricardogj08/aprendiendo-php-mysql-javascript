@@ -1,0 +1,16 @@
+<h2 soluciones_preguntas_capitulos_respuestas_capitulo_15>
+  Respuestas del capítulo 15
+</h2>
+
+<ol>
+  <li>La diferencia más notable entre los valores booleanos de PHP y JavaScript es que PHP reconoce las palabras reservadas <tt>TRUE</tt>, <tt>true</tt>, <tt>FALSE</tt> y <tt>false</tt>, mientras que en JavaScript solo se admiten <tt>true</tt> y <tt>false</tt>. Además, en PHP, <tt>TRUE</tt> tiene un valor de <tt>1</tt>, y <tt>FALSE</tt> es <tt>NULL</tt>; en JavaScript están representados por <tt>true</tt> y <tt>false</tt>, que pueden ser devueltos como valores de string.</li>
+  <li>A diferencia de PHP, no se utiliza ningún carácter (como <tt>$</tt>) para definir el nombre de una variable en JavaScript. Los nombres de las variables en JavaScript pueden comenzar y contener letras con mayúsculas y minúsculas, así como guiones bajos; los nombres también pueden incluir dígitos, pero no el primer carácter.</li>
+  <li>La diferencia entre los operadores unarios, binarios y ternarios es el número de operandos que cada uno requiere (uno, dos y tres, respectivamente).</li>
+  <li>La mejor manera de forzar tu propia precedencia de operadores es rodear las partes de una expresión que deben evaluarse primero con paréntesis.</li>
+  <li>Utilizas el operador de identidad cuando deseas evitar el cambio automático del tipo de dato del operando de JavaScript.</li>
+  <li>Las formas más simples de expresiones son las literales (como números y cadenas) y las variables, que simplemente se evalúan a sí mismas.</li>
+  <li>Los tres tipos de declaraciones condicionales son <tt>if</tt>, <tt>switch</tt> y el operador <tt>?:</tt>.</li>
+  <li>La mayoría de las expresiones condicionales en las declaraciones <tt>if</tt> y <tt>while</tt> son literales o booleanas y, por lo tanto, desencadenan la ejecución cuando se evalúan como <tt>true</tt>. Las expresiones numéricas desencadenan la ejecución cuando se evalúan a un valor distinto de cero. Las expresiones de string desencadenan la ejecución cuando se evalúan a un string no vacío. Un valor <tt>NULL</tt> se evalúa como <tt>false</tt> y, por lo tanto, no desencadena la ejecución.</li>
+  <li>Los bucles que utilizan declaraciones <tt>for</tt> son más poderosos que los bucles <tt>while</tt> porque soportan dos parámetros adicionales para controlar el manejo del bucle.</li>
+  <li>La declaración <tt>with</tt> toma un objeto como parámetro. Cuando la utilizamos, especificamos un objeto una sola vez; luego, para cada sentencia dentro del bloque <tt>with</tt>, se asume ese objeto.</li>
+</ol>

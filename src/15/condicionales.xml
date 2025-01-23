@@ -1,0 +1,5 @@
+<h2 expresiones_control_flujo_javascript_condicionales>
+  Condicionales
+</h2>
+
+<p>Las condicionales alteran el flujo del programa. Te permiten hacer preguntas sobre determinadas cosas y responder a las respuestas que obtienes de diferentes maneras. Hay tres tipos de condicionales no iterativos: la declaración <tt>if</tt>, la declaración <tt>switch</tt> y el operador <tt>?</tt>.</p>

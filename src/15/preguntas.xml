@@ -1,0 +1,18 @@
+<h2 expresiones_control_flujo_javascript_preguntas>
+  Preguntas
+</h2>
+
+<ol>
+  <li>¿Cómo se manejan los valores booleanos de manera diferente en PHP y JavaScript?</li>
+  <li>¿Qué caracteres se utilizan para definir un nombre de variable en JavaScript?</li>
+  <li>¿Cuál es la diferencia entre los operadores unarios, binarios y ternarios?</li>
+  <li>¿Cuál es la mejor manera de forzar la precedencia de operadores?</li>
+  <li>¿Cuándo utilizarías el operador <tt>===</tt> (identidad)?</li>
+  <li>¿Cuáles son las dos formas más simples de expresiones?</li>
+  <li>Nombra los tres tipos de declaración de condicionales.</li>
+  <li>¿Cómo interpretan las declaraciones <tt>if</tt> y <tt>while</tt> las expresiones condicionales de diferentes tipos de datos?</li>
+  <li>¿Por qué un bucle <tt>for</tt> es más poderoso que un bucle <tt>while</tt>?</li>
+  <li>¿Cuál es el propósito de la declaración <tt>with</tt>?</li>
+</ol>
+
+<p>Ver <a #soluciones_preguntas_capitulos_respuestas_capitulo_15>"Respuestas del Capítulo 15"</a> del <a #soluciones_preguntas_capitulos>Apéndice A</a> para comprobar las respuestas a estas preguntas.</p>

@@ -1,0 +1,41 @@
+<h3 expresiones_control_flujo_javascript_declaracion_else>
+  Declaración else
+</h3>
+
+<p>Cuando no se ha cumplido una condición, puedes ejecutar una alternativa utilizando una declaración <tt>else</tt>, así:</p>
+
+<code>
+if (a > 100)
+{
+  document.write("a is greater than 100")
+}
+else
+{
+  document.write("a is less than or equal to 100")
+}
+</code>
+
+<p>A diferencia de PHP, JavaScript no tiene una declaración <tt>elseif</tt>, pero eso no es un problema porque puedes utilizar un <tt>else</tt> seguido de otro <tt>if</tt> para formar el equivalente de una declaración <tt>elseif</tt>, así:</p>
+
+<code>
+if (a > 100)
+{
+  document.write("a is greater than 100")
+}
+else if (a < 100)
+{
+  document.write("a is less than 100")
+}
+else
+{
+  document.write("a is equal to 100")
+}
+</code>
+
+<p>Como puedes ver, es posible utilizar otro <tt>else</tt> después del nuevo <tt>if</tt>, al que podría seguir igualmente otra declaración <tt>if</tt>, y así sucesivamente. Aunque he mostrado llaves en las declaraciones, dado que cada una es una sola línea, el ejemplo anterior podría escribirse de la siguiente manera:</p>
+
+<code>
+if      (a > 100) document.write("a is greater than 100")
+else if (a < 100) document.write("a is less than 100")
+else              document.write("a is equal to 100")
+</code>

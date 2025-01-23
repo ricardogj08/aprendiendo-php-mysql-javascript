@@ -1,0 +1,31 @@
+<h3 expresiones_control_flujo_javascript_ruptura_bucle>
+  Ruptura de un bucle
+</h3>
+
+<p>El comando <tt>break</tt>, que recordarás es importante dentro de una declaración <tt>switch</tt>, también está disponible dentro de los bucles <tt>for</tt>. Es posible que tengas que utilizar esto, por ejemplo, cuando busques algún tipo de coincidencia. Una vez que se encuentra la coincidencia, sabes que continuar solo sería una pérdida tiempo y harás que tu visitante tenga que esperar. El ejemplo 15-20 muestra cómo utilizar el comando <tt>break</tt>.</p>
+
+<p><i>Ejemplo 15-20. Utilizando el comando <tt>break</tt> en un bucle <tt>for</tt></i></p>
+
+<code>
+<script>
+  haystack     = new Array()
+  haystack[17] = "Needle"
+
+  for (j = 0; j < 20; ++j)
+  {
+    if (haystack[j] == "Needle")
+    {
+      document.write("<br>- Found at location " + j)
+      break
+    }
+    else document.write(j + ", ")
+  }
+</script>
+</code>
+
+<p>Este script produce lo siguiente:</p>
+
+<pre>
+0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16,
+- Found at location 17
+</pre>

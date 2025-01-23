@@ -1,0 +1,33 @@
+<h3 expresiones_control_flujo_javascript_bucles_while>
+  Bucles while
+</h3>
+
+<p>Un bucle <tt>while</tt> en JavaScript comprueba primero el valor de una expresión y comienza a ejecutar las instrucciones dentro del bucle solo si esa expresión es <tt>true</tt>. Si es <tt>false</tt>, la ejecución salta a la siguiente instrucción de JavaScript (si la hay).</p>
+
+<p>Al completar una iteración del bucle, la expresión se vuelve a evaluar para ver si es <tt>true</tt>, y el proceso continúa hasta que la expresión se evalúe a <tt>false</tt> o hasta que la ejecución se detenga de otra manera. El ejemplo 15-17 muestra este bucle.</p>
+
+<p><i>Ejemplo 15-17. Un bucle <tt>while</tt></i></p>
+
+<code>
+<script>
+  counter = 0
+
+  while (counter < 5)
+  {
+    document.write("Counter: " + counter + "<br>")
+    ++counter
+  }
+</script>
+</code>
+
+<p>Este script produce lo siguiente:</p>
+
+<pre>
+Counter: 0
+Counter: 1
+Counter: 2
+Counter: 3
+Counter: 4
+</pre>
+
+<warn>Si la variable <tt>counter</tt> (contador) no se incrementara dentro del bucle, es bastante posible que algunos navegadores no ofrezcan ninguna respuesta debido a un bucle interminable, y la página no sea fácil de cerrar ni siquiera con Escape o con el botón de Detener. Así que, ten cuidado con tus bucles de JavaScript.</warn>

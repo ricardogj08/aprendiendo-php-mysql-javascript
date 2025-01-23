@@ -26,8 +26,8 @@
 </script>
 </code>
 
-<p>Sin embargo, si ejecutas el ejemplo, verás que imprime el número <tt>1</tt>, lo que significa que la primera sentencia <tt>if</tt> se evaluó como <tt>true</tt>. Esto se debe a que el valor del string de <tt>b</tt> se convirtió temporalmente en un número, y por lo tanto ambas mitades de la ecuación tenían un valor numérico de <tt>3.1415927</tt>.</p>
+<p>Sin embargo, si ejecutas el ejemplo, verás que imprime el número <tt>1</tt>, lo que significa que la primera sentencia <tt>if</tt> se evaluó como <tt>true</tt>. Esto se debe a que el valor del string de <tt>b</tt> se convirtió temporalmente a un número, y por lo tanto ambas mitades de la ecuación tenían un valor numérico de <tt>3.1415927</tt>.</p>
 
-<p>En contraste, la segunda sentencia <tt>if</tt> utiliza el <i>operador de identidad</i>, tres signos de igual uno a continuación del otro, lo que evita que JavaScript convierta automáticamente los tipos. Por lo tanto, <tt>a</tt> y <tt>b</tt> son diferentes, por lo que no se muestra ningún resultado.</p>
+<p>En contraste, la segunda sentencia <tt>if</tt> utiliza el <i>operador de identidad</i>, tres signos de igual uno a lado del otro, lo que evita que JavaScript convierta automáticamente los tipos. Por lo tanto, <tt>a</tt> y <tt>b</tt> son diferentes, por lo que no se muestra ningún resultado.</p>
 
-<p>Al igual que al forzar la precedencia de los operadores, siempre que tengas dudas sobre cómo JavaScript convertirá los tipos de los operandos, puedes usar el operador de identidad para desactivar este comportamiento.</p>
+<p>Al igual que al forzar la precedencia de los operadores, siempre que tengas dudas sobre cómo JavaScript convertirá los tipos de datos de los operandos, puedes utilizar el operador de identidad para desactivar este comportamiento.</p>

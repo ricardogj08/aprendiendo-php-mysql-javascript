@@ -116,6 +116,21 @@
   <include src/15/declaracion_with.xml>
   <include src/15/utilizando_onerror.xml>
   <include src/15/utilizando_try_catch.xml>
+  <include src/15/condicionales.xml>
+    <include src/15/declaracion_if.xml>
+    <include src/15/declaracion_else.xml>
+    <include src/15/declaracion_switch.xml>
+      <include src/15/ruptura.xml>
+      <include src/15/accion_por_defecto.xml>
+    <include src/15/operador_?.xml>
+  <include src/15/bucles.xml>
+    <include src/15/bucles_while.xml>
+    <include src/15/bucles_do_while.xml>
+    <include src/15/bucles_for.xml>
+    <include src/15/ruptura_bucle.xml>
+    <include src/15/declaracion_continue.xml>
+  <include src/15/conversion_explicita.xml>
+  <include src/15/preguntas.xml>
 
 <cap>Capítulo 16</cap>
   <include src/16/introduccion.xml>
@@ -162,3 +177,4 @@
 <cap>Apéndice A</cap>
   <include src/A/introduccion.xml>
   <include src/A/respuestas_capitulo_14.xml>
+  <include src/A/respuestas_capitulo_15.xml>

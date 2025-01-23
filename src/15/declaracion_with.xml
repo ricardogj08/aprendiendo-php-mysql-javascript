@@ -6,7 +6,7 @@
 
 <p>Por ejemplo, considerando el código del Ejemplo 15-10, en el cual la función <tt>document.write</tt> nunca hace referencia a la variable <tt>string</tt> por su nombre.</p>
 
-<p><i>Ejemplo 15-10. Utilizando la declaración with</i></p>
+<p><i>Ejemplo 15-10. Utilizando la declaración <tt>with</tt></i></p>
 
 <code>
 <script>

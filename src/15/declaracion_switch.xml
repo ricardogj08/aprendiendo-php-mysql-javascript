@@ -1,0 +1,70 @@
+<h3 expresiones_control_flujo_javascript_declaracion_switch>
+  Declaración switch
+</h3>
+
+<p>La declaración <tt>switch</tt> es útil cuando una variable o el resultado de una expresión puede tener múltiples valores y quieres realizar una función diferente para cada valor.</p>
+
+<p>Por ejemplo, el siguiente código emplea el sistema de menú en PHP que construimos en el <a #expresiones_control_flujo_php>Capítulo 4</a> y lo convierte a JavaScript. Funciona pasando un único string al código del menú principal de acuerdo con lo que el usuario solicite. Digamos que las opciones son Inicio (<tt>Home</tt>),  Acerca de (<tt>About</tt>), Noticias (<tt>News</tt>), Iniciar sesión (<tt>Login</tt>) y Enlaces (<tt>Links</tt>), y establecemos la variable <tt>page</tt> (página) en una de ellas en función de la entrada del usuario.</p>
+
+<p>El código escrito para esto utilizando <tt>if...else if...</tt> podría verse como en el Ejemplo 15-13.</p>
+
+<p><i>Ejemplo 15-13. Una declaración <tt>if...else if...</tt> de varias líneas</i></p>
+
+<code>
+<script>
+  if      (page == "Home")  document.write("You selected Home")
+  else if (page == "About") document.write("You selected About")
+  else if (page == "News")  document.write("You selected News")
+  else if (page == "Login") document.write("You selected Login")
+  else if (page == "Links") document.write("You selected Links")
+</script>
+</code>
+
+<p>Pero usando una estructura <tt>switch</tt>, el código podría verse como en el Ejemplo 15-14.</p>
+
+<p><i>Ejemplo 15-14. Una estructura <tt>switch</tt></i></p>
+
+<code>
+<script>
+  switch (page)
+  {
+    case "Home":
+      document.write("You selected Home")
+      break
+    case "About":
+      document.write("You selected About")
+      break
+    case "News":
+      document.write("You selected News")
+      break
+    case "Login":
+      document.write("You selected Login")
+      break
+    case "Links":
+      document.write("You selected Links")
+      break
+  }
+</script>
+</code>
+
+<p>La variable <tt>page</tt> se menciona solo una vez al inicio de la declaración <tt>switch</tt>. Después, el comando <tt>case</tt> comprueba las coincidencias. Cuando ocurre una coincidencia, se ejecuta la declaración condicional correspondiente. Por supuesto, un programa real tendría código aquí para mostrar o saltar a una página, en lugar de simplemente decirle al usuario lo que ha seleccionado.</p>
+
+<note>
+<p>También puedes proporcionar múltiples casos para una sola acción. Por ejemplo:</p>
+
+<code>
+switch (heroName)
+{
+  case "Superman":
+  case "Batman":
+  case "Wonder Woman":
+    document.write("Justice League")
+    break
+  case "Iron Man":
+  case "Captain America":
+  case "Spiderman":
+    document.write("The Avengers")
+    break
+}
+</code>
+</note>

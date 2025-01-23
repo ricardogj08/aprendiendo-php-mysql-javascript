@@ -1,0 +1,25 @@
+<h3 expresiones_control_flujo_javascript_operador_?>
+  El operador ?
+</h3>
+
+<p>El operador ternario (<tt>?</tt>), combinado con el caracter <tt>:</tt>, proporciona una forma rápida de realizar pruebas <tt>if...else</tt>. Con él puedes escribir una expresión para evaluar y luego acompañarla con el símbolo <tt>?</tt> y el código a ejecutar si la expresión es <tt>true</tt>. Después de eso, colocas un <tt>:</tt> y el código a ejecutar si la expresión se evalúa como <tt>false</tt>.</p>
+
+<p>El ejemplo 15-16 muestra el uso del operador ternario para imprimir si la variable <tt>a</tt> es menor o igual a <tt>5</tt> e imprime algo de cualquier manera.</p>
+
+<p><i>Ejemplo 15-16. Utilizando el operador ternario</i></p>
+
+<code>
+<script>
+  document.write(
+    a <= 5 ?
+    "a is less than or equal to 5" :
+    "a is greater than 5"
+  )
+</script>
+</code>
+
+<p>La declaración ha sido dividida en varias líneas para mayor claridad, pero es más probable que utilizes una declaración en una sola línea, de esta manera:</p>
+
+<code>
+size = a <= 5 ? "short" : "long"
+</code>

@@ -1,0 +1,5 @@
+<h4 expresiones_control_flujo_javascript_ruptura>
+  Ruptura
+</h4>
+
+<p>Como puedes ver en el Ejemplo 15-14, al igual que con PHP, el comando <tt>break</tt> permite que tu código salga de la declaración <tt>switch</tt> una vez que se ha cumplido una condición. Recuerda incluir el <tt>break</tt> a menos que quieras seguir ejecutando las sentencias del siguiente <tt>case</tt>.</p>

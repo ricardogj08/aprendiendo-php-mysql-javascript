@@ -1,0 +1,50 @@
+<h2 expresiones_control_flujo_javascript_conversion_explicita>
+  Conversión explícita
+</h2>
+
+<p>A diferencia de PHP, JavaScript no tiene una conversión explícita (casting) de tipos de datos como (<tt>int</tt>) o (<tt>float</tt>). En su lugar, cuando necesites que un valor sea de un tipo de dato específico, utiliza una de las funciones integradas de JavaScript, que se muestran en la Tabla 15-6.</p>
+
+<p><i>Tabla 15-6. Funciones de cambio de tipo en JavaScript</i></p>
+
+<table>
+  <tr>
+    <th>Cambiar al tipo</th>
+    <th>Función que se utiliza</th>
+  </tr>
+  <tr>
+    <td><tt>Int</tt>, <tt>Integer</tt></td>
+    <td><tt>parseInt()</tt></td>
+  </tr>
+  <tr>
+    <td><tt>Bool</tt>, <tt>Boolean</tt></td>
+    <td><tt>Boolean()</tt></td>
+  </tr>
+  <tr>
+    <td><tt>Float</tt>, <tt>Double</tt>, <tt>Real</tt></td>
+    <td><tt>parseFloat()</tt></td>
+  </tr>
+  <tr>
+    <td><tt>String</tt></td>
+    <td><tt>String()</tt></td>
+  </tr>
+  <tr>
+    <td><tt>Array</tt></td>
+    <td><tt>split()</tt></td>
+  </tr>
+</table>
+
+<p>Entonces, por ejemplo, para cambiar un número de punto flotante a un entero, podrías utilizar un código como el siguiente (que muestra el valor <tt>3</tt>):</p>
+
+<code>
+n = 3.1415927
+i = parseInt(n)
+document.write(i)
+</code>
+
+<p>O puedes utilizar la forma compuesta:</p>
+
+<code>
+document.write(parseInt(3.1415927))
+</code>
+
+<p>Eso es todo sobre el flujo de control y las expresiones. El siguiente capítulo se centrará en el uso de funciones, objetos y arreglos en JavaScript.</p>

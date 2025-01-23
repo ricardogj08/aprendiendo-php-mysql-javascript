@@ -9,9 +9,9 @@
   <li>El equivalente de los comandos <tt>echo</tt> y <tt>print</tt> utilizados en PHP, es la función <tt>document.write</tt> de JavaScript (o método).</li>
   <li>Para crear un comentario en JavaScript, comienza con <tt>//</tt> para un comentario de una sola línea o incluirlo entre <tt>/*</tt> y <tt>*/</tt> para un comentario de varias líneas.</li>
   <li>El operador de concatenación de strings en JavaScript es el símbolo <tt>+</tt>.</li>
-  <li>Dentro de una función de JavaScript, puedes definir una variable que tenga un alcance local iniciandola con la palabra clave <tt>var</tt> , <tt>let</tt> o <tt>const</tt> en la primera asignación.</li>
+  <li>Dentro de una función de JavaScript, puedes definir una variable que tenga un alcance local iniciandola con la palabra reservada <tt>var</tt> , <tt>let</tt> o <tt>const</tt> en la primera asignación.</li>
   <li>
-    Para mostrar la URL asignada al enlace con un <tt>id</tt> de <tt>thislink</tt> en los navegadores más importantes, puedes usar cualquiera de los dos siguientes comandos:
+    Para mostrar la URL asignada al enlace con un <tt>id</tt> de <tt>thislink</tt> en los navegadores más importantes, puedes utilizar cualquiera de los dos siguientes comandos:
 <code>
 document.write(document.getElementById('thislink').href)
 document.write(thislink.href)

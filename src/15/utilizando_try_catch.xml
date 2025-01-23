@@ -1,3 +1,33 @@
 <h2 expresiones_control_flujo_javascript_utilizando_try_catch>
   Utilizando try...catch
 </h2>
+
+<p>Las palabras clave <tt>try</tt> y <tt>catch</tt> son más estándar y más flexibles que la técnica <tt>onerror</tt> mostrada en la sección anterior. Estas palabras clave te permiten detectar errores en una sección de código determinado, en lugar de hacerlo para todos los scripts de un documento. Sin embargo, no detectan errores de sintaxis, para los cuales necesitas <tt>onerror</tt>.</p>
+
+<p>El constructor <tt>try...catch</tt> es compatible con todos los navegadores principales y es útil cuando quieres detectar una cierta condición que sabes que podría ocurrir en una parte específica de tu código.</p>
+
+<p>Por ejemplo, en el <a #funciones_objetos_arrays_javascript>Capítulo 18</a> exploraremos las técnicas de Ajax que utilizan el objeto <tt>XMLHttpRequest</tt>. Por lo tanto, podemos utilizar <tt>try</tt> y <tt>catch</tt> para detectar este caso y hacer algo más si la función no está disponible. El ejemplo 15-12 muestra cómo hacerlo.</p>
+
+<p><i>Ejemplo 15-12. Detección de un error con <tt>try</tt> y <tt>catch</tt></i></p>
+
+<code>
+<script>
+  try
+  {
+    request = new XMLHttpRequest()
+  }
+  catch (err)
+  {
+    // Use a different method to create an XMLHttpRequest object
+  }
+</script>
+</code>
+
+<p>También hay otra palabra reservada asociada con <tt>try</tt> y <tt>catch</tt> llamada <tt>finally</tt> que siempre se ejecuta, independientemente de si ocurre un error en la cláusula <tt>try</tt>. Para usarlo, simplemente añade algo como las siguientes declaraciones después de una declaración <tt>catch</tt>:</p>
+
+<code>
+finally
+{
+  alert("The 'try' clause was encountered")
+}
+</code>

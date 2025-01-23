@@ -1,0 +1,15 @@
+<h3 expresiones_control_flujo_javascript_declaracion_if>
+  Declaración if
+</h3>
+
+<p>Varios ejemplos en este capítulo ya han utilizado declaraciones <tt>if</tt>. El código dentro de tal declaración se ejecuta solo si la expresión dada se evalúa como <tt>true</tt>. Las sentencias <tt>if</tt> multilínea requieren llaves alrededor de ellas, pero al igual que en PHP, puedes omitir las llaves para una sola sentencia, aunque a menudo es una buena idea usarlas de todos modos, especialmente cuando escribes código en el que el número de acciones dentro de una declaración <tt>if</tt> podría cambiar a medida que avanza el desarrollo. Por lo tanto, las siguientes sentencias son válidas:</p>
+
+<code>
+if (a > 100)
+{
+  b = 2
+  document.write("a is greater than 100")
+}
+
+if (b == 10) document.write("b is equal to 10")
+</code>

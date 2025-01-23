@@ -1,0 +1,39 @@
+<h3 expresiones_control_flujo_javascript_declaracion_continue>
+  Declaración continue
+</h3>
+
+<p>A veces no quieres salir completamente de un bucle, sino que deseas omitir las sentencias restantes solo para una iteración concreta del bucle. En tales casos, puedes utilizar el comando <tt>continue</tt>. El ejemplo 15-21 muestra cómo se utiliza este comando.</p>
+
+<p><i>Ejemplo 15-21. Utilizando el comando <tt>continue</tt> en un bucle <tt>for</tt></i></p>
+
+<code>
+<script>
+  haystack     = new Array()
+  haystack[4]  = "Needle"
+  haystack[11] = "Needle"
+  haystack[17] = "Needle"
+
+  for (j = 0; j < 20; ++j)
+  {
+    if (haystack[j] == "Needle")
+    {
+      document.write("<br>- Found at location " + j + "<br>")
+      continue
+    }
+
+    document.write(j + ", ")
+  }
+</script>
+</code>
+
+<p>Nota cómo la segunda llamada a <tt>document.write</tt> no tiene que estar encerrada en una declaración <tt>else</tt> (como antes), porque el comando <tt>continue</tt> la omitirá si se ha encontrado una coincidencia. La salida de este script es la siguiente:</p>
+
+<pre>
+0, 1, 2, 3,
+- Found at location 4
+5, 6, 7, 8, 9, 10,
+- Found at location 11
+12, 13, 14, 15, 16,
+- Found at location 17
+18, 19,
+</pre>

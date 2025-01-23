@@ -1,0 +1,30 @@
+<h3 expresiones_control_flujo_javascript_bucles_do_while>
+  Bucles do...while
+</h3>
+
+<p>Cuando necesites que un bucle itere al menos una vez antes de realizar cualquier prueba, utiliza un bucle <tt>do...while</tt>, que es similar a un bucle <tt>while</tt>, excepto que la expresión de prueba se verifica solo después de cada iteración del bucle. Entonces, para mostrar los primeros siete resultados de la tabla del <tt>7</tt>, podrías usar un código como el del Ejemplo 15-18.</p>
+
+<p><i>Ejemplo 15-18. Un bucle <tt>do...while</tt></i></p>
+
+<code>
+<script>
+  count = 1
+
+  do
+  {
+    document.write(count + " times 7 is " + count * 7 + "<br>")
+  } while (++count <= 7)
+</script>
+</code>
+
+<p>Como era de esperar, este bucle produce lo siguiente:</p>
+
+<pre>
+1 times 7 is 7
+2 times 7 is 14
+3 times 7 is 21
+4 times 7 is 28
+5 times 7 is 35
+6 times 7 is 42
+7 times 7 is 49
+</pre>

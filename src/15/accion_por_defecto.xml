@@ -1,0 +1,13 @@
+<h4 expresiones_control_flujo_javascript_accion_por_defecto>
+  Acción por defecto
+</h4>
+
+<p>Cuando no se cumple ninguna condición, puedes especificar una acción por defecto para una declaración <tt>switch</tt> utilizando la palabra reserveda <tt>default</tt>. El Ejemplo 15-15 muestra un fragmento de código que podría insertarse en el Ejemplo 15-14.</p>
+
+<p><i>Ejemplo 15-15. Una declaración por defecto para agregar al Ejemplo 15-14</i></p>
+
+<code>
+default:
+  document.write("Unrecognized selection")
+  break
+</code>

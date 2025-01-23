@@ -2,7 +2,7 @@
   Operadores de comparación
 </h3>
 
-<p>Utilizando operadores de comparación, puedes probar más que solo igualdad y desigualdad. JavaScript también te ofrece <tt>></tt> (es mayor que), <tt><</tt> (es menor que), <tt>>=</tt> (es mayor o igual que) y <tt><=</tt> (es menor o igual que) con los que puedes juga. El Ejemplo 15-6 muestra como puedes utilizar estos operadores.</p>
+<p>Utilizando operadores de comparación, puedes probar más que solo igualdad y desigualdad. JavaScript también te ofrece <tt>></tt> (es mayor que), <tt><</tt> (es menor que), <tt>>=</tt> (es mayor o igual que) y <tt><=</tt> (es menor o igual que) con los que puedes jugar. El Ejemplo 15-6 muestra como puedes utilizar estos operadores.</p>
 
 <p><i>Ejemplo 15-6. Los cuatro operadores de comparación</i></p>
 
