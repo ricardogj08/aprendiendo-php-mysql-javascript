@@ -2,6 +2,6 @@
   Funciones, objetos y arrays en JavaScript
 </h1>
 
-<h2 funciones_objetos_arrays_javascript_funciones_javascript>
-  Funciones en JavaScript
-</h2>
+<p>Al igual que PHP, JavaScript ofrece el acceso a funciones y objetos. De hecho, JavaScript está basado en objetos, porque, como has visto, tiene que acceder al DOM, lo que hace que cada elemento de un documento HTML esté disponible para manipularlo como un objeto.</p>
+
+<p>El uso y la sintaxis también son bastante similares a los de PHP, por lo que deberías sentirte como en casa mientras te guío en el uso de funciones y objetos en JavaScript, así como en la exploración en profundidad del manejo de arreglos.</p>

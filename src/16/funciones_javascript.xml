@@ -1,0 +1,5 @@
+<h2 funciones_objetos_arrays_javascript_funciones_javascript>
+  Funciones en JavaScript
+</h2>
+
+<p>Además de tener acceso a docenas de funciones (o métodos) integrados, como <tt>write</tt>, que ya has visto que se utiliza en <tt>document.write</tt>, puedes crear fácilmente tus propias funciones. Siempre que tengas un fragmento de código relativamente complejo que probablemente se reutilice, tienes un candidato para una función.</p>

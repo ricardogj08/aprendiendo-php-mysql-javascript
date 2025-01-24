@@ -173,6 +173,9 @@
         <ul>
         <li rel="funciones_objetos_arrays_javascript"><label class="toc" for="_funciones_objetos_arrays_javascript">Funciones, objetos y arrays en JavaScript</label><div class="current">Funciones, objetos y arrays en JavaScript</div><ul>
           <li class="h2"><a href="#funciones_objetos_arrays_javascript_funciones_javascript" onclick="m()">Funciones en JavaScript</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_definicion_funcion" onclick="m()">Definición de una función</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_array_arguments" onclick="m()">El array arguments</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_devolviendo_valor" onclick="m()">Devolviendo un valor</a></li>
         </ul></li>
         </ul>
         <p>Capítulo 17</p>
@@ -1655,7 +1658,105 @@ Counter: 4
 <p>Ver <a href="#soluciones_preguntas_capitulos_respuestas_capitulo_15" onclick="c('soluciones_preguntas_capitulos_respuestas_capitulo_15')">"Respuestas del Capítulo 15"</a> del <a href="#soluciones_preguntas_capitulos" onclick="c('soluciones_preguntas_capitulos')">Apéndice A</a> para comprobar las respuestas a estas preguntas.</p><br style="clear:both;"><label class="btn prev" accesskey="p" for="_explorando_javascript" title="Explorando JavaScript">Volver</label><label class="btn next" accesskey="n" for="_funciones_objetos_arrays_javascript" title="Funciones, objetos y arrays en JavaScript">Siguiente</label></div>
 <div class="page" rel="funciones_objetos_arrays_javascript"><div><ul class="breadcrumbs"><li><label class="home" for="_" title="Inicio"></label>&nbsp;»</li><li>&nbsp;Capítulo 16&nbsp;»</li><li>&nbsp;Funciones, objetos y arrays en JavaScript</li></ul><hr></div>
 <h1 id="funciones_objetos_arrays_javascript">Funciones, objetos y arrays en JavaScript<a href="#funciones_objetos_arrays_javascript"></a></h1>
-<h2 id="funciones_objetos_arrays_javascript_funciones_javascript">Funciones en JavaScript<a href="#funciones_objetos_arrays_javascript_funciones_javascript"></a></h2><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>
+<p>Al igual que PHP, JavaScript ofrece el acceso a funciones y objetos. De hecho, JavaScript está basado en objetos, porque, como has visto, tiene que acceder al DOM, lo que hace que cada elemento de un documento HTML esté disponible para manipularlo como un objeto.</p>
+<p>El uso y la sintaxis también son bastante similares a los de PHP, por lo que deberías sentirte como en casa mientras te guío en el uso de funciones y objetos en JavaScript, así como en la exploración en profundidad del manejo de arreglos.</p>
+<h2 id="funciones_objetos_arrays_javascript_funciones_javascript">Funciones en JavaScript<a href="#funciones_objetos_arrays_javascript_funciones_javascript"></a></h2>
+<p>Además de tener acceso a docenas de funciones (o métodos) integrados, como <samp>write</samp>, que ya has visto que se utiliza en <samp>document.write</samp>, puedes crear fácilmente tus propias funciones. Siempre que tengas un fragmento de código relativamente complejo que probablemente se reutilice, tienes un candidato para una función.</p>
+<h3 id="funciones_objetos_arrays_javascript_definicion_funcion">Definición de una función<a href="#funciones_objetos_arrays_javascript_definicion_funcion"></a></h3>
+<p>La sintaxis general para una función se muestra aquí:</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_k">function</span> <span class="hl_f">function_name</span>([<span class="hl_v">parameter</span> [, <span class="hl_v">...</span>]])
+{
+  <span class="hl_v">statements</span>
+}</code></div>
+<p>La primera línea de la sintaxis indica lo siguiente:</p>
+<ul>
+<li>La definición comienza con la palabra <samp>function</samp>.</li>
+<li>A continuación, sigue un nombre que debe comenzar con una letra o un guion bajo, seguido de cualquier número de letras, dígitos, signos de dólar o guiones bajos.</li>
+<li>Los paréntesis son obligatorios.</li>
+<li>Uno o más parámetros, separados por comas, son opcionales (indicados por los corchetes, que no forman parte de la sintaxis de la función).</li>
+</ul>
+<p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los siguientes strings se refieren a diferentes funciones: <samp>getInput</samp>, <samp>GETINPUT</samp> y <samp>getinput</samp>.</p>
+<p>En JavaScript hay una convención general de nomenclaturas para funciones: la primera letra de cada palabra de un nombre se escribe en mayúsculas, excepto la primera letra, que se escribe en minúsculas. Por lo tanto, de los ejemplos anteriores, <samp>getInput</samp> sería el nombre preferido utilizado por la mayoría de los programadores. Esta convención se conoce comúnmente como <i>bumpyCaps</i>, <i>bumpyCase</i>, o (más frecuentemente) <i>camelCase</i>.</p>
+<p>La llave de apertura inicia las instrucciones que se ejecutarán cuando llames a la función; una llave de cierre correspondiente debe cerrarla. Estas declaraciones pueden incluir una o más declaraciones de <samp>return</samp>, que obligan a la función a detener su ejecución y regresar al código que la llamó. Si se adjunta un valor a la declaración de <samp>return</samp>, el código que la llama puede recuperarlo.</p>
+<h3 id="funciones_objetos_arrays_array_arguments">El array arguments<a href="#funciones_objetos_arrays_array_arguments"></a></h3>
+<p>El array <samp>arguments</samp> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Toma el ejemplo de una función llamada <samp>displayItems</samp>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
+<p><i>Ejemplo 16-1. Definición de una función</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_f">displayItems</span>(<span class="hl_s">&quot;Dog&quot;</span>, <span class="hl_s">&quot;Cat&quot;</span>, <span class="hl_s">&quot;Pony&quot;</span>, <span class="hl_s">&quot;Hamster&quot;</span>, <span class="hl_s">&quot;Tortoise&quot;</span>)
+
+  <span class="hl_k">function</span> <span class="hl_f">displayItems</span>(<span class="hl_v">v1</span>, <span class="hl_v">v2</span>, <span class="hl_v">v3</span>, <span class="hl_v">v4</span>, <span class="hl_v">v5</span>)
+  {
+    <span class="hl_f">document.write</span>(<span class="hl_v">v1</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_v">v2</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_v">v3</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_v">v4</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_v">v5</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Cuando llames a este script en tu navegador, mostrará lo siguiente:</p>
+<div class="pre"><pre>
+Dog
+Cat
+Pony
+Hamster
+Tortoise
+</pre></div>
+<p>Todo esto está bien, pero ¿qué pasaría si quisieras pasar más de cinco elementos a la función? Además, reutilizar la llamada a <samp>document.write</samp> múltiples veces en lugar de emplear un bucle es un desperdicio de programación. Afortunadamente, el array <samp>arguments</samp> te da la flexibilidad para manejar un número variable de argumentos. El Ejemplo 16-2 muestra cómo puedes utilizarla para reescribir el ejemplo anterior de una manera mucho más eficiente.</p>
+<p><i>Ejemplo 16-2. Modificando la función para utilizar el array <samp>arguments</samp></i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">let</span> <span class="hl_v">c</span> <span class="hl_o">=</span> <span class="hl_s">&quot;Car&quot;</span>
+
+  <span class="hl_f">displayItems</span>(<span class="hl_s">&quot;Bananas&quot;</span>, <span class="hl_n">32</span><span class="hl_v">.3</span>, <span class="hl_v">c</span>)
+
+  <span class="hl_k">function</span> <span class="hl_f">displayItems</span>()
+  {
+    <span class="hl_k">for</span> (<span class="hl_v">j</span> <span class="hl_o">=</span> <span class="hl_n">0</span>; <span class="hl_v">j</span> <span class="hl_o">&lt;</span> <span class="hl_v">displayItems.arguments.length</span>; <span class="hl_o">++</span><span class="hl_v">j</span>)
+      <span class="hl_f">document.write</span>(<span class="hl_v">displayItems.arguments</span>[<span class="hl_v">j</span>] <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Observa el uso de la propiedad <samp>length</samp>, que ya encontraste en el capítulo anterior, y también cómo hago referencia al array <samp>displayItems.arguments</samp> utilizando la variable <samp>j</samp> para desplazarnos sobre ella. También elegí mantener la función breve y concisa al no rodear el contenido del bucle <samp>for</samp> con llaves, ya que contiene solo una única instrucción. Recuerda que el bucle debe detenerse cuando <samp>j</samp> sea uno menos que <samp>length</samp>, no igual a <samp>length</samp>.</p>
+<p>Usando esta técnica, ahora tienes una función que puede tomar tantos (o tan pocos) argumentos como desees y actuar sobre cada argumento como desees.</p>
+<h3 id="funciones_objetos_arrays_javascript_devolviendo_valor">Devolviendo un valor<a href="#funciones_objetos_arrays_javascript_devolviendo_valor"></a></h3>
+<p>Las funciones no se utilizan solo para mostrar cosas. De hecho, se utilizan principalmente para realizar cálculos o manipulaciones de datos y luego devolver un resultado. La función <samp>fixNames</samp> en el Ejemplo 16-3 utiliza el array <samp>arguments</samp> (explicada en la sección anterior) para tomar una serie de string que se le pasan y devolverlas como un solo string. La "corrección" que realiza es convertir todos los caracteres de los argumentos a minúsculas, excepto el primer carácter de cada argumento, que se convertirá a mayúsculas.</p>
+<p><i>Ejemplo 16-3. Limpiando un nombre completo</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_f">document.write</span>(<span class="hl_f">fixNames</span>(<span class="hl_s">&quot;the&quot;</span>, <span class="hl_s">&quot;DALLAS&quot;</span>, <span class="hl_s">&quot;CowBoys&quot;</span>))
+
+  <span class="hl_k">function</span> <span class="hl_f">fixNames</span>()
+  {
+    <span class="hl_v">var</span> <span class="hl_v">s</span> <span class="hl_o">=</span> <span class="hl_s">&quot;&quot;</span>
+
+    <span class="hl_k">for</span> (<span class="hl_v">j</span> <span class="hl_o">=</span> <span class="hl_n">0</span>; <span class="hl_v">j</span> <span class="hl_o">&lt;</span> <span class="hl_v">fixNames.arguments.length</span>; <span class="hl_o">++</span><span class="hl_v">j</span>)
+      <span class="hl_v">s</span> <span class="hl_o">+=</span> <span class="hl_v">fixNames.arguments</span>[<span class="hl_v">j</span>]<span class="hl_f">.charAt</span>(<span class="hl_n">0</span>)<span class="hl_f">.toUpperCase</span>() <span class="hl_o">+</span>
+           <span class="hl_v">fixNames.arguments</span>[<span class="hl_v">j</span>]<span class="hl_f">.substr</span>(<span class="hl_n">1</span>)<span class="hl_f">.toLowerCase</span>() <span class="hl_o">+</span> <span class="hl_s">&quot; &quot;</span>
+
+    <span class="hl_k">return</span> <span class="hl_f">s.substr</span>(<span class="hl_n">0</span>, <span class="hl_v">s.length</span> <span class="hl_o">-</span> <span class="hl_n">1</span>)
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Cuando se llama con los parámetros <samp>the</samp>, <samp>DALLAS</samp> y <samp>CowBoys</samp>, por ejemplo, la función devuelve el string <samp>The Dallas Cowboys</samp>. Vamos a repasar la función.</p>
+<p>Primero inicializa la variable temporal (y local) <samp>s</samp> con el string vacío. Luego, un bucle <samp>for</samp> itera a través de cada uno de los parámetros pasados, aislando el primer carácter del parámetro utilizando el método <samp>charAt</samp> y convirtiéndolo a mayúsculas con el método <samp>toUpperCase</samp>. Los distintos métodos mostrados en este ejemplo están todos integrados en JavaScript y disponibles por defecto.</p>
+<p>Luego se utiliza el método <samp>substr</samp> para obtener el resto de cada string, que se convierte a minúsculas mediante el método <samp>toLowerCase</samp>. Una versión más completa del método <samp>substr</samp>, en este caso, especificaría cuántos caracteres son parte del substring como segundo argumento:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">substr</span>(<span class="hl_n">1</span>, (<span class="hl_v">arguments</span>[<span class="hl_v">j</span>]<span class="hl_v">.length</span>) <span class="hl_o">-</span> <span class="hl_n">1</span> )</code></div>
+<p>En otras palabras, este método <samp>substr</samp> dice: "Empieza con el carácter en la posición <samp>1</samp> (el segundo carácter) y devuelve el resto del string (la longitud menos uno)". Como un detalle agradable, sin embargo, el método <samp>substr</samp> asume que quieres el resto del string si omites el segundo argumento.</p>
+<p>Después de convertir todo el argumento al caso deseado, se añade un carácter de espacio al final y el resultado se agrega a la variable temporal <samp>s</samp>.</p>
+<p>Finalmente, se utiliza nuevamente el método <samp>substr</samp> para devolver el contenido de la variable <samp>s</samp>, excepto por el espacio final, que no se desea que aparezca. Lo eliminamos utilizando <samp>substr</samp> para devolver el string hasta el carácter final pero sin incluirlo.</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">fixNames.arguments</span>[<span class="hl_v">j</span>]<span class="hl_f">.substr</span>(<span class="hl_n">1</span>)<span class="hl_f">.toLowerCase</span>()</code></div>
+<p>Tienes que interpretar la expresión dividiéndola mentalmente en partes en los puntos. JavaScript evalúa estos elementos de la declaración de izquierda a derecha de la siguiente manera:</p>
+<ol>
+<li>Comienza con el nombre de la función en sí: <samp>fixNames</samp>.</li>
+<li>Extrae el elemento <samp>j</samp> del array <samp>arguments</samp>, elemento que representa los argumentos de <samp>fixNames</samp>.</li>
+<li>Invoca a <samp>substr</samp> con el valor del parámetro en <samp>1</samp> para el elemento extraído. El resultado pasa en su totalidad, menos el primer carácter, a la siguiente sección
+de la expresión.</li>
+<li>Aplica el método <samp>toLowerCase</samp> al string que se ha pasado hasta ahora.</li>
+</ol>
+<p>Esta práctica a menudo se le conoce como <i>encadenamiento de métodos</i>. Entonces, por ejemplo, si el string <samp>mixedCASE</samp> se pasa a la expresión del ejemplo, pasará por las siguientes transformaciones:</p>
+<div class="pre"><pre>
+mixedCASE
+ixedCASE
+ixedcase
+</pre></div>
+<p>En otras palabras, <samp>fixNames.arguments[j]</samp> produce “mixedCASE”, luego <samp>substr(1)</samp> toma “mixedCASE” y produce “ixedCASE”, y finalmente <samp>toLowerCase()</samp> toma “ixedCASE” y produce “ixedcase”.</p>
+<p>Un recordatorio final: la variable <samp>s</samp> creada dentro de la función es local y, por lo tanto, no se puede acceder a ella fuera de la función. Al devolver <samp>s</samp> en la declaración <samp>return</samp>, hicimos que su valor estuviera disponible para el llamante, quien podría almacenarlo o utilizarlo de la forma que quisiera. Pero <samp>s</samp> en sí mismo desaparece al final de la función. Aunque podríamos hacer que una función opere sobre variables globales (y a veces eso es necesario), es mucho mejor simplemente devolver los valores que quieres preservar y dejar que JavaScript limpie el resto de variables utilizadas por la función.</p><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>
 <div class="page" rel="validacion_manejo_errores_javascript_php"><div><ul class="breadcrumbs"><li><label class="home" for="_" title="Inicio"></label>&nbsp;»</li><li>&nbsp;Capítulo 17&nbsp;»</li><li>&nbsp;Validación y manejo de errores en JavaScript y PHP</li></ul><hr></div>
 <h1 id="validacion_manejo_errores_javascript_php">Validación y manejo de errores en JavaScript y PHP<a href="#validacion_manejo_errores_javascript_php"></a></h1>
 <h2 id="validacion_manejo_errores_javascript_php_validando_entrada_usuario_javascript">Validando la entrada del usuario con JavaScript<a href="#validacion_manejo_errores_javascript_php_validando_entrada_usuario_javascript"></a></h2><br style="clear:both;"><label class="btn prev" accesskey="p" for="_funciones_objetos_arrays_javascript" title="Funciones, objetos y arrays en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_utilizando_comunicaciones_asincronas" title="Utilizando comunicaciones asíncronas">Siguiente</label></div>

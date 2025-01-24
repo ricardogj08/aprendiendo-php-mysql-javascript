@@ -1,0 +1,27 @@
+<h3 funciones_objetos_arrays_javascript_definicion_funcion>
+  Definición de una función
+</h3>
+
+<p>La sintaxis general para una función se muestra aquí:</p>
+
+<code>
+function function_name([parameter [, ...]])
+{
+  statements
+}
+</code>
+
+<p>La primera línea de la sintaxis indica lo siguiente:</p>
+
+<ul>
+  <li>La definición comienza con la palabra <tt>function</tt>.</li>
+  <li>A continuación, sigue un nombre que debe comenzar con una letra o un guion bajo, seguido de cualquier número de letras, dígitos, signos de dólar o guiones bajos.</li>
+  <li>Los paréntesis son obligatorios.</li>
+  <li>Uno o más parámetros, separados por comas, son opcionales (indicados por los corchetes, que no forman parte de la sintaxis de la función).</li>
+</ul>
+
+<p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los siguientes strings se refieren a diferentes funciones: <tt>getInput</tt>, <tt>GETINPUT</tt> y <tt>getinput</tt>.</p>
+
+<p>En JavaScript hay una convención general de nomenclaturas para funciones: la primera letra de cada palabra de un nombre se escribe en mayúsculas, excepto la primera letra, que se escribe en minúsculas. Por lo tanto, de los ejemplos anteriores, <tt>getInput</tt> sería el nombre preferido utilizado por la mayoría de los programadores. Esta convención se conoce comúnmente como <i>bumpyCaps</i>, <i>bumpyCase</i>, o (más frecuentemente) <i>camelCase</i>.</p>
+
+<p>La llave de apertura inicia las instrucciones que se ejecutarán cuando llames a la función; una llave de cierre correspondiente debe cerrarla. Estas declaraciones pueden incluir una o más declaraciones de <tt>return</tt>, que obligan a la función a detener su ejecución y regresar al código que la llamó. Si se adjunta un valor a la declaración de <tt>return</tt>, el código que la llama puede recuperarlo.</p>

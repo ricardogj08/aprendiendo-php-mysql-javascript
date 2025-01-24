@@ -1,0 +1,54 @@
+<h3 funciones_objetos_arrays_array_arguments>
+  El array arguments
+</h3>
+
+<p>El array <tt>arguments</tt> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Toma el ejemplo de una función llamada <tt>displayItems</tt>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
+
+<p><i>Ejemplo 16-1. Definición de una función</i></p>
+
+<code>
+<script>
+  displayItems("Dog", "Cat", "Pony", "Hamster", "Tortoise")
+
+  function displayItems(v1, v2, v3, v4, v5)
+  {
+    document.write(v1 + "<br>")
+    document.write(v2 + "<br>")
+    document.write(v3 + "<br>")
+    document.write(v4 + "<br>")
+    document.write(v5 + "<br>")
+  }
+</script>
+</code>
+
+<p>Cuando llames a este script en tu navegador, mostrará lo siguiente:</p>
+
+<pre>
+Dog
+Cat
+Pony
+Hamster
+Tortoise
+</pre>
+
+<p>Todo esto está bien, pero ¿qué pasaría si quisieras pasar más de cinco elementos a la función? Además, reutilizar la llamada a <tt>document.write</tt> múltiples veces en lugar de emplear un bucle es un desperdicio de programación. Afortunadamente, el array <tt>arguments</tt> te da la flexibilidad para manejar un número variable de argumentos. El Ejemplo 16-2 muestra cómo puedes utilizarla para reescribir el ejemplo anterior de una manera mucho más eficiente.</p>
+
+<p><i>Ejemplo 16-2. Modificando la función para utilizar el array <tt>arguments</tt></i></p>
+
+<code>
+<script>
+  let c = "Car"
+
+  displayItems("Bananas", 32.3, c)
+
+  function displayItems()
+  {
+    for (j = 0; j < displayItems.arguments.length; ++j)
+      document.write(displayItems.arguments[j] + "<br>")
+  }
+</script>
+</code>
+
+<p>Observa el uso de la propiedad <tt>length</tt>, que ya encontraste en el capítulo anterior, y también cómo hago referencia al array <tt>displayItems.arguments</tt> utilizando la variable <tt>j</tt> para desplazarnos sobre ella. También elegí mantener la función breve y concisa al no rodear el contenido del bucle <tt>for</tt> con llaves, ya que contiene solo una única instrucción. Recuerda que el bucle debe detenerse cuando <tt>j</tt> sea uno menos que <tt>length</tt>, no igual a <tt>length</tt>.</p>
+
+<p>Usando esta técnica, ahora tienes una función que puede tomar tantos (o tan pocos) argumentos como desees y actuar sobre cada argumento como desees.</p>

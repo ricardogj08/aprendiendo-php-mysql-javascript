@@ -1,0 +1,66 @@
+<h3 funciones_objetos_arrays_javascript_devolviendo_valor>
+  Devolviendo un valor
+</h3>
+
+<p>Las funciones no se utilizan solo para mostrar cosas. De hecho, se utilizan principalmente para realizar cálculos o manipulaciones de datos y luego devolver un resultado. La función <tt>fixNames</tt> en el Ejemplo 16-3 utiliza el array <tt>arguments</tt> (explicada en la sección anterior) para tomar una serie de string que se le pasan y devolverlas como un solo string. La "corrección" que realiza es convertir todos los caracteres de los argumentos a minúsculas, excepto el primer carácter de cada argumento, que se convertirá a mayúsculas.</p>
+
+<p><i>Ejemplo 16-3. Limpiando un nombre completo</i></p>
+
+<code>
+<script>
+  document.write(fixNames("the", "DALLAS", "CowBoys"))
+
+  function fixNames()
+  {
+    var s = ""
+
+    for (j = 0; j < fixNames.arguments.length; ++j)
+      s += fixNames.arguments[j].charAt(0).toUpperCase() +
+           fixNames.arguments[j].substr(1).toLowerCase() + " "
+
+    return s.substr(0, s.length - 1)
+  }
+</script>
+</code>
+
+<p>Cuando se llama con los parámetros <tt>the</tt>, <tt>DALLAS</tt> y <tt>CowBoys</tt>, por ejemplo, la función devuelve el string <tt>The Dallas Cowboys</tt>. Vamos a repasar la función.</p>
+
+<p>Primero inicializa la variable temporal (y local) <tt>s</tt> con el string vacío. Luego, un bucle <tt>for</tt> itera a través de cada uno de los parámetros pasados, aislando el primer carácter del parámetro utilizando el método <tt>charAt</tt> y convirtiéndolo a mayúsculas con el método <tt>toUpperCase</tt>. Los distintos métodos mostrados en este ejemplo están todos integrados en JavaScript y disponibles por defecto.</p>
+
+<p>Luego se utiliza el método <tt>substr</tt> para obtener el resto de cada string, que se convierte a minúsculas mediante el método <tt>toLowerCase</tt>. Una versión más completa del método <tt>substr</tt>, en este caso, especificaría cuántos caracteres son parte del substring como segundo argumento:</p>
+
+<code>
+substr(1, (arguments[j].length) - 1 )
+</code>
+
+<p>En otras palabras, este método <tt>substr</tt> dice: "Empieza con el carácter en la posición <tt>1</tt> (el segundo carácter) y devuelve el resto del string (la longitud menos uno)". Como un detalle agradable, sin embargo, el método <tt>substr</tt> asume que quieres el resto del string si omites el segundo argumento.</p>
+
+<p>Después de convertir todo el argumento al caso deseado, se añade un carácter de espacio al final y el resultado se agrega a la variable temporal <tt>s</tt>.</p>
+
+<p>Finalmente, se utiliza nuevamente el método <tt>substr</tt> para devolver el contenido de la variable <tt>s</tt>, excepto por el espacio final, que no se desea que aparezca. Lo eliminamos utilizando <tt>substr</tt> para devolver el string hasta el carácter final pero sin incluirlo.</p>
+
+<code>
+fixNames.arguments[j].substr(1).toLowerCase()
+</code>
+
+<p>Tienes que interpretar la expresión dividiéndola mentalmente en partes en los puntos. JavaScript evalúa estos elementos de la declaración de izquierda a derecha de la siguiente manera:</p>
+
+<ol>
+  <li>Comienza con el nombre de la función en sí: <tt>fixNames</tt>.</li>
+  <li>Extrae el elemento <tt>j</tt> del array <tt>arguments</tt>, elemento que representa los argumentos de <tt>fixNames</tt>.</li>
+  <li>Invoca a <tt>substr</tt> con el valor del parámetro en <tt>1</tt> para el elemento extraído. El resultado pasa en su totalidad, menos el primer carácter, a la siguiente sección
+de la expresión.</li>
+  <li>Aplica el método <tt>toLowerCase</tt> al string que se ha pasado hasta ahora.</li>
+</ol>
+
+<p>Esta práctica a menudo se le conoce como <i>encadenamiento de métodos</i>. Entonces, por ejemplo, si el string <tt>mixedCASE</tt> se pasa a la expresión del ejemplo, pasará por las siguientes transformaciones:</p>
+
+<pre>
+mixedCASE
+ixedCASE
+ixedcase
+</pre>
+
+<p>En otras palabras, <tt>fixNames.arguments[j]</tt> produce “mixedCASE”, luego <tt>substr(1)</tt> toma “mixedCASE” y produce “ixedCASE”, y finalmente <tt>toLowerCase()</tt> toma “ixedCASE” y produce “ixedcase”.</p>
+
+<p>Un recordatorio final: la variable <tt>s</tt> creada dentro de la función es local y, por lo tanto, no se puede acceder a ella fuera de la función. Al devolver <tt>s</tt> en la declaración <tt>return</tt>, hicimos que su valor estuviera disponible para el llamante, quien podría almacenarlo o utilizarlo de la forma que quisiera. Pero <tt>s</tt> en sí mismo desaparece al final de la función. Aunque podríamos hacer que una función opere sobre variables globales (y a veces eso es necesario), es mucho mejor simplemente devolver los valores que quieres preservar y dejar que JavaScript limpie el resto de variables utilizadas por la función.</p>

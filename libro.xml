@@ -134,6 +134,10 @@
 
 <cap>Capítulo 16</cap>
   <include src/16/introduccion.xml>
+  <include src/16/funciones_javascript.xml>
+    <include src/16/definicion_funcion.xml>
+    <include src/16/array_arguments.xml>
+    <include src/16/devolviendo_valor.xml>
 
 <cap>Capítulo 17</cap>
   <include src/17/introduccion.xml>
