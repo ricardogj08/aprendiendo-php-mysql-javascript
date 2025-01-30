@@ -1,0 +1,54 @@
+<h4 funciones_objetos_arrays_javascript_asignando_valores_elementos>
+  Asignando valores a los elementos
+</h4>
+
+<p>En PHP, puedes agregar un nuevo elemento a un array simplemente asignándolo, sin especificar el desplazamiento del elemento, así:</p>
+
+<code>
+$arrayname[] = "Element 1";
+$arrayname[] = "Element 2";
+</code>
+
+<p>Pero en JavaScript se utiliza el método <tt>push</tt> para lograr el mismo resultado, así:</p>
+
+<code>
+arrayname.push("Element 1")
+arrayname.push("Element 2")
+</code>
+
+<p>Esto te permite seguir añadiendo elementos a un array sin tener que llevar un control del número de elementos. Cuando necesites saber cuántos elementos hay en un array, puedes usar la propiedad <tt>length</tt>, así:</p>
+
+<code>
+document.write(arrayname.length)
+</code>
+
+<p>Opcionalmente, si deseas realizar tú mismo un seguimiento de las ubicaciones de los elementos y colocarlos en ubicaciones específicas, puedes utilizar una sintaxis como esta:</p>
+
+<code>
+arrayname[0] = "Element 1"
+arrayname[1] = "Element 2"
+</code>
+
+<p>El ejemplo 16-8 muestra un script simple que crea un array, lo carga con algunos valores y luego los muestra.</p>
+
+<p><i>Ejemplo 16-8. Creación, construcción e impresión de un array</i></p>
+
+<code>
+<script>
+  numbers = []
+  numbers.push("One")
+  numbers.push("Two")
+  numbers.push("Three")
+
+  for (j = 0; j < numbers.length; ++j)
+    document.write("Element " + j + " = " + numbers[j] + "<br>")
+</script>
+</code>
+
+<p>La salida de este script es la siguiente:</p>
+
+<pre>
+Element 0 = One
+Element 1 = Two
+Element 2 = Three
+</pre>

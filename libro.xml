@@ -147,6 +147,14 @@
       <include src/16/propiedades_metodos_estaticos.xml>
       <include src/16/extendiendo_objetos_javascript.xml>
   <include src/16/arrays_javascript.xml>
+    <include src/16/arrays_numericos.xml>
+      <include src/16/asignando_valores_elementos.xml>
+      <include src/16/asignacion_utilizando_palabra_reservada_array.xml>
+    <include src/16/arrays_asociativos.xml>
+    <include src/16/arrays_multidimensionales.xml>
+    <include src/16/utilizando_metodos_array.xml>
+      <include src/16/some.xml>
+      <include src/16/indexof.xml>
 
 <cap>Capítulo 17</cap>
   <include src/17/introduccion.xml>

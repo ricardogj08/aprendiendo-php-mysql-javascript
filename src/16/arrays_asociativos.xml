@@ -1,0 +1,38 @@
+<h3 funciones_objetos_arrays_javascript_arrays_asociativos>
+  Arrays asociativos
+</h3>
+
+<p>Un <i>array asociativo</i> es aquel en el que los elementos se referencian por nombre en lugar de por un desplazamiento de un número entero. Sin embargo, JavaScript no soporta tales cosas. En su lugar, podemos lograr el mismo resultado creando un objeto con propiedades que actúen de la misma manera.</p>
+
+<p>Entonces, para crear un "array asociativo," define un bloque de elementos dentro de unas llaves. Para cada elemento, coloca la clave a la izquierda y el contenido a la derecha de los dos puntos (<tt>:</tt>). El ejemplo 16-9 muestra cómo puedes crear un array asociativo para abarcar el contenido de la sección de "pelotas" de un minorista de equipamiento deportivo online.</p>
+
+<p><i>Ejemplo 16-9. Creación y visualización de un array asociativo</i></p>
+
+<code>
+<script>
+  balls = {"golf":   "Golf balls, 6",
+           "tennis": "Tennis balls, 3",
+           "soccer": "Soccer ball, 1",
+           "ping":   "Ping Pong balls, 1 doz"}
+
+  for (ball in balls)
+    document.write(ball + " = " + balls[ball] + "<br>")
+</script>
+</code>
+
+<p>Para verificar que el array se ha creado y rellenado correctamente, he utilizado otro tipo de bucle <tt>for</tt> usando la palabra reservada <tt>in</tt>. Esto crea una nueva variable para usarlo únicamente dentro del array (<tt>ball</tt>, en este ejemplo) e itera a través de todos los elementos del array que se encuentra a la derecha de la palabra reservada <tt>in</tt> (<tt>balls</tt>, en este ejemplo). El bucle actúa sobre cada elemento de <tt>balls</tt>, colocando el valor de la clave en <tt>ball</tt>.</p>
+
+<p>Utilizando este valor de la clave almacenado en <tt>ball</tt>, también puedes obtener el valor del elemento actual de <tt>balls</tt>. El resultado de llamar al script del ejemplo en un navegador es el siguiente:</p>
+
+<pre>
+golf = Golf balls, 6
+tennis = Tennis balls, 3
+soccer = Soccer ball, 1
+ping = Ping Pong balls, 1 doz
+</pre>
+
+<p>Para obtener un elemento específico de un array asociativo, puedes especificar una clave explícitamente, de la siguiente manera (en este caso, mostrando el valor <tt>Soccer ball, 1</tt>):</p>
+
+<code>
+document.write(balls['soccer'])
+</code>

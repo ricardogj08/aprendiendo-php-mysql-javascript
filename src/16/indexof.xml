@@ -1,0 +1,10 @@
+<h4 funciones_objetos_arrays_javascript_indexof>
+  indexOf
+</h4>
+
+<p>Para averiguar dónde se puede encontrar un elemento en un array, puedes llamar a la función <tt>indexOf</tt> en el array, que devolverá el índice del elemento encontrado (empezando desde <tt>0</tt>), o <tt>-1</tt> si no se encuentra. Por ejemplo, lo siguiente da como resultado el valor <tt>2</tt>:</p>
+
+<code>
+animals = ['cat', 'dog', 'cow', 'horse', 'elephant']
+offset = animals.indexOf('cow')
+</code>

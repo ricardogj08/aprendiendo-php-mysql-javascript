@@ -1,0 +1,13 @@
+<h4 funciones_objetos_arrays_javascript_asignacion_utilizando_palabra_reservada_array>
+  Asignación utilizando la palabra reservada Array
+</h4>
+
+<p>También puedes crear un array junto con algunos elementos iniciales utilizando la palabra reservada <tt>Array</tt>, así:</p>
+
+<code>
+numbers = Array("One", "Two", "Three")
+</code>
+
+<p>No hay nada que te impida agregar más elementos después también.</p>
+
+<p>Ahora has visto un par de maneras de agregar elementos a un array, y una forma de referenciarlos. JavaScript ofrece muchos más, de los cuales hablaré en breve, pero primero, veremos otro tipo de array.</p>

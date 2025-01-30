@@ -1,0 +1,56 @@
+<h3 funciones_objetos_arrays_javascript_arrays_multidimensionales>
+  Arrays multidimensionales
+</h3>
+
+<p>Para crear un array multidimensional en JavaScript, simplemente coloca arrays dentro de otros arrays. Por ejemplo, para crear un array que contenga los detalles de un tablero de ajedrez bidimensional (8 × 8 casillas), podrías utilizar el código en el Ejemplo 16-10.</p>
+
+<p><i>Ejemplo 16-10. Creando un array numérico multidimensional</i></p>
+
+<code>
+<script>
+  checkerboard = Array(
+    Array(' ', 'o', ' ', 'o', ' ', 'o', ' ', 'o'),
+    Array('o', ' ', 'o', ' ', 'o', ' ', 'o', ' '),
+    Array(' ', 'o', ' ', 'o', ' ', 'o', ' ', 'o'),
+    Array(' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '),
+    Array(' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '),
+    Array('O', ' ', 'O', ' ', 'O', ' ', 'O', ' '),
+    Array(' ', 'O', ' ', 'O', ' ', 'O', ' ', 'O'),
+    Array('O', ' ', 'O', ' ', 'O', ' ', 'O', ' '))
+
+  document.write("<pre>")
+
+  for (j = 0; j < 8; ++j)
+  {
+    for (k = 0; k < 8; ++k)
+      document.write(checkerboard[j][k] + " ")
+
+    document.write("<br>")
+  }
+
+  document.write("</pre>")
+</script>
+</code>
+
+<p>En este ejemplo, las letras minúsculas representan piezas negras, y las mayúsculas blancas. Un par de bucles <tt>for</tt> anidados recorren el array y muestran su contenido.</p>
+
+<p>El bucle externo contiene dos sentencias, que están encerradas por llaves. El bucle interno luego procesa cada casilla en una fila, imprimiendo el carácter en la ubicación <tt>[j][k]</tt>, seguido de un espacio (para alinear la impresión). Este bucle contiene una sola sentencia, por lo que no se requieren llaves para encerrarlo. Las etiquetas <tt><pre></tt> y <tt></pre></tt> aseguran que la salida se muestre correctamente, así:</p>
+
+<pre>
+  o   o   o   o 
+o   o   o   o   
+  o   o   o   o 
+                
+                
+O   O   O   O   
+  O   O   O   O 
+O   O   O   O   
+</pre>
+
+<p>También puedes acceder directamente a cualquier elemento dentro de este array utilizando corchetes:</p>
+
+<code>
+document.write(checkerboard[7][2])
+</code>
+
+<p>Esta declaración imprime la letra mayúscula <tt>O</tt>, el octavo elemento hacia abajo y el tercero a lo largo, recuerda que los índices de los arrays comienzan en <tt>0</tt>, no en <tt>1</tt>.</p>

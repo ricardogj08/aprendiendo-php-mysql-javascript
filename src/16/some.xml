@@ -1,0 +1,15 @@
+<h4 funciones_objetos_arrays_javascript_some>
+  some
+</h4>
+
+<p>Cuando necesitas saber si al menos un elemento del array cumple con un cierto criterio, puedes utilizar la función <tt>some</tt>, que probará todos los elementos y se detendrá automáticamente, devolviendo el valor requerido tan pronto como uno coincida. Esto te ahorra tener que escribir tu propio código para realizar tales búsquedas, como este:</p>
+
+<code>
+function isBiggerThan10(element, index, array)
+{
+  return element > 10
+}
+
+result = [2, 5, 8, 1, 4].some(isBiggerThan10);  // result will be false
+result = [12, 5, 8, 1, 4].some(isBiggerThan10); // result will be true
+</code>

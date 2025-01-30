@@ -1,0 +1,15 @@
+<h3 funciones_objetos_arrays_javascript_arrays_numericos>
+  Arrays numéricos
+</h3>
+
+<p>Para crear un nuevo array, utiliza la siguiente sintaxis:</p>
+
+<code>
+arrayname = new Array()
+</code>
+
+<p>O puedes utilizar la forma abreviada, de la siguiente manera:</p>
+
+<code>
+arrayname = []
+</code>
