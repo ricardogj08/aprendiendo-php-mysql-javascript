@@ -1,0 +1,38 @@
+<h3 funciones_objetos_arrays_javascript_devolviendo_array>
+  Devolviendo un array
+</h3>
+
+<p>En el Ejemplo 16-3, la función devolvió un solo parámetro, pero ¿qué pasa si necesitas devolver varios parámetros? Puedes hacerlo devolviendo un array, como en el Ejemplo 16-4.</p>
+
+<p><i>Ejemplo 16-4. Devolviendo un array de valores</i></p>
+
+<code>
+<script>
+  words = fixNames("the", "DALLAS", "CowBoys")
+
+  for (j = 0; j < words.length; ++j)
+    document.write(words[j] + "<br>")
+
+  function fixNames()
+  {
+    var s = new Array()
+
+    for (j = 0; j < fixNames.arguments.length; ++j)
+      s[j] = fixNames.arguments[j].charAt(0).toUpperCase() +
+             fixNames.arguments[j].substr(1).toLowerCase()
+
+    return s
+  }
+</script>
+</code>
+
+<p>Aquí la variable <tt>words</tt> se define automáticamente como un array y se llena con el resultado que devuelve la llamada a la función <tt>fixNames</tt>. Luego, un bucle <tt>for</tt> itera a través del array y muestra cada elemento.</p>
+
+<p>En cuanto a la función <tt>fixNames</tt>, es casi idéntica al Ejemplo 16-3, excepto que la variable <tt>s</tt> ahora es un array; después de procesar cada palabra, se almacena como un elemento de este array, que es devuelto por la declaración <tt>return</tt>.</p>
+
+<p>Esta función permite la extracción de parámetros individuales de sus valores devueltos, como el siguiente (cuyo resultado es simplemente <tt>The Cowboys</tt>):</p>
+
+<code>
+words = fixNames("the", "DALLAS", "CowBoys")
+document.write(words[0] + " " + words[2])
+</code>

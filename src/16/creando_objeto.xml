@@ -1,0 +1,35 @@
+<h3 funciones_objetos_arrays_javascript_creando_objeto>
+  Creando un objeto
+</h3>
+
+<p>Para crear una instancia de la clase <tt>User</tt>, puedes utilizar una declaración como la siguiente:</p>
+
+<code>
+details = new User("Wolfgang", "w.a.mozart", "composer")
+</code>
+
+<p>O puedes crear un objeto vacío, como este:</p>
+
+<code>
+details = new User()
+</code>
+
+<p>y luego completarlo más tarde, así:</p>
+
+<code>
+details.forename = "Wolfgang"
+details.username = "w.a.mozart"
+details.password = "composer"
+</code>
+
+<p>También puedes agregar nuevas propiedades a un objeto, así:</p>
+
+<code>
+details.greeting = "Hello"
+</code>
+
+<p>Puedes verificar que agregar las nuevas propiedades funcionan con la siguiente declaración:</p>
+
+<code>
+document.write(details.greeting)
+</code>

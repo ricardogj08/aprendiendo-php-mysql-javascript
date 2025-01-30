@@ -174,8 +174,17 @@
         <li rel="funciones_objetos_arrays_javascript"><label class="toc" for="_funciones_objetos_arrays_javascript">Funciones, objetos y arrays en JavaScript</label><div class="current">Funciones, objetos y arrays en JavaScript</div><ul>
           <li class="h2"><a href="#funciones_objetos_arrays_javascript_funciones_javascript" onclick="m()">Funciones en JavaScript</a></li>
           <li class="h3"><a href="#funciones_objetos_arrays_javascript_definicion_funcion" onclick="m()">Definición de una función</a></li>
-          <li class="h3"><a href="#funciones_objetos_arrays_array_arguments" onclick="m()">El array arguments</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_array_arguments" onclick="m()">El array arguments</a></li>
           <li class="h3"><a href="#funciones_objetos_arrays_javascript_devolviendo_valor" onclick="m()">Devolviendo un valor</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_devolviendo_array" onclick="m()">Devolviendo un array</a></li>
+          <li class="h2"><a href="#funciones_objetos_arrays_javascript_objetos_javascript" onclick="m()">Objetos en JavaScript</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_declarando_clase" onclick="m()">Declarando una clase</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_creando_objeto" onclick="m()">Creando un objeto</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_accediendo_objetos" onclick="m()">Accediendo a objetos</a></li>
+          <li class="h3"><a href="#funciones_objetos_arrays_javascript_palabra_reservada_protoype" onclick="m()">La palabra reservada prototype</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_propiedades_metodos_estaticos" onclick="m()">Propiedades y métodos estáticos</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_extendiendo_objetos_javascript" onclick="m()">Extendiendo objetos de JavaScript</a></li>
+          <li class="h2"><a href="#funciones_objetos_arrays_javascript_arrays_javascript" onclick="m()">Arrays en JavaScript</a></li>
         </ul></li>
         </ul>
         <p>Capítulo 17</p>
@@ -1678,7 +1687,7 @@ Counter: 4
 <p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los siguientes strings se refieren a diferentes funciones: <samp>getInput</samp>, <samp>GETINPUT</samp> y <samp>getinput</samp>.</p>
 <p>En JavaScript hay una convención general de nomenclaturas para funciones: la primera letra de cada palabra de un nombre se escribe en mayúsculas, excepto la primera letra, que se escribe en minúsculas. Por lo tanto, de los ejemplos anteriores, <samp>getInput</samp> sería el nombre preferido utilizado por la mayoría de los programadores. Esta convención se conoce comúnmente como <i>bumpyCaps</i>, <i>bumpyCase</i>, o (más frecuentemente) <i>camelCase</i>.</p>
 <p>La llave de apertura inicia las instrucciones que se ejecutarán cuando llames a la función; una llave de cierre correspondiente debe cerrarla. Estas declaraciones pueden incluir una o más declaraciones de <samp>return</samp>, que obligan a la función a detener su ejecución y regresar al código que la llamó. Si se adjunta un valor a la declaración de <samp>return</samp>, el código que la llama puede recuperarlo.</p>
-<h3 id="funciones_objetos_arrays_array_arguments">El array arguments<a href="#funciones_objetos_arrays_array_arguments"></a></h3>
+<h3 id="funciones_objetos_arrays_javascript_array_arguments">El array arguments<a href="#funciones_objetos_arrays_javascript_array_arguments"></a></h3>
 <p>El array <samp>arguments</samp> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Toma el ejemplo de una función llamada <samp>displayItems</samp>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
 <p><i>Ejemplo 16-1. Definición de una función</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
@@ -1756,7 +1765,173 @@ ixedCASE
 ixedcase
 </pre></div>
 <p>En otras palabras, <samp>fixNames.arguments[j]</samp> produce “mixedCASE”, luego <samp>substr(1)</samp> toma “mixedCASE” y produce “ixedCASE”, y finalmente <samp>toLowerCase()</samp> toma “ixedCASE” y produce “ixedcase”.</p>
-<p>Un recordatorio final: la variable <samp>s</samp> creada dentro de la función es local y, por lo tanto, no se puede acceder a ella fuera de la función. Al devolver <samp>s</samp> en la declaración <samp>return</samp>, hicimos que su valor estuviera disponible para el llamante, quien podría almacenarlo o utilizarlo de la forma que quisiera. Pero <samp>s</samp> en sí mismo desaparece al final de la función. Aunque podríamos hacer que una función opere sobre variables globales (y a veces eso es necesario), es mucho mejor simplemente devolver los valores que quieres preservar y dejar que JavaScript limpie el resto de variables utilizadas por la función.</p><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>
+<p>Un recordatorio final: la variable <samp>s</samp> creada dentro de la función es local y, por lo tanto, no se puede acceder a ella fuera de la función. Al devolver <samp>s</samp> en la declaración <samp>return</samp>, hicimos que su valor estuviera disponible para el llamante, quien podría almacenarlo o utilizarlo de la forma que quisiera. Pero <samp>s</samp> en sí mismo desaparece al final de la función. Aunque podríamos hacer que una función opere sobre variables globales (y a veces eso es necesario), es mucho mejor simplemente devolver los valores que quieres preservar y dejar que JavaScript limpie el resto de variables utilizadas por la función.</p>
+<h3 id="funciones_objetos_arrays_javascript_devolviendo_array">Devolviendo un array<a href="#funciones_objetos_arrays_javascript_devolviendo_array"></a></h3>
+<p>En el Ejemplo 16-3, la función devolvió un solo parámetro, pero ¿qué pasa si necesitas devolver varios parámetros? Puedes hacerlo devolviendo un array, como en el Ejemplo 16-4.</p>
+<p><i>Ejemplo 16-4. Devolviendo un array de valores</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">words</span> <span class="hl_o">=</span> <span class="hl_f">fixNames</span>(<span class="hl_s">&quot;the&quot;</span>, <span class="hl_s">&quot;DALLAS&quot;</span>, <span class="hl_s">&quot;CowBoys&quot;</span>)
+
+  <span class="hl_k">for</span> (<span class="hl_v">j</span> <span class="hl_o">=</span> <span class="hl_n">0</span>; <span class="hl_v">j</span> <span class="hl_o">&lt;</span> <span class="hl_v">words.length</span>; <span class="hl_o">++</span><span class="hl_v">j</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_v">words</span>[<span class="hl_v">j</span>] <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_k">function</span> <span class="hl_f">fixNames</span>()
+  {
+    <span class="hl_v">var</span> <span class="hl_v">s</span> <span class="hl_o">=</span> <span class="hl_t">new</span> <span class="hl_f">Array</span>()
+
+    <span class="hl_k">for</span> (<span class="hl_v">j</span> <span class="hl_o">=</span> <span class="hl_n">0</span>; <span class="hl_v">j</span> <span class="hl_o">&lt;</span> <span class="hl_v">fixNames.arguments.length</span>; <span class="hl_o">++</span><span class="hl_v">j</span>)
+      <span class="hl_v">s</span>[<span class="hl_v">j</span>] <span class="hl_o">=</span> <span class="hl_v">fixNames.arguments</span>[<span class="hl_v">j</span>]<span class="hl_f">.charAt</span>(<span class="hl_n">0</span>)<span class="hl_f">.toUpperCase</span>() <span class="hl_o">+</span>
+             <span class="hl_v">fixNames.arguments</span>[<span class="hl_v">j</span>]<span class="hl_f">.substr</span>(<span class="hl_n">1</span>)<span class="hl_f">.toLowerCase</span>()
+
+    <span class="hl_k">return</span> <span class="hl_v">s</span>
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Aquí la variable <samp>words</samp> se define automáticamente como un array y se llena con el resultado que devuelve la llamada a la función <samp>fixNames</samp>. Luego, un bucle <samp>for</samp> itera a través del array y muestra cada elemento.</p>
+<p>En cuanto a la función <samp>fixNames</samp>, es casi idéntica al Ejemplo 16-3, excepto que la variable <samp>s</samp> ahora es un array; después de procesar cada palabra, se almacena como un elemento de este array, que es devuelto por la declaración <samp>return</samp>.</p>
+<p>Esta función permite la extracción de parámetros individuales de sus valores devueltos, como el siguiente (cuyo resultado es simplemente <samp>The Cowboys</samp>):</p>
+<div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_v">words</span> <span class="hl_o">=</span> <span class="hl_f">fixNames</span>(<span class="hl_s">&quot;the&quot;</span>, <span class="hl_s">&quot;DALLAS&quot;</span>, <span class="hl_s">&quot;CowBoys&quot;</span>)
+<span class="hl_f">document.write</span>(<span class="hl_v">words</span>[<span class="hl_n">0</span>] <span class="hl_o">+</span> <span class="hl_s">&quot; &quot;</span> <span class="hl_o">+</span> <span class="hl_v">words</span>[<span class="hl_n">2</span>])</code></div>
+<h2 id="funciones_objetos_arrays_javascript_objetos_javascript">Objetos en JavaScript<a href="#funciones_objetos_arrays_javascript_objetos_javascript"></a></h2>
+<p>Un objeto de JavaScript es un paso adelante al de una variable, que solo puede contener un valor a la vez. En cambio, los objetos pueden contener múltiples valores e incluso funciones. Un objeto agrupa datos junto con las funciones necesarias para manipularlos.</p>
+<h3 id="funciones_objetos_arrays_javascript_declarando_clase">Declarando una clase<a href="#funciones_objetos_arrays_javascript_declarando_clase"></a></h3>
+<p>Al crear un script para utilizar objetos, necesitas diseñar una composición de datos y código llamado <i>clase</i>. Cada nuevo objeto basado en esta clase se llama <i>instancia</i> (o <i>ocurrencia</i>) de esa clase. Como ya has visto, los datos asociados a un objeto se llaman <i>propiedades</i>, mientras que las funciones que utiliza se llaman <i>métodos</i>.</p>
+<p>Veamos cómo declarar la clase para un objeto llamado <samp>User</samp> que contendrá detalles sobre el usuario actual. Para crear la clase, simplemente escribe una función con el mismo nombre de la clase. Esta función puede aceptar argumentos (más adelante mostraré cómo se invoca) y puede crear propiedades y métodos para los objetos de esa clase. A la función se le llama <i>constructor</i>.</p>
+<p>El ejemplo 16-5 muestra un constructor para la clase <samp>User</samp> con tres propiedades: <samp>forename</samp> (nombre), <samp>username</samp> (nombre de usuario) y <samp>password</samp> (contraseña). La clase también define el método <samp>showUser</samp> (mostrar usuario).</p>
+<p><i>Ejemplo 16-5. Declaración de la clase <samp>User</samp> y su método</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_k">function</span> <span class="hl_f">User</span>(<span class="hl_v">forename</span>, <span class="hl_v">username</span>, <span class="hl_v">password</span>)
+  {
+    <span class="hl_v">this.forename</span> <span class="hl_o">=</span> <span class="hl_v">forename</span>
+    <span class="hl_v">this.username</span> <span class="hl_o">=</span> <span class="hl_v">username</span>
+    <span class="hl_v">this.password</span> <span class="hl_o">=</span> <span class="hl_v">password</span>
+    <span class="hl_v">this.showUser</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
+    {
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Forename: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.forename</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Username: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.username</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Password: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.password</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    }
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>La función es diferente de otras funciones que hemos visto hasta ahora en varios aspectos:</p>
+<ul>
+<li>Cada vez que se llama a la función, crea un nuevo objeto. De este modo, puedes llamar a la misma función una y otra vez con diferentes argumentos para crear usuarios con diferentes nombres, por ejemplo.</li>
+<li>La función se refiere a un objeto llamado <samp>this</samp>, que se refiere a la instancia que se está creando. Como se muestra en el ejemplo, el objeto utiliza el nombre <samp>this</samp> para establecer sus propias propiedades, las cuales serán diferentes de un <samp>User</samp> a otro.</li>
+<li>Se crea una nueva función llamada <samp>showUser</samp> dentro de la función. La sintaxis que se muestra aquí es nueva y bastante complicada, pero su propósito es vincular <samp>showUser</samp> a la clase <samp>User</samp>. Así, <samp>showUser</samp> se convierte en un método de la clase <samp>User</samp>.</li>
+</ul>
+<p>La convención de nomenclatura que he utilizado es mantener todas las propiedades en minúsculas y usar al menos un carácter en mayúsculas en los nombres de los métodos, siguiendo la convención camelCase mencionada anteriormente en el capítulo.</p>
+<p>El Ejemplo 16-5 sigue la forma recomendada de escribir un constructor de clase, que es incluir métodos en la función del constructor. Sin embargo, también puedes hacer referencia a funciones definidas fuera del constructor, como en el Ejemplo 16-6.</p>
+<p><i>Ejemplo 16-6. Definición separada de una clase y un método</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_k">function</span> <span class="hl_f">User</span>(<span class="hl_v">forename</span>, <span class="hl_v">username</span>, <span class="hl_v">password</span>)
+  {
+    <span class="hl_v">this.forename</span> <span class="hl_o">=</span> <span class="hl_v">forename</span>
+    <span class="hl_v">this.username</span> <span class="hl_o">=</span> <span class="hl_v">username</span>
+    <span class="hl_v">this.password</span> <span class="hl_o">=</span> <span class="hl_v">password</span>
+    <span class="hl_v">this.showUser</span> <span class="hl_o">=</span> <span class="hl_v">showUser</span>
+  }
+
+  <span class="hl_k">function</span> <span class="hl_f">showUser</span>()
+  {
+    <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Forename: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.forename</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Username: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.username</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Password: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.password</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Te muestro esta forma porque seguramente lo encontrás al revisar el código de otros programadores.</p>
+<h3 id="funciones_objetos_arrays_javascript_creando_objeto">Creando un objeto<a href="#funciones_objetos_arrays_javascript_creando_objeto"></a></h3>
+<p>Para crear una instancia de la clase <samp>User</samp>, puedes utilizar una declaración como la siguiente:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">details</span> <span class="hl_o">=</span> <span class="hl_t">new</span> <span class="hl_f">User</span>(<span class="hl_s">&quot;Wolfgang&quot;</span>, <span class="hl_s">&quot;w.a.mozart&quot;</span>, <span class="hl_s">&quot;composer&quot;</span>)</code></div>
+<p>O puedes crear un objeto vacío, como este:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">details</span> <span class="hl_o">=</span> <span class="hl_t">new</span> <span class="hl_f">User</span>()</code></div>
+<p>y luego completarlo más tarde, así:</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br></pre><code><span class="hl_v">details.forename</span> <span class="hl_o">=</span> <span class="hl_s">&quot;Wolfgang&quot;</span>
+<span class="hl_v">details.username</span> <span class="hl_o">=</span> <span class="hl_s">&quot;w.a.mozart&quot;</span>
+<span class="hl_v">details.password</span> <span class="hl_o">=</span> <span class="hl_s">&quot;composer&quot;</span></code></div>
+<p>También puedes agregar nuevas propiedades a un objeto, así:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">details.greeting</span> <span class="hl_o">=</span> <span class="hl_s">&quot;Hello&quot;</span></code></div>
+<p>Puedes verificar que agregar las nuevas propiedades funcionan con la siguiente declaración:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">document.write</span>(<span class="hl_v">details.greeting</span>)</code></div>
+<h3 id="funciones_objetos_arrays_javascript_accediendo_objetos">Accediendo a objetos<a href="#funciones_objetos_arrays_javascript_accediendo_objetos"></a></h3>
+<p>Para acceder a un objeto, puedes hacer referencia a sus propiedades, como en los siguientes dos ejemplos de declaraciones no relacionadas:</p>
+<div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_v">name</span> <span class="hl_o">=</span> <span class="hl_v">details.forename</span>
+<span class="hl_k">if</span> (<span class="hl_v">details.username</span> <span class="hl_o">==</span> <span class="hl_s">&quot;Admin&quot;</span>) <span class="hl_f">loginAsAdmin</span>()</code></div>
+<p>Entonces, para acceder al método <samp>showUser</samp> de un objeto de la clase <samp>User</samp>, utilizarías la siguiente sintaxis, en la que el objeto <samp>details</samp> ya ha sido creado y completado con datos:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">details.showUser</span>()</code></div>
+<p>Suponiendo los datos proporcionados anteriormente, este código mostraría lo siguiente:</p>
+<div class="pre"><pre>
+Forename: Wolfgang
+Username: w.a.mozart
+Password: composer
+</pre></div>
+<h3 id="funciones_objetos_arrays_javascript_palabra_reservada_protoype">La palabra reservada prototype<a href="#funciones_objetos_arrays_javascript_palabra_reservada_protoype"></a></h3>
+<p>La palabra reservada <samp>prototype</samp> puede ahorrarte mucha memoria. En la clase <samp>User</samp>, cada instancia contendrá las tres propiedades y el método. Por lo tanto, si tienes mil de estos objetos en memoria, el método <samp>showUser</samp> también se replicará mil veces. Sin embargo, dado que el método es idéntico en todos los caso, puedes especificar que los nuevos objetos deben referirse a una única instancia del método en lugar de crear una copia de él. Entonces, en lugar de usar lo siguiente en un constructor de clase:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">this.showUser</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()</code></div>
+<p>podrías reemplazarlo con esto:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">User.prototype.showUser</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()</code></div>
+<p>El ejemplo 16-7 muestra cómo sería el nuevo constructor.</p>
+<p><i>Ejemplo 16-7. Declarando una clase utilizando la palabra reservada <samp>prototype</samp> para un método</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_k">function</span> <span class="hl_f">User</span>(<span class="hl_v">forename</span>, <span class="hl_v">username</span>, <span class="hl_v">password</span>)
+  {
+    <span class="hl_v">this.forename</span> <span class="hl_o">=</span> <span class="hl_v">forename</span>
+    <span class="hl_v">this.username</span> <span class="hl_o">=</span> <span class="hl_v">username</span>
+    <span class="hl_v">this.password</span> <span class="hl_o">=</span> <span class="hl_v">password</span>
+
+    <span class="hl_v">User.prototype.showUser</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
+    {
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Forename: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.forename</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Username: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.username</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Password: &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.password</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    }
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Esto funciona porque todas las funciones tienen una propiedad <samp>prototype</samp>, diseñada para contener propiedades y métodos que no se replican en ningún objeto creado a partir de una clase. En cambio, se pasan a sus objetos por referencia.</p>
+<p>Esto significa que puedes agregar una propiedad o método <samp>prototype</samp> en cualquier momento y todos los objetos (incluso los ya creados) lo heredarán, como ilustran las siguientes declaraciones:</p>
+<div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_v">User.prototype.greeting</span> <span class="hl_o">=</span> <span class="hl_s">&quot;Hello&quot;</span>
+<span class="hl_f">document.write</span>(<span class="hl_v">details.greeting</span>)</code></div>
+<p>La primera declaración añade la propiedad <samp>prototype</samp> de <samp>greeting</samp> (saludo) con un valor de <samp>Hello</samp> (Hola) a la clase <samp>User</samp>. En la segunda línea, el objeto <samp>details</samp>, que ya ha sido creado, muestra correctamente esta nueva propiedad.</p>
+<p>También puedes añadir o modificar métodos en una clase, tal y como se ilustran en las siguientes sentencias:</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br></pre><code><span class="hl_v">User.prototype.showUser</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
+{
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Name &quot;</span>  <span class="hl_o">+</span> <span class="hl_v">this.forename</span> <span class="hl_o">+</span>
+                 <span class="hl_s">&quot; User &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.username</span> <span class="hl_o">+</span>
+                 <span class="hl_s">&quot; Pass &quot;</span> <span class="hl_o">+</span> <span class="hl_v">this.password</span>)
+}
+
+<span class="hl_f">details.showUser</span>()</code></div>
+<p>Podrías agregar estas líneas a tu script en una declaración condicional (como un <samp>if</samp>), para que se ejecuten si las actividades del usuario hacen que decidas que necesites un método <samp>showUser</samp> diferente. Después de que se ejecuten estas líneas, incluso si el objeto <samp>details</samp> ya ha sido creado, las llamadas posteriores a <samp>details.showUser</samp> ejecutarán la nueva función. La antigua definición de <samp>showUser</samp> se borrará.</p>
+<h4 id="funciones_objetos_arrays_javascript_propiedades_metodos_estaticos">Propiedades y métodos estáticos<a href="#funciones_objetos_arrays_javascript_propiedades_metodos_estaticos"></a></h4>
+<p>Al leer sobre objetos en PHP, aprendiste que las clases pueden tener propiedades y métodos estáticos, así como propiedades y métodos asociados con una instancia particular de una clase. JavaScript también admite propiedades y métodos estáticos, que puedes almacenar y recuperar cómodamente desde la clase <samp>prototype</samp>. Así, las siguientes sentencias establecen y leen un string estático de <samp>User</samp>:</p>
+<div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_v">User.prototype.greeting</span> <span class="hl_o">=</span> <span class="hl_s">&quot;Hello&quot;</span>
+<span class="hl_f">document.write</span>(<span class="hl_v">User.prototype.greeting</span>)</code></div>
+<h4 id="funciones_objetos_arrays_javascript_extendiendo_objetos_javascript">Extendiendo objetos de JavaScript<a href="#funciones_objetos_arrays_javascript_extendiendo_objetos_javascript"></a></h4>
+<p>La palabra reservada <samp>prototype</samp> incluso te permite agregar funcionalidades a un objeto integrado. Por ejemplo, supongamos que te gustaría añadir la capacidad de reemplazar todos los espacios de un string por espacios no separables para evitar que se divida. Puedes hacer esto añadiendo un método <samp>prototype</samp> a la definición del objeto <samp>String</samp> predeterminado de JavaScript, así:</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">String.prototype.nbsp</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
+{
+  <span class="hl_k">return</span> <span class="hl_f">this.replace</span>(<span class="hl_o">/</span> <span class="hl_o">/</span><span class="hl_v">g</span>, <span class="hl_v">&#039;</span><span class="hl_o">&amp;</span><span class="hl_v">nbsp</span>;<span class="hl_v">&#039;</span>)
+}</code></div>
+<p>Aquí se utiliza el método <samp>replace</samp> con una expresión regular para encontrar y reemplazar todos los espacios individuales con el string <samp>&amp;nbsp;</samp>.</p>
+<div class="info"><p><span>Nota</span></p><p>Si no estás familiarizado con las expresiones regulares, son una herramienta útil para extraer información o manipular strings y se explican con detalle en el <a href="#validacion_manejo_errores_javascript_php" onclick="c('validacion_manejo_errores_javascript_php')">Capítulo 17</a>. Basta con decir que por ahora, puedes copiar y pegar los ejemplos anteriores y funcionarán como se describe, ilustrando el poder de extender los objetos <samp>String</samp> de JavaScript.</p></div>
+<p>Si luego introduces el siguiente comando:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">document.write</span>(<span class="hl_s">&quot;The quick brown fox&quot;</span><span class="hl_f">.nbsp</span>())</code></div>
+<p>Saldrá el string <samp>The&amp;nbsp;quick&amp;nbsp;brown&amp;nbsp;fox</samp>. O aquí tienes un método que puedes añadir que eliminará los espacios del principio y el final del string (una vez más utilizando una expresión regular):</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">String.prototype.trim</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
+{
+  <span class="hl_k">return</span> <span class="hl_f">this.replace</span>(<span class="hl_o">/^</span><span class="hl_v">\s</span><span class="hl_o">+|</span><span class="hl_v">\s</span><span class="hl_o">+</span><span class="hl_v">$</span><span class="hl_o">/</span><span class="hl_v">g</span>, <span class="hl_v">&#039;&#039;</span>)
+}</code></div>
+<p>Si emites la siguiente declaración, la salida será el string <samp>Please trim me</samp> (sin los espacios del inicio y final):</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">document.write</span>(<span class="hl_s">&quot;Please trim me&quot;</span><span class="hl_f">.trim</span>())</code></div>
+<p>Si dividimos la expresión en las partes que lo componen, los dos caracteres <samp>/</samp> marcan el inicio y el final de la expresión, y la <samp>g</samp> del final especifica una búsqueda global. Dentro de la expresión, la parte <samp>^\s+</samp> busca uno o más caracteres de espacios en blanco que aparezcan al inicio del string de búsqueda, mientras que la parte <samp>\s+$</samp> busca uno o más caracteres de espacios en blanco al final del string de búsqueda. El carácter del medio <samp>|</samp> actúa para separar las dos alternativas.</p>
+<p>El resultado es que cuando cualquiera de estas expresiones coincide, la coincidencia se reemplaza con un string vacío, devolviendo así una versión recortada del string sin espacios en blanco al inicio o al final.</p>
+<div class="warn"><p><span>Precaución</span></p><p>
+<p>Existe un debate acerca de si extender objetos es una buena o mala práctica. Algunos programadores dicen que si más adelante se extiende un objeto para ofrecer oficialmente la funcionalidad que has añadido, podría implementarse de otra manera, o hacer algo bastante diferente a tu extensión, lo que podría causar un conflicto. Sin embargo, otros programadores, como el inventor de JavaScript, Brendan Eich, dicen que esta es una práctica perfectamente aceptable. Mi opinión es que estoy de acuerdo con esto último, pero en el código de producción elegir nombres de extensiones que sean poco probables de ser utilizados oficialmente. Entonces, por ejemplo, la extensión <samp>trim</samp> podría renombrarse como <samp>mytrim</samp>, y el código de soporte podría escribirse de manera más segura como lo siguiente:</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">String.prototype.mytrim</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
+{
+  <span class="hl_k">return</span> <span class="hl_f">this.replace</span>(<span class="hl_o">/^</span><span class="hl_v">\s</span><span class="hl_o">+|</span><span class="hl_v">\s</span><span class="hl_o">+</span><span class="hl_v">$</span><span class="hl_o">/</span><span class="hl_v">g</span>, <span class="hl_v">&#039;&#039;</span>)
+}</code></div>
+</p></div>
+<h2 id="funciones_objetos_arrays_javascript_arrays_javascript">Arrays en JavaScript<a href="#funciones_objetos_arrays_javascript_arrays_javascript"></a></h2>
+<p>El manejo de arrays en JavaScript es muy similar al de PHP, aunque la sintaxis es un poco diferente. No obstante, dado que todo lo que ya has aprendido sobre arrays, esta sección debería ser relativamente sencilla para ti.</p><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>
 <div class="page" rel="validacion_manejo_errores_javascript_php"><div><ul class="breadcrumbs"><li><label class="home" for="_" title="Inicio"></label>&nbsp;»</li><li>&nbsp;Capítulo 17&nbsp;»</li><li>&nbsp;Validación y manejo de errores en JavaScript y PHP</li></ul><hr></div>
 <h1 id="validacion_manejo_errores_javascript_php">Validación y manejo de errores en JavaScript y PHP<a href="#validacion_manejo_errores_javascript_php"></a></h1>
 <h2 id="validacion_manejo_errores_javascript_php_validando_entrada_usuario_javascript">Validando la entrada del usuario con JavaScript<a href="#validacion_manejo_errores_javascript_php_validando_entrada_usuario_javascript"></a></h2><br style="clear:both;"><label class="btn prev" accesskey="p" for="_funciones_objetos_arrays_javascript" title="Funciones, objetos y arrays en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_utilizando_comunicaciones_asincronas" title="Utilizando comunicaciones asíncronas">Siguiente</label></div>

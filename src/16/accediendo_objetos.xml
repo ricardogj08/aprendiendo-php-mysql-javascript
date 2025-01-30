@@ -1,0 +1,24 @@
+<h3 funciones_objetos_arrays_javascript_accediendo_objetos>
+  Accediendo a objetos
+</h3>
+
+<p>Para acceder a un objeto, puedes hacer referencia a sus propiedades, como en los siguientes dos ejemplos de declaraciones no relacionadas:</p>
+
+<code>
+name = details.forename
+if (details.username == "Admin") loginAsAdmin()
+</code>
+
+<p>Entonces, para acceder al método <tt>showUser</tt> de un objeto de la clase <tt>User</tt>, utilizarías la siguiente sintaxis, en la que el objeto <tt>details</tt> ya ha sido creado y completado con datos:</p>
+
+<code>
+details.showUser()
+</code>
+
+<p>Suponiendo los datos proporcionados anteriormente, este código mostraría lo siguiente:</p>
+
+<pre>
+Forename: Wolfgang
+Username: w.a.mozart
+Password: composer
+</pre>

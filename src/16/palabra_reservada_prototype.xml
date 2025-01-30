@@ -1,0 +1,64 @@
+<h3 funciones_objetos_arrays_javascript_palabra_reservada_protoype>
+  La palabra reservada prototype
+</h3>
+
+<p>La palabra reservada <tt>prototype</tt> puede ahorrarte mucha memoria. En la clase <tt>User</tt>, cada instancia contendrá las tres propiedades y el método. Por lo tanto, si tienes mil de estos objetos en memoria, el método <tt>showUser</tt> también se replicará mil veces. Sin embargo, dado que el método es idéntico en todos los caso, puedes especificar que los nuevos objetos deben referirse a una única instancia del método en lugar de crear una copia de él. Entonces, en lugar de usar lo siguiente en un constructor de clase:</p>
+
+<code>
+this.showUser = function()
+</code>
+
+<p>podrías reemplazarlo con esto:</p>
+
+<code>
+User.prototype.showUser = function()
+</code>
+
+<p>El ejemplo 16-7 muestra cómo sería el nuevo constructor.</p>
+
+<p><i>Ejemplo 16-7. Declarando una clase utilizando la palabra reservada <tt>prototype</tt> para un método</i></p>
+
+<code>
+<script>
+  function User(forename, username, password)
+  {
+    this.forename = forename
+    this.username = username
+    this.password = password
+
+    User.prototype.showUser = function()
+    {
+      document.write("Forename: " + this.forename + "<br>")
+      document.write("Username: " + this.username + "<br>")
+      document.write("Password: " + this.password + "<br>")
+    }
+  }
+</script>
+</code>
+
+<p>Esto funciona porque todas las funciones tienen una propiedad <tt>prototype</tt>, diseñada para contener propiedades y métodos que no se replican en ningún objeto creado a partir de una clase. En cambio, se pasan a sus objetos por referencia.</p>
+
+<p>Esto significa que puedes agregar una propiedad o método <tt>prototype</tt> en cualquier momento y todos los objetos (incluso los ya creados) lo heredarán, como ilustran las siguientes declaraciones:</p>
+
+<code>
+User.prototype.greeting = "Hello"
+document.write(details.greeting)
+</code>
+
+<p>La primera declaración añade la propiedad <tt>prototype</tt> de <tt>greeting</tt> (saludo) con un valor de <tt>Hello</tt> (Hola) a la clase <tt>User</tt>. En la segunda línea, el objeto <tt>details</tt>, que ya ha sido creado, muestra correctamente esta nueva propiedad.</p>
+
+<p>También puedes añadir o modificar métodos en una clase, tal y como se ilustran en las siguientes sentencias:</p>
+
+<code>
+User.prototype.showUser = function()
+{
+  document.write("Name "  + this.forename +
+                 " User " + this.username +
+                 " Pass " + this.password)
+}
+
+details.showUser()
+</code>
+
+<p>Podrías agregar estas líneas a tu script en una declaración condicional (como un <tt>if</tt>), para que se ejecuten si las actividades del usuario hacen que decidas que necesites un método <tt>showUser</tt> diferente. Después de que se ejecuten estas líneas, incluso si el objeto <tt>details</tt> ya ha sido creado, las llamadas posteriores a <tt>details.showUser</tt> ejecutarán la nueva función. La antigua definición de <tt>showUser</tt> se borrará.</p>
+

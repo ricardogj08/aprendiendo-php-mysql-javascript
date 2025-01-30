@@ -1,0 +1,51 @@
+<h4 funciones_objetos_arrays_javascript_extendiendo_objetos_javascript>
+  Extendiendo objetos de JavaScript
+</h4>
+
+<p>La palabra reservada <tt>prototype</tt> incluso te permite agregar funcionalidades a un objeto integrado. Por ejemplo, supongamos que te gustaría añadir la capacidad de reemplazar todos los espacios de un string por espacios no separables para evitar que se divida. Puedes hacer esto añadiendo un método <tt>prototype</tt> a la definición del objeto <tt>String</tt> predeterminado de JavaScript, así:</p>
+
+<code>
+String.prototype.nbsp = function()
+{
+  return this.replace(/ /g, '&nbsp;')
+}
+</code>
+
+<p>Aquí se utiliza el método <tt>replace</tt> con una expresión regular para encontrar y reemplazar todos los espacios individuales con el string <tt>&nbsp;</tt>.</p>
+
+<note>Si no estás familiarizado con las expresiones regulares, son una herramienta útil para extraer información o manipular strings y se explican con detalle en el <a #validacion_manejo_errores_javascript_php>Capítulo 17</a>. Basta con decir que por ahora, puedes copiar y pegar los ejemplos anteriores y funcionarán como se describe, ilustrando el poder de extender los objetos <tt>String</tt> de JavaScript.</note>
+
+<p>Si luego introduces el siguiente comando:</p>
+
+<code>
+document.write("The quick brown fox".nbsp())
+</code>
+
+<p>Saldrá el string <tt>The&nbsp;quick&nbsp;brown&nbsp;fox</tt>. O aquí tienes un método que puedes añadir que eliminará los espacios del principio y el final del string (una vez más utilizando una expresión regular):</p>
+
+<code>
+String.prototype.trim = function()
+{
+  return this.replace(/^\s+|\s+$/g, '')
+}
+</code>
+
+<p>Si emites la siguiente declaración, la salida será el string <tt>Please trim me</tt> (sin los espacios del inicio y final):</p>
+
+<code>
+document.write("Please trim me".trim())
+</code>
+
+<p>Si dividimos la expresión en las partes que lo componen, los dos caracteres <tt>/</tt> marcan el inicio y el final de la expresión, y la <tt>g</tt> del final especifica una búsqueda global. Dentro de la expresión, la parte <tt>^\s+</tt> busca uno o más caracteres de espacios en blanco que aparezcan al inicio del string de búsqueda, mientras que la parte <tt>\s+$</tt> busca uno o más caracteres de espacios en blanco al final del string de búsqueda. El carácter del medio <tt>|</tt> actúa para separar las dos alternativas.</p>
+
+<p>El resultado es que cuando cualquiera de estas expresiones coincide, la coincidencia se reemplaza con un string vacío, devolviendo así una versión recortada del string sin espacios en blanco al inicio o al final.</p>
+
+<warn>
+<p>Existe un debate acerca de si extender objetos es una buena o mala práctica. Algunos programadores dicen que si más adelante se extiende un objeto para ofrecer oficialmente la funcionalidad que has añadido, podría implementarse de otra manera, o hacer algo bastante diferente a tu extensión, lo que podría causar un conflicto. Sin embargo, otros programadores, como el inventor de JavaScript, Brendan Eich, dicen que esta es una práctica perfectamente aceptable. Mi opinión es que estoy de acuerdo con esto último, pero en el código de producción elegir nombres de extensiones que sean poco probables de ser utilizados oficialmente. Entonces, por ejemplo, la extensión <tt>trim</tt> podría renombrarse como <tt>mytrim</tt>, y el código de soporte podría escribirse de manera más segura como lo siguiente:</p>
+<code>
+String.prototype.mytrim = function()
+{
+  return this.replace(/^\s+|\s+$/g, '')
+}
+</code>
+</warn>

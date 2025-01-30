@@ -138,6 +138,15 @@
     <include src/16/definicion_funcion.xml>
     <include src/16/array_arguments.xml>
     <include src/16/devolviendo_valor.xml>
+    <include src/16/devolviendo_array.xml>
+  <include src/16/objetos_javascript.xml>
+    <include src/16/declarando_clase.xml>
+    <include src/16/creando_objeto.xml>
+    <include src/16/accediendo_objetos.xml>
+    <include src/16/palabra_reservada_prototype.xml>
+      <include src/16/propiedades_metodos_estaticos.xml>
+      <include src/16/extendiendo_objetos_javascript.xml>
+  <include src/16/arrays_javascript.xml>
 
 <cap>Capítulo 17</cap>
   <include src/17/introduccion.xml>

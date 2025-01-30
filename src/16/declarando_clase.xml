@@ -1,0 +1,63 @@
+<h3 funciones_objetos_arrays_javascript_declarando_clase>
+  Declarando una clase
+</h3>
+
+<p>Al crear un script para utilizar objetos, necesitas diseñar una composición de datos y código llamado <i>clase</i>. Cada nuevo objeto basado en esta clase se llama <i>instancia</i> (o <i>ocurrencia</i>) de esa clase. Como ya has visto, los datos asociados a un objeto se llaman <i>propiedades</i>, mientras que las funciones que utiliza se llaman <i>métodos</i>.</p>
+
+<p>Veamos cómo declarar la clase para un objeto llamado <tt>User</tt> que contendrá detalles sobre el usuario actual. Para crear la clase, simplemente escribe una función con el mismo nombre de la clase. Esta función puede aceptar argumentos (más adelante mostraré cómo se invoca) y puede crear propiedades y métodos para los objetos de esa clase. A la función se le llama <i>constructor</i>.</p>
+
+<p>El ejemplo 16-5 muestra un constructor para la clase <tt>User</tt> con tres propiedades: <tt>forename</tt> (nombre), <tt>username</tt> (nombre de usuario) y <tt>password</tt> (contraseña). La clase también define el método <tt>showUser</tt> (mostrar usuario).</p>
+
+<p><i>Ejemplo 16-5. Declaración de la clase <tt>User</tt> y su método</i></p>
+
+<code>
+<script>
+  function User(forename, username, password)
+  {
+    this.forename = forename
+    this.username = username
+    this.password = password
+    this.showUser = function()
+    {
+      document.write("Forename: " + this.forename + "<br>")
+      document.write("Username: " + this.username + "<br>")
+      document.write("Password: " + this.password + "<br>")
+    }
+  }
+</script>
+</code>
+
+<p>La función es diferente de otras funciones que hemos visto hasta ahora en varios aspectos:</p>
+
+<ul>
+  <li>Cada vez que se llama a la función, crea un nuevo objeto. De este modo, puedes llamar a la misma función una y otra vez con diferentes argumentos para crear usuarios con diferentes nombres, por ejemplo.</li>
+  <li>La función se refiere a un objeto llamado <tt>this</tt>, que se refiere a la instancia que se está creando. Como se muestra en el ejemplo, el objeto utiliza el nombre <tt>this</tt> para establecer sus propias propiedades, las cuales serán diferentes de un <tt>User</tt> a otro.</li>
+  <li>Se crea una nueva función llamada <tt>showUser</tt> dentro de la función. La sintaxis que se muestra aquí es nueva y bastante complicada, pero su propósito es vincular <tt>showUser</tt> a la clase <tt>User</tt>. Así, <tt>showUser</tt> se convierte en un método de la clase <tt>User</tt>.</li>
+</ul>
+
+<p>La convención de nomenclatura que he utilizado es mantener todas las propiedades en minúsculas y usar al menos un carácter en mayúsculas en los nombres de los métodos, siguiendo la convención camelCase mencionada anteriormente en el capítulo.</p>
+
+<p>El Ejemplo 16-5 sigue la forma recomendada de escribir un constructor de clase, que es incluir métodos en la función del constructor. Sin embargo, también puedes hacer referencia a funciones definidas fuera del constructor, como en el Ejemplo 16-6.</p>
+
+<p><i>Ejemplo 16-6. Definición separada de una clase y un método</i></p>
+
+<code>
+<script>
+  function User(forename, username, password)
+  {
+    this.forename = forename
+    this.username = username
+    this.password = password
+    this.showUser = showUser
+  }
+
+  function showUser()
+  {
+    document.write("Forename: " + this.forename + "<br>")
+    document.write("Username: " + this.username + "<br>")
+    document.write("Password: " + this.password + "<br>")
+  }
+</script>
+</code>
+
+<p>Te muestro esta forma porque seguramente lo encontrás al revisar el código de otros programadores.</p>

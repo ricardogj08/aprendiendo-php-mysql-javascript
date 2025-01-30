@@ -1,0 +1,10 @@
+<h4 funciones_objetos_arrays_javascript_propiedades_metodos_estaticos>
+  Propiedades y métodos estáticos
+</h4>
+
+<p>Al leer sobre objetos en PHP, aprendiste que las clases pueden tener propiedades y métodos estáticos, así como propiedades y métodos asociados con una instancia particular de una clase. JavaScript también admite propiedades y métodos estáticos, que puedes almacenar y recuperar cómodamente desde la clase <tt>prototype</tt>. Así, las siguientes sentencias establecen y leen un string estático de <tt>User</tt>:</p>
+
+<code>
+User.prototype.greeting = "Hello"
+document.write(User.prototype.greeting)
+</code>
