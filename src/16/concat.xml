@@ -1,0 +1,23 @@
+<h4 funciones_objetos_arrays_javascript_concat>
+  concat
+</h4>
+
+<p>El método <tt>concat</tt> concatena dos arrays, o una serie de valores dentro de un array. Por ejemplo, el siguiente código produce <tt>Banana</tt> (Banana), <tt>Grape</tt> (Uva), <tt>Carrot</tt> (Zanahoria), <tt>Cabbage</tt> (Repollo):</p>
+
+<code>
+fruit = ["Banana", "Grape"]
+veg   = ["Carrot", "Cabbage"]
+
+document.write(fruit.concat(veg))
+</code>
+
+<p>Puedes especificar múltiples arrays como argumentos, en cuyo caso <tt>concat</tt> agrega todos los elementos en el orden en que se especifican los arrays.</p>
+
+<p>Aquí hay otra manera de utilizar <tt>concat</tt>. Esta vez, los valores simples se concatenan con el array <tt>pets</tt> (mascotas), lo que produce <tt>Cat</tt> (Gato), <tt>Dog</tt> (Perro), <tt>Fish</tt> (Pez), <tt>Rabbit</tt> (Conejo), <tt>Hamster</tt> (Hámster):</p>
+
+<code>
+pets      = ["Cat", "Dog", "Fish"]
+more_pets = pets.concat("Rabbit", "Hamster")
+
+document.write(more_pets)
+</code>

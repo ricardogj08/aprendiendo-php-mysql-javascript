@@ -1,0 +1,77 @@
+<h4 funciones_objetos_arrays_javascript_push_pop>
+  push y pop
+</h4>
+
+<p>Ya has visto cómo se puede utilizar el método <tt>push</tt> para insertar un valor en un array. El método inverso es <tt>pop</tt>. Elimina el elemento insertado más recientemente de un array y lo devuelve. El ejemplo 16-13 muestra un ejemplo de su uso.</p>
+
+<p><i>Ejemplo 16-13. Utilizando los métodos <tt>push</tt> y <tt>pop</tt></i></p>
+
+<code>
+<script>
+  sports = ["Football", "Tennis", "Baseball"]
+  document.write("Start = " + sports + "<br>")
+
+  sports.push("Hockey")
+  document.write("After Push = " + sports + "<br>")
+
+  removed = sports.pop()
+  document.write("After Pop = " + sports  + "<br>")
+  document.write("Removed = "   + removed + "<br>")
+</script>
+</code>
+
+<p>Las tres declaraciones principales de este script se muestran en negritas. Primero, el script crea un array llamado <tt>sports</tt> (deportes) con tres elementos y luego agrega (<tt>push</tt>) un cuarto elemento al array. Después de eso, lo elimina (<tt>pop</tt>) de nuevo. En el proceso, se visualizan los valores existentes a través de <tt>document.write</tt>. El script muestra lo siguiente:</p>
+
+<pre>
+Start = Football,Tennis,Baseball
+After Push = Football,Tennis,Baseball,Hockey
+After Pop = Football,Tennis,Baseball
+Removed = Hockey
+</pre>
+
+<p>Las funciones <tt>push</tt> y <tt>pop</tt> son útiles en situaciones donde necesitas desviarte de alguna actividad para hacer otra, y luego regresar. Por ejemplo, supongamos que quieres posponer algunas actividades para más tarde, mientras te ocupas de algo más importante ahora. Esto a menudo ocurre en la vida real cuando estamos revisando listas de "to-do" (tareas por hacer), así que emulemos eso en código, otorgando prioridad a las tareas número 2 y 5 en una lista de seis elementos, como en el Ejemplo 16-14.</p>
+
+<p><i>Ejemplo 16-14. Utilizando <tt>push</tt> y <tt>pop</tt> dentro y fuera de un bucle</i></p>
+
+<code>
+<script>
+  numbers = []
+
+  for (j = 1; j < 6; ++j)
+  {
+    if (j == 2 || j == 5)
+    {
+      document.write("Processing 'todo' #" + j + "<br>")
+    }
+    else
+    {
+      document.write("Putting off 'todo' #" + j + " until later<br>")
+      numbers.push(j)
+    }
+  }
+
+  document.write("<br>Finished processing the priority tasks.")
+  document.write("<br>Commencing stored tasks, most recent first.<br><br>")
+
+  document.write("Now processing 'todo' #" + numbers.pop() + "<br>")
+  document.write("Now processing 'todo' #" + numbers.pop() + "<br>")
+  document.write("Now processing 'todo' #" + numbers.pop() + "<br>")
+</script>
+</code>
+
+<p>Por supuesto, aquí no se está procesando nada en realidad, solo se está enviando texto al navegador, pero ya entiendes la idea. La salida de este ejemplo es la siguiente:</p>
+
+<pre>
+Putting off 'todo' #1 until later
+Processing 'todo' #2
+Putting off 'todo' #3 until later
+Putting off 'todo' #4 until later
+Processing 'todo' #5
+
+Finished processing the priority tasks.
+Commencing stored tasks, most recent first.
+
+Now processing 'todo' #4
+Now processing 'todo' #3
+Now processing 'todo' #1
+</pre>

@@ -1,0 +1,21 @@
+<h4 funciones_objetos_arrays_javascript_utilizando_reverse>
+  Utilizando reverse
+</h4>
+
+<p>El método <tt>reverse</tt> simplemente invierte el orden de todos los elementos de un array. El ejemplo 16-15 muestra esto en acción.</p>
+
+<p><i>Ejemplo 16-15. Utilizando el método <tt>reverse</tt></i></p>
+
+<code>
+<script>
+  sports = ["Football", "Tennis", "Baseball", "Hockey"]
+  sports.reverse()
+  document.write(sports)
+</script>
+</code>
+
+<p>El array original se modifica, y la salida de este script es la siguiente:</p>
+
+<pre>
+Hockey,Baseball,Tennis,Football
+</pre>

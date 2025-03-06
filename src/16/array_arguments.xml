@@ -2,7 +2,7 @@
   El array arguments
 </h3>
 
-<p>El array <tt>arguments</tt> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Toma el ejemplo de una función llamada <tt>displayItems</tt>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
+<p>El array <tt>arguments</tt> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Tomemos el ejemplo de una función llamada <tt>displayItems</tt>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
 
 <p><i>Ejemplo 16-1. Definición de una función</i></p>
 

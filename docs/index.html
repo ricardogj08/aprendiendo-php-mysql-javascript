@@ -193,6 +193,13 @@
           <li class="h3"><a href="#funciones_objetos_arrays_javascript_utilizando_metodos_arrays" onclick="m()">Utilizando métodos de los arrays</a></li>
           <li class="h4"><a href="#funciones_objetos_arrays_javascript_some" onclick="m()">some</a></li>
           <li class="h4"><a href="#funciones_objetos_arrays_javascript_indexof" onclick="m()">indexOf</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_concat" onclick="m()">concat</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_foreach" onclick="m()">forEach</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_join" onclick="m()">join</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_push_pop" onclick="m()">push y pop</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_utilizando_reverse" onclick="m()">Utilizando reverse</a></li>
+          <li class="h4"><a href="#funciones_objetos_arrays_javascript_sort" onclick="m()">sort</a></li>
+          <li class="h2"><a href="#funciones_objetos_arrays_javascript_preguntas" onclick="m()">Preguntas</a></li>
         </ul></li>
         </ul>
         <p>Capítulo 17</p>
@@ -278,6 +285,7 @@
         <li rel="soluciones_preguntas_capitulos"><label class="toc" for="_soluciones_preguntas_capitulos">Soluciones a las preguntas de los capítulos</label><div class="current">Soluciones a las preguntas de los capítulos</div><ul>
           <li class="h2"><a href="#soluciones_preguntas_capitulos_respuestas_capitulo_14" onclick="m()">Respuestas del capítulo 14</a></li>
           <li class="h2"><a href="#soluciones_preguntas_capitulos_respuestas_capitulo_15" onclick="m()">Respuestas del capítulo 15</a></li>
+          <li class="h2"><a href="#soluciones_preguntas_capitulos_respuestas_capitulo_16" onclick="m()">Respuestas del capítulo 16</a></li>
         </ul></li>
         </ul>
       </div>
@@ -1692,11 +1700,11 @@ Counter: 4
 <li>Los paréntesis son obligatorios.</li>
 <li>Uno o más parámetros, separados por comas, son opcionales (indicados por los corchetes, que no forman parte de la sintaxis de la función).</li>
 </ul>
-<p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los siguientes strings se refieren a diferentes funciones: <samp>getInput</samp>, <samp>GETINPUT</samp> y <samp>getinput</samp>.</p>
+<p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los strings a continuación se refieren a diferentes funciones: <samp>getInput</samp>, <samp>GETINPUT</samp> y <samp>getinput</samp>.</p>
 <p>En JavaScript hay una convención general de nomenclaturas para funciones: la primera letra de cada palabra de un nombre se escribe en mayúsculas, excepto la primera letra, que se escribe en minúsculas. Por lo tanto, de los ejemplos anteriores, <samp>getInput</samp> sería el nombre preferido utilizado por la mayoría de los programadores. Esta convención se conoce comúnmente como <i>bumpyCaps</i>, <i>bumpyCase</i>, o (más frecuentemente) <i>camelCase</i>.</p>
 <p>La llave de apertura inicia las instrucciones que se ejecutarán cuando llames a la función; una llave de cierre correspondiente debe cerrarla. Estas declaraciones pueden incluir una o más declaraciones de <samp>return</samp>, que obligan a la función a detener su ejecución y regresar al código que la llamó. Si se adjunta un valor a la declaración de <samp>return</samp>, el código que la llama puede recuperarlo.</p>
 <h3 id="funciones_objetos_arrays_javascript_array_arguments">El array arguments<a href="#funciones_objetos_arrays_javascript_array_arguments"></a></h3>
-<p>El array <samp>arguments</samp> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Toma el ejemplo de una función llamada <samp>displayItems</samp>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
+<p>El array <samp>arguments</samp> es un miembro de toda función. Con él, puedes determinar el número de variables pasadas a una función y cuáles son. Tomemos el ejemplo de una función llamada <samp>displayItems</samp>. El ejemplo 16-1 muestra una forma de escribirlo.</p>
 <p><i>Ejemplo 16-1. Definición de una función</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
   <span class="hl_f">displayItems</span>(<span class="hl_s">&quot;Dog&quot;</span>, <span class="hl_s">&quot;Cat&quot;</span>, <span class="hl_s">&quot;Pony&quot;</span>, <span class="hl_s">&quot;Hamster&quot;</span>, <span class="hl_s">&quot;Tortoise&quot;</span>)
@@ -1734,7 +1742,7 @@ Tortoise
 <p>Observa el uso de la propiedad <samp>length</samp>, que ya encontraste en el capítulo anterior, y también cómo hago referencia al array <samp>displayItems.arguments</samp> utilizando la variable <samp>j</samp> para desplazarnos sobre ella. También elegí mantener la función breve y concisa al no rodear el contenido del bucle <samp>for</samp> con llaves, ya que contiene solo una única instrucción. Recuerda que el bucle debe detenerse cuando <samp>j</samp> sea uno menos que <samp>length</samp>, no igual a <samp>length</samp>.</p>
 <p>Usando esta técnica, ahora tienes una función que puede tomar tantos (o tan pocos) argumentos como desees y actuar sobre cada argumento como desees.</p>
 <h3 id="funciones_objetos_arrays_javascript_devolviendo_valor">Devolviendo un valor<a href="#funciones_objetos_arrays_javascript_devolviendo_valor"></a></h3>
-<p>Las funciones no se utilizan solo para mostrar cosas. De hecho, se utilizan principalmente para realizar cálculos o manipulaciones de datos y luego devolver un resultado. La función <samp>fixNames</samp> en el Ejemplo 16-3 utiliza el array <samp>arguments</samp> (explicada en la sección anterior) para tomar una serie de string que se le pasan y devolverlas como un solo string. La "corrección" que realiza es convertir todos los caracteres de los argumentos a minúsculas, excepto el primer carácter de cada argumento, que se convertirá a mayúsculas.</p>
+<p>Las funciones no se utilizan solo para mostrar cosas. De hecho, se utilizan principalmente para realizar cálculos o manipulaciones de datos y luego devolver un resultado. La función <samp>fixNames</samp> en el Ejemplo 16-3 utiliza el array <samp>arguments</samp> (explicada en la sección anterior) para tomar una serie de strings que se le pasan y devolverlas como un solo string. La "corrección" que realiza es convertir todos los caracteres de los argumentos a minúsculas, excepto el primer carácter de cada argumento, que se convertirá a mayúsculas.</p>
 <p><i>Ejemplo 16-3. Limpiando un nombre completo</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
   <span class="hl_f">document.write</span>(<span class="hl_f">fixNames</span>(<span class="hl_s">&quot;the&quot;</span>, <span class="hl_s">&quot;DALLAS&quot;</span>, <span class="hl_s">&quot;CowBoys&quot;</span>))
@@ -1827,7 +1835,7 @@ ixedcase
 <li>Se crea una nueva función llamada <samp>showUser</samp> dentro de la función. La sintaxis que se muestra aquí es nueva y bastante complicada, pero su propósito es vincular <samp>showUser</samp> a la clase <samp>User</samp>. Así, <samp>showUser</samp> se convierte en un método de la clase <samp>User</samp>.</li>
 </ul>
 <p>La convención de nomenclatura que he utilizado es mantener todas las propiedades en minúsculas y usar al menos un carácter en mayúsculas en los nombres de los métodos, siguiendo la convención camelCase mencionada anteriormente en el capítulo.</p>
-<p>El Ejemplo 16-5 sigue la forma recomendada de escribir un constructor de clase, que es incluir métodos en la función del constructor. Sin embargo, también puedes hacer referencia a funciones definidas fuera del constructor, como en el Ejemplo 16-6.</p>
+<p>El Ejemplo 16-5 sigue la forma recomendada para escribir un constructor de clase, que es incluir métodos en la función del constructor. Sin embargo, también puedes hacer referencia a funciones definidas fuera del constructor, como en el Ejemplo 16-6.</p>
 <p><i>Ejemplo 16-6. Definición separada de una clase y un método</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
   <span class="hl_k">function</span> <span class="hl_f">User</span>(<span class="hl_v">forename</span>, <span class="hl_v">username</span>, <span class="hl_v">password</span>)
@@ -1922,7 +1930,7 @@ Password: composer
 <div class="info"><p><span>Nota</span></p><p>Si no estás familiarizado con las expresiones regulares, son una herramienta útil para extraer información o manipular strings y se explican con detalle en el <a href="#validacion_manejo_errores_javascript_php" onclick="c('validacion_manejo_errores_javascript_php')">Capítulo 17</a>. Basta con decir que por ahora, puedes copiar y pegar los ejemplos anteriores y funcionarán como se describe, ilustrando el poder de extender los objetos <samp>String</samp> de JavaScript.</p></div>
 <p>Si luego introduces el siguiente comando:</p>
 <div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">document.write</span>(<span class="hl_s">&quot;The quick brown fox&quot;</span><span class="hl_f">.nbsp</span>())</code></div>
-<p>Saldrá el string <samp>The&amp;nbsp;quick&amp;nbsp;brown&amp;nbsp;fox</samp>. O aquí tienes un método que puedes añadir que eliminará los espacios del principio y el final del string (una vez más utilizando una expresión regular):</p>
+<p>Saldrá el string <samp>The&amp;nbsp;quick&amp;nbsp;brown&amp;nbsp;fox</samp>. O aquí tienes un método que puedes añadir que eliminará los espacios de principio y final del string (una vez más utilizando una expresión regular):</p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">String.prototype.trim</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
 {
   <span class="hl_k">return</span> <span class="hl_f">this.replace</span>(<span class="hl_o">/^</span><span class="hl_v">\s</span><span class="hl_o">+|</span><span class="hl_v">\s</span><span class="hl_o">+</span><span class="hl_v">$</span><span class="hl_o">/</span><span class="hl_v">g</span>, <span class="hl_v">&#039;&#039;</span>)
@@ -1932,7 +1940,7 @@ Password: composer
 <p>Si dividimos la expresión en las partes que lo componen, los dos caracteres <samp>/</samp> marcan el inicio y el final de la expresión, y la <samp>g</samp> del final especifica una búsqueda global. Dentro de la expresión, la parte <samp>^\s+</samp> busca uno o más caracteres de espacios en blanco que aparezcan al inicio del string de búsqueda, mientras que la parte <samp>\s+$</samp> busca uno o más caracteres de espacios en blanco al final del string de búsqueda. El carácter del medio <samp>|</samp> actúa para separar las dos alternativas.</p>
 <p>El resultado es que cuando cualquiera de estas expresiones coincide, la coincidencia se reemplaza con un string vacío, devolviendo así una versión recortada del string sin espacios en blanco al inicio o al final.</p>
 <div class="warn"><p><span>Precaución</span></p><p>
-<p>Existe un debate acerca de si extender objetos es una buena o mala práctica. Algunos programadores dicen que si más adelante se extiende un objeto para ofrecer oficialmente la funcionalidad que has añadido, podría implementarse de otra manera, o hacer algo bastante diferente a tu extensión, lo que podría causar un conflicto. Sin embargo, otros programadores, como el inventor de JavaScript, Brendan Eich, dicen que esta es una práctica perfectamente aceptable. Mi opinión es que estoy de acuerdo con esto último, pero en el código de producción elegir nombres de extensiones que sean poco probables de ser utilizados oficialmente. Entonces, por ejemplo, la extensión <samp>trim</samp> podría renombrarse como <samp>mytrim</samp>, y el código de soporte podría escribirse de manera más segura como lo siguiente:</p>
+<p>Existe un debate acerca de si extender objetos es una buena o mala práctica. Algunos programadores dicen que si más adelante se extiende un objeto para ofrecer oficialmente la funcionalidad que has añadido, podría implementarse de otra manera, o hacer algo bastante diferente a tu extensión, lo que podría causar un conflicto. Sin embargo, otros programadores, como el inventor de JavaScript, Brendan Eich, dice que esta es una práctica perfectamente aceptable. Mi opinión es que estoy de acuerdo con esto último, pero en código de producción elige nombres de extensiones que sean poco probables de ser utilizados oficialmente. Entonces, por ejemplo, la extensión <samp>trim</samp> podría renombrarse como <samp>mytrim</samp>, y el código de soporte podría escribirse de manera más segura como lo siguiente:</p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">String.prototype.mytrim</span> <span class="hl_o">=</span> <span class="hl_k">function</span>()
 {
   <span class="hl_k">return</span> <span class="hl_f">this.replace</span>(<span class="hl_o">/^</span><span class="hl_v">\s</span><span class="hl_o">+|</span><span class="hl_v">\s</span><span class="hl_o">+</span><span class="hl_v">$</span><span class="hl_o">/</span><span class="hl_v">g</span>, <span class="hl_v">&#039;&#039;</span>)
@@ -1952,7 +1960,7 @@ Password: composer
 <p>Pero en JavaScript se utiliza el método <samp>push</samp> para lograr el mismo resultado, así:</p>
 <div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_f">arrayname.push</span>(<span class="hl_s">&quot;Element 1&quot;</span>)
 <span class="hl_f">arrayname.push</span>(<span class="hl_s">&quot;Element 2&quot;</span>)</code></div>
-<p>Esto te permite seguir añadiendo elementos a un array sin tener que llevar un control del número de elementos. Cuando necesites saber cuántos elementos hay en un array, puedes usar la propiedad <samp>length</samp>, así:</p>
+<p>Esto te permite seguir añadiendo elementos a un array sin tener que llevar un control del número de elementos. Cuando necesites saber cuántos elementos hay en un array, puedes utilizar la propiedad <samp>length</samp>, así:</p>
 <div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">document.write</span>(<span class="hl_v">arrayname.length</span>)</code></div>
 <p>Opcionalmente, si deseas realizar tú mismo un seguimiento de las ubicaciones de los elementos y colocarlos en ubicaciones específicas, puedes utilizar una sintaxis como esta:</p>
 <div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_v">arrayname</span>[<span class="hl_n">0</span>] <span class="hl_o">=</span> <span class="hl_s">&quot;Element 1&quot;</span>
@@ -1977,11 +1985,11 @@ Element 2 = Three
 <h4 id="funciones_objetos_arrays_javascript_asignacion_utilizando_palabra_reservada_array">Asignación utilizando la palabra reservada Array<a href="#funciones_objetos_arrays_javascript_asignacion_utilizando_palabra_reservada_array"></a></h4>
 <p>También puedes crear un array junto con algunos elementos iniciales utilizando la palabra reservada <samp>Array</samp>, así:</p>
 <div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_v">numbers</span> <span class="hl_o">=</span> <span class="hl_f">Array</span>(<span class="hl_s">&quot;One&quot;</span>, <span class="hl_s">&quot;Two&quot;</span>, <span class="hl_s">&quot;Three&quot;</span>)</code></div>
-<p>No hay nada que te impida agregar más elementos después también.</p>
+<p>También no hay nada que te impida agregar más elementos después.</p>
 <p>Ahora has visto un par de maneras de agregar elementos a un array, y una forma de referenciarlos. JavaScript ofrece muchos más, de los cuales hablaré en breve, pero primero, veremos otro tipo de array.</p>
 <h3 id="funciones_objetos_arrays_javascript_arrays_asociativos">Arrays asociativos<a href="#funciones_objetos_arrays_javascript_arrays_asociativos"></a></h3>
-<p>Un <i>array asociativo</i> es aquel en el que los elementos se referencian por nombre en lugar de por un desplazamiento de un número entero. Sin embargo, JavaScript no soporta tales cosas. En su lugar, podemos lograr el mismo resultado creando un objeto con propiedades que actúen de la misma manera.</p>
-<p>Entonces, para crear un "array asociativo," define un bloque de elementos dentro de unas llaves. Para cada elemento, coloca la clave a la izquierda y el contenido a la derecha de los dos puntos (<samp>:</samp>). El ejemplo 16-9 muestra cómo puedes crear un array asociativo para abarcar el contenido de la sección de "pelotas" de un minorista de equipamiento deportivo online.</p>
+<p>Un <i>array asociativo</i> es aquel en el que los elementos se referencian por nombre en lugar de un desplazamiento por número entero. Sin embargo, JavaScript no soporta tales cosas. En su lugar, podemos lograr el mismo resultado creando un objeto con propiedades que actúen de la misma manera.</p>
+<p>Entonces, para crear un "array asociativo," define un bloque de elementos dentro de unas llaves. Para cada elemento, coloca la clave a la izquierda y el contenido a la derecha de los dos puntos (<samp>:</samp>). El ejemplo 16-9 muestra cómo puedes crear un array asociativo para abarcar el contenido de la sección de "<samp>balls</samp>" (pelotas) de un minorista de equipamiento deportivo online.</p>
 <p><i>Ejemplo 16-9. Creación y visualización de un array asociativo</i></p>
 <div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
   <span class="hl_v">balls</span> <span class="hl_o">=</span> {<span class="hl_s">&quot;golf&quot;</span><span class="hl_o">:</span>   <span class="hl_s">&quot;Golf balls, 6&quot;</span>,
@@ -2052,12 +2060,179 @@ O   O   O   O
   <span class="hl_k">return</span> <span class="hl_v">element</span> <span class="hl_o">&gt;</span> <span class="hl_n">10</span>
 }
 
-<span class="hl_v">result</span> <span class="hl_o">=</span> [<span class="hl_n">2</span>, <span class="hl_n">5</span>, <span class="hl_n">8</span>, <span class="hl_n">1</span>, <span class="hl_n">4</span>]<span class="hl_f">.some</span>(<span class="hl_v">isBiggerThan10</span>);  <span class="hl_c">// result will be false</span>
-<span class="hl_v">result</span> <span class="hl_o">=</span> [<span class="hl_n">12</span>, <span class="hl_n">5</span>, <span class="hl_n">8</span>, <span class="hl_n">1</span>, <span class="hl_n">4</span>]<span class="hl_f">.some</span>(<span class="hl_v">isBiggerThan10</span>); <span class="hl_c">// result will be true</span></code></div>
+<span class="hl_v">result</span> <span class="hl_o">=</span> [<span class="hl_n">2</span>, <span class="hl_n">5</span>, <span class="hl_n">8</span>, <span class="hl_n">1</span>, <span class="hl_n">4</span>]<span class="hl_f">.some</span>(<span class="hl_v">isBiggerThan10</span>)  <span class="hl_c">// result will be false</span>
+<span class="hl_v">result</span> <span class="hl_o">=</span> [<span class="hl_n">12</span>, <span class="hl_n">5</span>, <span class="hl_n">8</span>, <span class="hl_n">1</span>, <span class="hl_n">4</span>]<span class="hl_f">.some</span>(<span class="hl_v">isBiggerThan10</span>) <span class="hl_c">// result will be true</span></code></div>
 <h4 id="funciones_objetos_arrays_javascript_indexof">indexOf<a href="#funciones_objetos_arrays_javascript_indexof"></a></h4>
-<p>Para averiguar dónde se puede encontrar un elemento en un array, puedes llamar a la función <samp>indexOf</samp> en el array, que devolverá el índice del elemento encontrado (empezando desde <samp>0</samp>), o <samp>-1</samp> si no se encuentra. Por ejemplo, lo siguiente da como resultado el valor <samp>2</samp>:</p>
+<p>Para averiguar dónde se puede encontrar el elemento de un array, puedes llamar a la función <samp>indexOf</samp> en el array, que devolverá el índice del elemento encontrado (empezando desde <samp>0</samp>), o <samp>-1</samp> si no se encuentra. Por ejemplo, lo siguiente da como resultado el valor <samp>2</samp>:</p>
 <div class="pre"><pre class="lineno">1<br>2<br></pre><code><span class="hl_v">animals</span> <span class="hl_o">=</span> [<span class="hl_v">&#039;cat&#039;</span>, <span class="hl_v">&#039;dog&#039;</span>, <span class="hl_v">&#039;cow&#039;</span>, <span class="hl_v">&#039;horse&#039;</span>, <span class="hl_v">&#039;elephant&#039;</span>]
-<span class="hl_v">offset</span> <span class="hl_o">=</span> <span class="hl_f">animals.indexOf</span>(<span class="hl_v">&#039;cow&#039;</span>)</code></div><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>
+<span class="hl_v">offset</span> <span class="hl_o">=</span> <span class="hl_f">animals.indexOf</span>(<span class="hl_v">&#039;cow&#039;</span>)</code></div>
+<h4 id="funciones_objetos_arrays_javascript_concat">concat<a href="#funciones_objetos_arrays_javascript_concat"></a></h4>
+<p>El método <samp>concat</samp> concatena dos arrays, o una serie de valores dentro de un array. Por ejemplo, el siguiente código produce <samp>Banana</samp> (Banana), <samp>Grape</samp> (Uva), <samp>Carrot</samp> (Zanahoria), <samp>Cabbage</samp> (Repollo):</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">fruit</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Banana&quot;</span>, <span class="hl_s">&quot;Grape&quot;</span>]
+<span class="hl_v">veg</span>   <span class="hl_o">=</span> [<span class="hl_s">&quot;Carrot&quot;</span>, <span class="hl_s">&quot;Cabbage&quot;</span>]
+
+<span class="hl_f">document.write</span>(<span class="hl_f">fruit.concat</span>(<span class="hl_v">veg</span>))</code></div>
+<p>Puedes especificar múltiples arrays como argumentos, en cuyo caso <samp>concat</samp> agrega todos los elementos en el orden en que se especifican los arrays.</p>
+<p>Aquí hay otra manera de utilizar <samp>concat</samp>. Esta vez, los valores simples se concatenan con el array <samp>pets</samp> (mascotas), lo que produce <samp>Cat</samp> (Gato), <samp>Dog</samp> (Perro), <samp>Fish</samp> (Pez), <samp>Rabbit</samp> (Conejo), <samp>Hamster</samp> (Hámster):</p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br></pre><code><span class="hl_v">pets</span>      <span class="hl_o">=</span> [<span class="hl_s">&quot;Cat&quot;</span>, <span class="hl_s">&quot;Dog&quot;</span>, <span class="hl_s">&quot;Fish&quot;</span>]
+<span class="hl_v">more_pets</span> <span class="hl_o">=</span> <span class="hl_f">pets.concat</span>(<span class="hl_s">&quot;Rabbit&quot;</span>, <span class="hl_s">&quot;Hamster&quot;</span>)
+
+<span class="hl_f">document.write</span>(<span class="hl_v">more_pets</span>)</code></div>
+<h4 id="funciones_objetos_arrays_javascript_foreach">forEach<a href="#funciones_objetos_arrays_javascript_foreach"></a></h4>
+<p>El método <samp>forEach</samp> en JavaScript es otra manera de lograr una funcionalidad similar a la palabra reservada <samp>foreach</samp> de PHP. Para utilizarlo, le pasas el nombre de una función, que se llamará para cada elemento dentro del array. El ejemplo 16-11 muestra cómo.</p>
+<p><i>Ejemplo 16-11. Utilizando el método <samp>forEach</samp></i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">pets</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Cat&quot;</span>, <span class="hl_s">&quot;Dog&quot;</span>, <span class="hl_s">&quot;Rabbit&quot;</span>, <span class="hl_s">&quot;Hamster&quot;</span>]
+  <span class="hl_f">pets.forEach</span>(<span class="hl_v">output</span>)
+
+  <span class="hl_k">function</span> <span class="hl_f">output</span>(<span class="hl_v">element</span>, <span class="hl_v">index</span>, <span class="hl_v">array</span>)
+  {
+    <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Element at index &quot;</span> <span class="hl_o">+</span> <span class="hl_v">index</span> <span class="hl_o">+</span> <span class="hl_s">&quot; has the value &quot;</span> <span class="hl_o">+</span>
+      <span class="hl_v">element</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  }
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>En este caso, la función pasada a <samp>forEach</samp> se llama <samp>output</samp>. Toma tres parámetros: el elemento (<samp>element</samp>), su índice (<samp>index</samp>) y el <samp>array</samp>. Estos se pueden utilizar según lo requiera tu función. Este ejemplo muestra solo los valores del elemento (<samp>element</samp>) y el índice (<samp>index</samp>) utilizando la función <samp>document.write</samp>.</p>
+<p>Una vez que se ha rellenado un array, el método se llama así:</p>
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">pets.forEach</span>(<span class="hl_v">output</span>)</code></div>
+<p>Este es el resultado:</p>
+<div class="pre"><pre>
+Element at index 0 has the value Cat
+Element at index 1 has the value Dog
+Element at index 2 has the value Rabbit
+Element at index 3 has the value Hamster
+</pre></div>
+<h4 id="funciones_objetos_arrays_javascript_join">join<a href="#funciones_objetos_arrays_javascript_join"></a></h4>
+<p>Con el método <samp>join</samp>, puedes convertir todos los valores de un array a strings y luego unirlos en un gran string, colocando un separador opcional entre ellos. El ejemplo 16-12 muestra tres manera de utilizar este método.</p>
+<p><i>Ejemplo 16-12. Utilizando el método <samp>join</samp></i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">pets</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Cat&quot;</span>, <span class="hl_s">&quot;Dog&quot;</span>, <span class="hl_s">&quot;Rabbit&quot;</span>, <span class="hl_s">&quot;Hamster&quot;</span>]
+
+  <span class="hl_f">document.write</span>(<span class="hl_f">pets.join</span>()      <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_f">pets.join</span>(<span class="hl_v">&#039;</span> <span class="hl_v">&#039;</span>)   <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_f">pets.join</span>(<span class="hl_v">&#039;</span> <span class="hl_o">:</span> <span class="hl_v">&#039;</span>) <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Sin un parámetro, <samp>join</samp> utiliza una coma para separar los elementos; de lo contrario, el string pasado a <samp>join</samp> se inserta entre cada elemento. La salida del Ejemplo 16-12 se ve así:</p>
+<div class="pre"><pre>
+Cat,Dog,Rabbit,Hamster
+Cat Dog Rabbit Hamster
+Cat : Dog : Rabbit : Hamster
+</pre></div>
+<h4 id="funciones_objetos_arrays_javascript_push_pop">push y pop<a href="#funciones_objetos_arrays_javascript_push_pop"></a></h4>
+<p>Ya has visto cómo se puede utilizar el método <samp>push</samp> para insertar un valor en un array. El método inverso es <samp>pop</samp>. Elimina el elemento insertado más recientemente de un array y lo devuelve. El ejemplo 16-13 muestra un ejemplo de su uso.</p>
+<p><i>Ejemplo 16-13. Utilizando los métodos <samp>push</samp> y <samp>pop</samp></i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">sports</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Football&quot;</span>, <span class="hl_s">&quot;Tennis&quot;</span>, <span class="hl_s">&quot;Baseball&quot;</span>]
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Start = &quot;</span> <span class="hl_o">+</span> <span class="hl_v">sports</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_f">sports.push</span>(<span class="hl_s">&quot;Hockey&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;After Push = &quot;</span> <span class="hl_o">+</span> <span class="hl_v">sports</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_v">removed</span> <span class="hl_o">=</span> <span class="hl_f">sports.pop</span>()
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;After Pop = &quot;</span> <span class="hl_o">+</span> <span class="hl_v">sports</span>  <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Removed = &quot;</span>   <span class="hl_o">+</span> <span class="hl_v">removed</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Las tres declaraciones principales de este script se muestran en negritas. Primero, el script crea un array llamado <samp>sports</samp> (deportes) con tres elementos y luego agrega (<samp>push</samp>) un cuarto elemento al array. Después de eso, lo elimina (<samp>pop</samp>) de nuevo. En el proceso, se visualizan los valores existentes a través de <samp>document.write</samp>. El script muestra lo siguiente:</p>
+<div class="pre"><pre>
+Start = Football,Tennis,Baseball
+After Push = Football,Tennis,Baseball,Hockey
+After Pop = Football,Tennis,Baseball
+Removed = Hockey
+</pre></div>
+<p>Las funciones <samp>push</samp> y <samp>pop</samp> son útiles en situaciones donde necesitas desviarte de alguna actividad para hacer otra, y luego regresar. Por ejemplo, supongamos que quieres posponer algunas actividades para más tarde, mientras te ocupas de algo más importante ahora. Esto a menudo ocurre en la vida real cuando estamos revisando listas de "to-do" (tareas por hacer), así que emulemos eso en código, otorgando prioridad a las tareas número 2 y 5 en una lista de seis elementos, como en el Ejemplo 16-14.</p>
+<p><i>Ejemplo 16-14. Utilizando <samp>push</samp> y <samp>pop</samp> dentro y fuera de un bucle</i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">numbers</span> <span class="hl_o">=</span> []
+
+  <span class="hl_k">for</span> (<span class="hl_v">j</span> <span class="hl_o">=</span> <span class="hl_n">1</span>; <span class="hl_v">j</span> <span class="hl_o">&lt;</span> <span class="hl_n">6</span>; <span class="hl_o">++</span><span class="hl_v">j</span>)
+  {
+    <span class="hl_k">if</span> (<span class="hl_v">j</span> <span class="hl_o">==</span> <span class="hl_n">2</span> <span class="hl_o">||</span> <span class="hl_v">j</span> <span class="hl_o">==</span> <span class="hl_n">5</span>)
+    {
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Processing &#039;todo&#039; #&quot;</span> <span class="hl_o">+</span> <span class="hl_v">j</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+    }
+    <span class="hl_k">else</span>
+    {
+      <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Putting off &#039;todo&#039; #&quot;</span> <span class="hl_o">+</span> <span class="hl_v">j</span> <span class="hl_o">+</span> <span class="hl_s">&quot; until later&lt;br&gt;&quot;</span>)
+      <span class="hl_f">numbers.push</span>(<span class="hl_v">j</span>)
+    }
+  }
+
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;&lt;br&gt;Finished processing the priority tasks.&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;&lt;br&gt;Commencing stored tasks, most recent first.&lt;br&gt;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Now processing &#039;todo&#039; #&quot;</span> <span class="hl_o">+</span> <span class="hl_f">numbers.pop</span>() <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Now processing &#039;todo&#039; #&quot;</span> <span class="hl_o">+</span> <span class="hl_f">numbers.pop</span>() <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+  <span class="hl_f">document.write</span>(<span class="hl_s">&quot;Now processing &#039;todo&#039; #&quot;</span> <span class="hl_o">+</span> <span class="hl_f">numbers.pop</span>() <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>Por supuesto, aquí no se está procesando nada en realidad, solo se está enviando texto al navegador, pero ya entiendes la idea. La salida de este ejemplo es la siguiente:</p>
+<div class="pre"><pre>
+Putting off &#039;todo&#039; #1 until later
+Processing &#039;todo&#039; #2
+Putting off &#039;todo&#039; #3 until later
+Putting off &#039;todo&#039; #4 until later
+Processing &#039;todo&#039; #5
+
+Finished processing the priority tasks.
+Commencing stored tasks, most recent first.
+
+Now processing &#039;todo&#039; #4
+Now processing &#039;todo&#039; #3
+Now processing &#039;todo&#039; #1
+</pre></div>
+<h4 id="funciones_objetos_arrays_javascript_utilizando_reverse">Utilizando reverse<a href="#funciones_objetos_arrays_javascript_utilizando_reverse"></a></h4>
+<p>El método <samp>reverse</samp> simplemente invierte el orden de todos los elementos de un array. El ejemplo 16-15 muestra esto en acción.</p>
+<p><i>Ejemplo 16-15. Utilizando el método <samp>reverse</samp></i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_v">sports</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Football&quot;</span>, <span class="hl_s">&quot;Tennis&quot;</span>, <span class="hl_s">&quot;Baseball&quot;</span>, <span class="hl_s">&quot;Hockey&quot;</span>]
+  <span class="hl_f">sports.reverse</span>()
+  <span class="hl_f">document.write</span>(<span class="hl_v">sports</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>El array original se modifica, y la salida de este script es la siguiente:</p>
+<div class="pre"><pre>
+Hockey,Baseball,Tennis,Football
+</pre></div>
+<h4 id="funciones_objetos_arrays_javascript_sort">sort<a href="#funciones_objetos_arrays_javascript_sort"></a></h4>
+<p>Con el método <samp>sort</samp>, puedes colocar todos los elementos de un array en orden alfabético, dependiendo de los parámetros utilizados. El ejemplo 16-16 muestra cuatro tipos de ordenamiento.</p>
+<p><i>Ejemplo 16-16. Utilizando el método <samp>sort</samp></i></p>
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br></pre><code><span class="hl_o">&lt;</span><span class="hl_v">script</span><span class="hl_o">&gt;</span>
+  <span class="hl_c">// Alphabetical sort</span>
+  <span class="hl_v">sports</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Football&quot;</span>, <span class="hl_s">&quot;Tennis&quot;</span>, <span class="hl_s">&quot;Baseball&quot;</span>, <span class="hl_s">&quot;Hockey&quot;</span>]
+  <span class="hl_f">sports.sort</span>()
+  <span class="hl_f">document.write</span>(<span class="hl_v">sports</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_c">// Reverse alphabetical sort</span>
+  <span class="hl_v">sports</span> <span class="hl_o">=</span> [<span class="hl_s">&quot;Football&quot;</span>, <span class="hl_s">&quot;Tennis&quot;</span>, <span class="hl_s">&quot;Baseball&quot;</span>, <span class="hl_s">&quot;Hockey&quot;</span>]
+  <span class="hl_f">sports.sort</span>()<span class="hl_f">.reverse</span>()
+  <span class="hl_f">document.write</span>(<span class="hl_v">sports</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_c">// Ascending numeric sort</span>
+  <span class="hl_v">numbers</span> <span class="hl_o">=</span> [<span class="hl_n">7</span>, <span class="hl_n">23</span>, <span class="hl_n">6</span>, <span class="hl_n">74</span>]
+  <span class="hl_f">numbers.sort</span>(<span class="hl_k">function</span>(<span class="hl_v">a</span>,<span class="hl_v">b</span>){<span class="hl_k">return</span> <span class="hl_v">a</span> <span class="hl_o">-</span> <span class="hl_v">b</span>})
+  <span class="hl_f">document.write</span>(<span class="hl_v">numbers</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+
+  <span class="hl_c">// Descending numeric sort</span>
+  <span class="hl_v">numbers</span> <span class="hl_o">=</span> [<span class="hl_n">7</span>, <span class="hl_n">23</span>, <span class="hl_n">6</span>, <span class="hl_n">74</span>]
+  <span class="hl_f">numbers.sort</span>(<span class="hl_k">function</span>(<span class="hl_v">a</span>,<span class="hl_v">b</span>){<span class="hl_k">return</span> <span class="hl_v">b</span> <span class="hl_o">-</span> <span class="hl_v">a</span>})
+  <span class="hl_f">document.write</span>(<span class="hl_v">numbers</span> <span class="hl_o">+</span> <span class="hl_s">&quot;&lt;br&gt;&quot;</span>)
+<span class="hl_o">&lt;/</span><span class="hl_v">script</span><span class="hl_o">&gt;</span></code></div>
+<p>La primera de las cuatro secciones del ejemplo utiliza el método <samp>sort</samp> predeterminado para realizar una <i>ordenación alfabética</i>, mientras que la segunda utiliza el método <samp>sort</samp> predeterminado y luego aplica el método <samp>reverse</samp> para obtener una ordenación <i>alfabética inversa</i>.</p>
+<p>La tercera y cuarta sección son un poco más complicadas; utilizan una función para comparar la relación entre <samp>a</samp> y <samp>b</samp>. La función no tiene un nombre, porque solo se utiliza en el ordenamiento. Ya has visto la función llamada <samp>function</samp> usada para crear una función anónima; la usamos para definir un método en una clase (el método <samp>showUser</samp>).</p>
+<p>Aquí, <samp>function</samp> crea una función anónima que satisface las necesidades del método <samp>sort</samp>. Si la función devuelve un valor mayor que cero, el ordenamiento asume que <samp>b</samp> viene antes que <samp>a</samp>. Si la función devuelve un valor menor que cero, el ordenamiento asume que <samp>a</samp> viene antes que <samp>b</samp>. El ordenamiento ejecuta esta función en todos los valores del array para determinar su orden. (Por supuesto, si <samp>a</samp> y <samp>b</samp> tienen el mismo valor, la función devuelve cero y no importa cuál valor esté primero.)</p>
+<p>Al manipular el valor devuelto (<samp>a - b</samp> en contraste con <samp>b - a</samp>), la tercera y cuarta sección del Ejemplo 16-16 eligen entre una <i>ordenación numérica ascendente</i> y una <i>ordenación numérica descendente</i>.</p>
+<p>Y, créelo o no, esto representa el final de tu introducción a JavaScript. Ahora deberías tener un conocimiento básico de las tres tecnologías principales cubiertas en este libro. El próximo capítulo se examinará algunas técnicas avanzadas utilizadas en estas tecnologías, como la coincidencia de patrones y la validación de entradas.</p>
+<h2 id="funciones_objetos_arrays_javascript_preguntas">Preguntas<a href="#funciones_objetos_arrays_javascript_preguntas"></a></h2>
+<ol>
+<li>¿Son sensibles o insensibles a mayúsculas y minúsculas los nombres de funciones y variables en JavaScript?</li>
+<li>¿Cómo puedes escribir una función que acepte y procese un número ilimitado de parámetros?</li>
+<li>Nombra una forma de devolver múltiples valores desde una función.</li>
+<li>Cuando estás definiendo una clase, ¿qué palabra reservada utilizas para referirte al objeto actual?</li>
+<li>¿Todos los métodos de una clase tienen que estar definidos dentro de la definición de la clase?</li>
+<li>¿Qué palabra reservada se utiliza para crear un objeto?</li>
+<li>¿Cómo puedes hacer que una propiedad o método esté disponible para todos los objetos de una clase sin replicar la propiedad o método dentro del objeto?</li>
+<li>¿Cómo puedes crear un array multidimensional?</li>
+<li>¿Qué sintaxis se utiliza para crear un array asociativo?</li>
+<li>Escribe una instrucción para ordenar un array de números en orden numérico descendente.</li>
+</ol>
+<p>Ver <a href="#soluciones_preguntas_capitulos_respuestas_capitulo_16" onclick="c('soluciones_preguntas_capitulos_respuestas_capitulo_16')">"Respuestas del Capítulo 16"</a> del <a href="#soluciones_preguntas_capitulos" onclick="c('soluciones_preguntas_capitulos')">Apéndice A</a> para comprobar las respuestas a estas preguntas.</p><br style="clear:both;"><label class="btn prev" accesskey="p" for="_expresiones_control_flujo_javascript" title="Expresiones y control de flujo en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_validacion_manejo_errores_javascript_php" title="Validación y manejo de errores en JavaScript y PHP">Siguiente</label></div>
 <div class="page" rel="validacion_manejo_errores_javascript_php"><div><ul class="breadcrumbs"><li><label class="home" for="_" title="Inicio"></label>&nbsp;»</li><li>&nbsp;Capítulo 17&nbsp;»</li><li>&nbsp;Validación y manejo de errores en JavaScript y PHP</li></ul><hr></div>
 <h1 id="validacion_manejo_errores_javascript_php">Validación y manejo de errores en JavaScript y PHP<a href="#validacion_manejo_errores_javascript_php"></a></h1>
 <h2 id="validacion_manejo_errores_javascript_php_validando_entrada_usuario_javascript">Validando la entrada del usuario con JavaScript<a href="#validacion_manejo_errores_javascript_php_validando_entrada_usuario_javascript"></a></h2><br style="clear:both;"><label class="btn prev" accesskey="p" for="_funciones_objetos_arrays_javascript" title="Funciones, objetos y arrays en JavaScript">Volver</label><label class="btn next" accesskey="n" for="_utilizando_comunicaciones_asincronas" title="Utilizando comunicaciones asíncronas">Siguiente</label></div>
@@ -2135,6 +2310,29 @@ Para reemplazar el documento actual con la página principal del sitio web de O'
 <li>La mayoría de las expresiones condicionales en las declaraciones <samp>if</samp> y <samp>while</samp> son literales o booleanas y, por lo tanto, desencadenan la ejecución cuando se evalúan como <samp>true</samp>. Las expresiones numéricas desencadenan la ejecución cuando se evalúan a un valor distinto de cero. Las expresiones de string desencadenan la ejecución cuando se evalúan a un string no vacío. Un valor <samp>NULL</samp> se evalúa como <samp>false</samp> y, por lo tanto, no desencadena la ejecución.</li>
 <li>Los bucles que utilizan declaraciones <samp>for</samp> son más poderosos que los bucles <samp>while</samp> porque soportan dos parámetros adicionales para controlar el manejo del bucle.</li>
 <li>La declaración <samp>with</samp> toma un objeto como parámetro. Cuando la utilizamos, especificamos un objeto una sola vez; luego, para cada sentencia dentro del bloque <samp>with</samp>, se asume ese objeto.</li>
+</ol>
+<h2 id="soluciones_preguntas_capitulos_respuestas_capitulo_16">Respuestas del capítulo 16<a href="#soluciones_preguntas_capitulos_respuestas_capitulo_16"></a></h2>
+<ol>
+<li>Las funciones y los nombres de las variables en JavaScript son sensibles a mayúsculas y minúsculas. Las variables <samp>Count</samp>, <samp>count</samp> y <samp>COUNT</samp> son todas diferentes.</li>
+<li>Para escribir una función que acepte y procese un número ilimitado de parámetros, hay que acceder a los parámetros a través del array <samp>arguments</samp>, que es miembro de todas las funciones.</li>
+<li>Una forma de devolver múltiples valores desde una función es colocarlos todos dentro de un array y devolver el array.</li>
+<li>Al definir una clase, hay que utilizar la palabra reservada <samp>this</samp> para referirte al objeto actual.</li>
+<li>Los métodos de una clase no tienen que definirse dentro de la definición de la clase. Si un método se define fuera del constructor, el nombre del método debe asignarse al objeto <samp>this</samp> dentro de la definición de la clase.</li>
+<li>Los nuevos objetos se crean mediante la palabra reservada <samp>new</samp>.</li>
+<li>Puedes hacer que una propiedad o método esté disponible para todos los objetos de una clase sin replicarlo dentro del objeto utilizando la palabra reservada <samp>prototype</samp> para crear una única instancia, que luego se pasa por referencia a todos los objetos de la clase.</li>
+<li>Para crear un array multidimensional, hay que colocar subarrays dentro del array principal.</li>
+<li>
+La sintaxis que se utilizaría para crear un array asociativo es <samp>clave : valor</samp>, dentro de llaves, como en lo siguiente:
+<div class="pre"><pre class="lineno">1<br>2<br>3<br>4<br>5<br></pre><code><span class="hl_v">assocarray</span> <span class="hl_o">=</span> {
+  <span class="hl_s">&quot;forename&quot;</span> <span class="hl_o">:</span> <span class="hl_s">&quot;Paul&quot;</span>,
+  <span class="hl_s">&quot;surname&quot;</span> <span class="hl_o">:</span> <span class="hl_s">&quot;McCartney&quot;</span>,
+  <span class="hl_s">&quot;group&quot;</span> <span class="hl_o">:</span> <span class="hl_s">&quot;The Beatles&quot;</span>
+}</code></div>
+</li>
+<li>
+Una sentencia para ordenar un array de números en orden numérico descendente se vería así:
+<div class="pre"><pre class="lineno">1<br></pre><code><span class="hl_f">numbers.sort</span>(<span class="hl_k">function</span>(<span class="hl_v">a</span>, <span class="hl_v">b</span>){ <span class="hl_k">return</span> <span class="hl_v">b</span> <span class="hl_v">–</span> <span class="hl_v">a</span> })</code></div>
+</li>
 </ol><br style="clear:both;"><label class="btn prev" accesskey="p" for="_uniendo_todo" title="Uniendo todo">Volver</label></div>
       <footer><hr><p>© Copyright 2021 Robin Nixon. Todos los derechos reservados.<br><small>Generated by <a href="https://gitlab.com/bztsrc/gendoc">gendoc</a> v1.0.0</small></p></footer>
     </div>

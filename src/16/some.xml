@@ -10,6 +10,6 @@ function isBiggerThan10(element, index, array)
   return element > 10
 }
 
-result = [2, 5, 8, 1, 4].some(isBiggerThan10);  // result will be false
-result = [12, 5, 8, 1, 4].some(isBiggerThan10); // result will be true
+result = [2, 5, 8, 1, 4].some(isBiggerThan10)  // result will be false
+result = [12, 5, 8, 1, 4].some(isBiggerThan10) // result will be true
 </code>

@@ -1,0 +1,30 @@
+<h2 soluciones_preguntas_capitulos_respuestas_capitulo_16>
+  Respuestas del capítulo 16
+</h2>
+
+<ol>
+  <li>Las funciones y los nombres de las variables en JavaScript son sensibles a mayúsculas y minúsculas.  Las variables <tt>Count</tt>, <tt>count</tt> y <tt>COUNT</tt> son todas diferentes.</li>
+  <li>Para escribir una función que acepte y procese un número ilimitado de parámetros, hay que acceder a los parámetros a través del array <tt>arguments</tt>, que es miembro de todas las funciones.</li>
+  <li>Una forma de devolver múltiples valores desde una función es colocarlos todos dentro de un array y devolver el array.</li>
+  <li>Al definir una clase, hay que utilizar la palabra reservada <tt>this</tt> para referirte al objeto actual.</li>
+  <li>Los métodos de una clase no tienen que definirse dentro de la definición de la clase. Si un método se define fuera del constructor, el nombre del método debe asignarse al objeto <tt>this</tt> dentro de la definición de la clase.</li>
+  <li>Los nuevos objetos se crean mediante la palabra reservada <tt>new</tt>.</li>
+  <li>Puedes hacer que una propiedad o método esté disponible para todos los objetos de una clase sin replicarlo dentro del objeto utilizando la palabra reservada <tt>prototype</tt> para crear una única instancia, que luego se pasa por referencia a todos los objetos de la clase.</li>
+  <li>Para crear un array multidimensional, hay que colocar subarrays dentro del array principal.</li>
+  <li>
+    La sintaxis que se utilizaría para crear un array asociativo es <tt>clave : valor</tt>, dentro de llaves, como en lo siguiente:
+<code>
+assocarray = {
+  "forename" : "Paul",
+  "surname" : "McCartney",
+  "group" : "The Beatles"
+}
+</code>
+  </li>
+  <li>
+  Una sentencia para ordenar un array de números en orden numérico descendente se vería así:
+<code>
+numbers.sort(function(a, b){ return b – a })
+</code>
+  </li>
+</ol>

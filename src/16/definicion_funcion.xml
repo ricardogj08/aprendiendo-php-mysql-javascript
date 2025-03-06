@@ -20,7 +20,7 @@ function function_name([parameter [, ...]])
   <li>Uno o más parámetros, separados por comas, son opcionales (indicados por los corchetes, que no forman parte de la sintaxis de la función).</li>
 </ul>
 
-<p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los siguientes strings se refieren a diferentes funciones: <tt>getInput</tt>, <tt>GETINPUT</tt> y <tt>getinput</tt>.</p>
+<p>Los nombres de las funciones son sensibles a mayúsculas, por lo que todos los strings a continuación se refieren a diferentes funciones: <tt>getInput</tt>, <tt>GETINPUT</tt> y <tt>getinput</tt>.</p>
 
 <p>En JavaScript hay una convención general de nomenclaturas para funciones: la primera letra de cada palabra de un nombre se escribe en mayúsculas, excepto la primera letra, que se escribe en minúsculas. Por lo tanto, de los ejemplos anteriores, <tt>getInput</tt> sería el nombre preferido utilizado por la mayoría de los programadores. Esta convención se conoce comúnmente como <i>bumpyCaps</i>, <i>bumpyCase</i>, o (más frecuentemente) <i>camelCase</i>.</p>
 

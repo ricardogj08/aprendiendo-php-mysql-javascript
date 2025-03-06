@@ -2,7 +2,7 @@
   Devolviendo un valor
 </h3>
 
-<p>Las funciones no se utilizan solo para mostrar cosas. De hecho, se utilizan principalmente para realizar cálculos o manipulaciones de datos y luego devolver un resultado. La función <tt>fixNames</tt> en el Ejemplo 16-3 utiliza el array <tt>arguments</tt> (explicada en la sección anterior) para tomar una serie de string que se le pasan y devolverlas como un solo string. La "corrección" que realiza es convertir todos los caracteres de los argumentos a minúsculas, excepto el primer carácter de cada argumento, que se convertirá a mayúsculas.</p>
+<p>Las funciones no se utilizan solo para mostrar cosas. De hecho, se utilizan principalmente para realizar cálculos o manipulaciones de datos y luego devolver un resultado. La función <tt>fixNames</tt> en el Ejemplo 16-3 utiliza el array <tt>arguments</tt> (explicada en la sección anterior) para tomar una serie de strings que se le pasan y devolverlas como un solo string. La "corrección" que realiza es convertir todos los caracteres de los argumentos a minúsculas, excepto el primer carácter de cada argumento, que se convertirá a mayúsculas.</p>
 
 <p><i>Ejemplo 16-3. Limpiando un nombre completo</i></p>
 

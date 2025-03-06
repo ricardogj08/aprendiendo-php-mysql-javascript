@@ -1,0 +1,18 @@
+<h2 funciones_objetos_arrays_javascript_preguntas>
+  Preguntas
+</h2>
+
+<ol>
+  <li>¿Son sensibles o insensibles a mayúsculas y minúsculas los nombres de funciones y variables en JavaScript?</li>
+  <li>¿Cómo puedes escribir una función que acepte y procese un número ilimitado de parámetros?</li>
+  <li>Nombra una forma de devolver múltiples valores desde una función.</li>
+  <li>Cuando estás definiendo una clase, ¿qué palabra reservada utilizas para referirte al objeto actual?</li>
+  <li>¿Todos los métodos de una clase tienen que estar definidos dentro de la definición de la clase?</li>
+  <li>¿Qué palabra reservada se utiliza para crear un objeto?</li>
+  <li>¿Cómo puedes hacer que una propiedad o método esté disponible para todos los objetos de una clase sin replicar la propiedad o método dentro del objeto?</li>
+  <li>¿Cómo puedes crear un array multidimensional?</li>
+  <li>¿Qué sintaxis se utiliza para crear un array asociativo?</li>
+  <li>Escribe una instrucción para ordenar un array de números en orden numérico descendente.</li>
+</ol>
+
+<p>Ver <a #soluciones_preguntas_capitulos_respuestas_capitulo_16>"Respuestas del Capítulo 16"</a> del <a #soluciones_preguntas_capitulos>Apéndice A</a> para comprobar las respuestas a estas preguntas.</p>

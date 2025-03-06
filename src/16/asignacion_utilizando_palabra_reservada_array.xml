@@ -8,6 +8,6 @@
 numbers = Array("One", "Two", "Three")
 </code>
 
-<p>No hay nada que te impida agregar más elementos después también.</p>
+<p>También no hay nada que te impida agregar más elementos después.</p>
 
 <p>Ahora has visto un par de maneras de agregar elementos a un array, y una forma de referenciarlos. JavaScript ofrece muchos más, de los cuales hablaré en breve, pero primero, veremos otro tipo de array.</p>

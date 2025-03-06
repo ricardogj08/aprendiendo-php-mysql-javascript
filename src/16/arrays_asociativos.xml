@@ -2,9 +2,9 @@
   Arrays asociativos
 </h3>
 
-<p>Un <i>array asociativo</i> es aquel en el que los elementos se referencian por nombre en lugar de por un desplazamiento de un número entero. Sin embargo, JavaScript no soporta tales cosas. En su lugar, podemos lograr el mismo resultado creando un objeto con propiedades que actúen de la misma manera.</p>
+<p>Un <i>array asociativo</i> es aquel en el que los elementos se referencian por nombre en lugar de un desplazamiento por número entero. Sin embargo, JavaScript no soporta tales cosas. En su lugar, podemos lograr el mismo resultado creando un objeto con propiedades que actúen de la misma manera.</p>
 
-<p>Entonces, para crear un "array asociativo," define un bloque de elementos dentro de unas llaves. Para cada elemento, coloca la clave a la izquierda y el contenido a la derecha de los dos puntos (<tt>:</tt>). El ejemplo 16-9 muestra cómo puedes crear un array asociativo para abarcar el contenido de la sección de "pelotas" de un minorista de equipamiento deportivo online.</p>
+<p>Entonces, para crear un "array asociativo," define un bloque de elementos dentro de unas llaves. Para cada elemento, coloca la clave a la izquierda y el contenido a la derecha de los dos puntos (<tt>:</tt>). El ejemplo 16-9 muestra cómo puedes crear un array asociativo para abarcar el contenido de la sección de "<tt>balls</tt>" (pelotas) de un minorista de equipamiento deportivo online.</p>
 
 <p><i>Ejemplo 16-9. Creación y visualización de un array asociativo</i></p>
 

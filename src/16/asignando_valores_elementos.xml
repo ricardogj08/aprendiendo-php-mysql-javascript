@@ -16,7 +16,7 @@ arrayname.push("Element 1")
 arrayname.push("Element 2")
 </code>
 
-<p>Esto te permite seguir añadiendo elementos a un array sin tener que llevar un control del número de elementos. Cuando necesites saber cuántos elementos hay en un array, puedes usar la propiedad <tt>length</tt>, así:</p>
+<p>Esto te permite seguir añadiendo elementos a un array sin tener que llevar un control del número de elementos. Cuando necesites saber cuántos elementos hay en un array, puedes utilizar la propiedad <tt>length</tt>, así:</p>
 
 <code>
 document.write(arrayname.length)

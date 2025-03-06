@@ -37,7 +37,7 @@
 
 <p>La convención de nomenclatura que he utilizado es mantener todas las propiedades en minúsculas y usar al menos un carácter en mayúsculas en los nombres de los métodos, siguiendo la convención camelCase mencionada anteriormente en el capítulo.</p>
 
-<p>El Ejemplo 16-5 sigue la forma recomendada de escribir un constructor de clase, que es incluir métodos en la función del constructor. Sin embargo, también puedes hacer referencia a funciones definidas fuera del constructor, como en el Ejemplo 16-6.</p>
+<p>El Ejemplo 16-5 sigue la forma recomendada para escribir un constructor de clase, que es incluir métodos en la función del constructor. Sin embargo, también puedes hacer referencia a funciones definidas fuera del constructor, como en el Ejemplo 16-6.</p>
 
 <p><i>Ejemplo 16-6. Definición separada de una clase y un método</i></p>
 

@@ -1,0 +1,37 @@
+<h4 funciones_objetos_arrays_javascript_foreach>
+  forEach
+</h4>
+
+<p>El método <tt>forEach</tt> en JavaScript es otra manera de lograr una funcionalidad similar a la palabra reservada <tt>foreach</tt> de PHP. Para utilizarlo, le pasas el nombre de una función, que se llamará para cada elemento dentro del array. El ejemplo 16-11 muestra cómo.</p>
+
+<p><i>Ejemplo 16-11. Utilizando el método <tt>forEach</tt></i></p>
+
+<code>
+<script>
+  pets = ["Cat", "Dog", "Rabbit", "Hamster"]
+  pets.forEach(output)
+
+  function output(element, index, array)
+  {
+    document.write("Element at index " + index + " has the value " +
+      element + "<br>")
+  }
+</script>
+</code>
+
+<p>En este caso, la función pasada a <tt>forEach</tt> se llama <tt>output</tt>. Toma tres parámetros: el elemento (<tt>element</tt>), su índice (<tt>index</tt>) y el <tt>array</tt>. Estos se pueden utilizar según lo requiera tu función. Este ejemplo muestra solo los valores del elemento (<tt>element</tt>) y el índice (<tt>index</tt>) utilizando la función <tt>document.write</tt>.</p>
+
+<p>Una vez que se ha rellenado un array, el método se llama así:</p>
+
+<code>
+pets.forEach(output)
+</code>
+
+<p>Este es el resultado:</p>
+
+<pre>
+Element at index 0 has the value Cat
+Element at index 1 has the value Dog
+Element at index 2 has the value Rabbit
+Element at index 3 has the value Hamster
+</pre>

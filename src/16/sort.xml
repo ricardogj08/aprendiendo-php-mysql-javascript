@@ -1,0 +1,41 @@
+<h4 funciones_objetos_arrays_javascript_sort>
+  sort
+</h4>
+
+<p>Con el método <tt>sort</tt>, puedes colocar todos los elementos de un array en orden alfabético, dependiendo de los parámetros utilizados. El ejemplo 16-16 muestra cuatro tipos de ordenamiento.</p>
+
+<p><i>Ejemplo 16-16. Utilizando el método <tt>sort</tt></i></p>
+
+<code>
+<script>
+  // Alphabetical sort
+  sports = ["Football", "Tennis", "Baseball", "Hockey"]
+  sports.sort()
+  document.write(sports + "<br>")
+
+  // Reverse alphabetical sort
+  sports = ["Football", "Tennis", "Baseball", "Hockey"]
+  sports.sort().reverse()
+  document.write(sports + "<br>")
+
+  // Ascending numeric sort
+  numbers = [7, 23, 6, 74]
+  numbers.sort(function(a,b){return a - b})
+  document.write(numbers + "<br>")
+
+  // Descending numeric sort
+  numbers = [7, 23, 6, 74]
+  numbers.sort(function(a,b){return b - a})
+  document.write(numbers + "<br>")
+</script>
+</code>
+
+<p>La primera de las cuatro secciones del ejemplo utiliza el método <tt>sort</tt> predeterminado para realizar una <i>ordenación alfabética</i>, mientras que la segunda utiliza el método <tt>sort</tt> predeterminado y luego aplica el método <tt>reverse</tt> para obtener una ordenación <i>alfabética inversa</i>.</p>
+
+<p>La tercera y cuarta sección son un poco más complicadas; utilizan una función para comparar la relación entre <tt>a</tt> y <tt>b</tt>. La función no tiene un nombre, porque solo se utiliza en el ordenamiento. Ya has visto la función llamada <tt>function</tt> usada para crear una función anónima; la usamos para definir un método en una clase (el método <tt>showUser</tt>).</p>
+
+<p>Aquí, <tt>function</tt> crea una función anónima que satisface las necesidades del método <tt>sort</tt>. Si la función devuelve un valor mayor que cero, el ordenamiento asume que <tt>b</tt> viene antes que <tt>a</tt>. Si la función devuelve un valor menor que cero, el ordenamiento asume que <tt>a</tt> viene antes que <tt>b</tt>. El ordenamiento ejecuta esta función en todos los valores del array para determinar su orden. (Por supuesto, si <tt>a</tt> y <tt>b</tt> tienen el mismo valor, la función devuelve cero y no importa cuál valor esté primero.)</p>
+
+<p>Al manipular el valor devuelto (<tt>a - b</tt> en contraste con <tt>b - a</tt>), la tercera y cuarta sección del Ejemplo 16-16 eligen entre una <i>ordenación numérica ascendente</i> y una <i>ordenación numérica descendente</i>.</p>
+
+<p>Y, créelo o no, esto representa el final de tu introducción a JavaScript. Ahora deberías tener un conocimiento básico de las tres tecnologías principales cubiertas en este libro. El próximo capítulo se examinará algunas técnicas avanzadas utilizadas en estas tecnologías, como la coincidencia de patrones y la validación de entradas.</p>

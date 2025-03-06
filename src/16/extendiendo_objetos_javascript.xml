@@ -21,7 +21,7 @@ String.prototype.nbsp = function()
 document.write("The quick brown fox".nbsp())
 </code>
 
-<p>Saldrá el string <tt>The&nbsp;quick&nbsp;brown&nbsp;fox</tt>. O aquí tienes un método que puedes añadir que eliminará los espacios del principio y el final del string (una vez más utilizando una expresión regular):</p>
+<p>Saldrá el string <tt>The&nbsp;quick&nbsp;brown&nbsp;fox</tt>. O aquí tienes un método que puedes añadir que eliminará los espacios de principio y final del string (una vez más utilizando una expresión regular):</p>
 
 <code>
 String.prototype.trim = function()
@@ -41,7 +41,7 @@ document.write("Please trim me".trim())
 <p>El resultado es que cuando cualquiera de estas expresiones coincide, la coincidencia se reemplaza con un string vacío, devolviendo así una versión recortada del string sin espacios en blanco al inicio o al final.</p>
 
 <warn>
-<p>Existe un debate acerca de si extender objetos es una buena o mala práctica. Algunos programadores dicen que si más adelante se extiende un objeto para ofrecer oficialmente la funcionalidad que has añadido, podría implementarse de otra manera, o hacer algo bastante diferente a tu extensión, lo que podría causar un conflicto. Sin embargo, otros programadores, como el inventor de JavaScript, Brendan Eich, dicen que esta es una práctica perfectamente aceptable. Mi opinión es que estoy de acuerdo con esto último, pero en el código de producción elegir nombres de extensiones que sean poco probables de ser utilizados oficialmente. Entonces, por ejemplo, la extensión <tt>trim</tt> podría renombrarse como <tt>mytrim</tt>, y el código de soporte podría escribirse de manera más segura como lo siguiente:</p>
+<p>Existe un debate acerca de si extender objetos es una buena o mala práctica. Algunos programadores dicen que si más adelante se extiende un objeto para ofrecer oficialmente la funcionalidad que has añadido, podría implementarse de otra manera, o hacer algo bastante diferente a tu extensión, lo que podría causar un conflicto. Sin embargo, otros programadores, como el inventor de JavaScript, Brendan Eich, dice que esta es una práctica perfectamente aceptable. Mi opinión es que estoy de acuerdo con esto último, pero en código de producción elige nombres de extensiones que sean poco probables de ser utilizados oficialmente. Entonces, por ejemplo, la extensión <tt>trim</tt> podría renombrarse como <tt>mytrim</tt>, y el código de soporte podría escribirse de manera más segura como lo siguiente:</p>
 <code>
 String.prototype.mytrim = function()
 {

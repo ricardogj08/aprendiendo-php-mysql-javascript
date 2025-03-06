@@ -1,0 +1,25 @@
+<h4 funciones_objetos_arrays_javascript_join>
+  join
+</h4>
+
+<p>Con el método <tt>join</tt>, puedes convertir todos los valores de un array a strings y luego unirlos en un gran string, colocando un separador opcional entre ellos. El ejemplo 16-12 muestra tres manera de utilizar este método.</p>
+
+<p><i>Ejemplo 16-12. Utilizando el método <tt>join</tt></i></p>
+
+<code>
+<script>
+  pets = ["Cat", "Dog", "Rabbit", "Hamster"]
+
+  document.write(pets.join()      + "<br>")
+  document.write(pets.join(' ')   + "<br>")
+  document.write(pets.join(' : ') + "<br>")
+</script>
+</code>
+
+<p>Sin un parámetro, <tt>join</tt> utiliza una coma para separar los elementos; de lo contrario, el string pasado a <tt>join</tt> se inserta entre cada elemento. La salida del Ejemplo 16-12 se ve así:</p>
+
+<pre>
+Cat,Dog,Rabbit,Hamster
+Cat Dog Rabbit Hamster
+Cat : Dog : Rabbit : Hamster
+</pre>
